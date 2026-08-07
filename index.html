@@ -298,6 +298,35 @@
     body{background:#fff;color:#000}
     .card{background:#fff;border-color:#999;box-shadow:none}
   }
+
+  /* ---------- PRESENTACIÓN SEMANA 1 ---------- */
+  .deck{padding:40px 0 12px}
+  .deck-head{margin:0 0 24px;max-width:78ch}
+  .deck-head h2{margin:12px 0 8px;font-size:clamp(1.7rem,6vw,2.5rem);line-height:1.15;letter-spacing:-.01em}
+  .deck-head h2 .accent2{background:linear-gradient(90deg,var(--violet),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .deck-sub{margin:0;color:var(--muted)}
+  .deck-list{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-direction:column;gap:14px}
+  .deck-card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--violet);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 18px}
+  .deck-card h3{margin:0 0 12px;font-size:1.08rem;color:var(--white);display:flex;align-items:center;gap:12px}
+  .deck-num{flex:0 0 auto;min-width:38px;height:38px;padding:0 6px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;font-weight:800;font-size:.82rem;color:var(--yellow);background:rgba(247,179,43,.12);border:1px solid rgba(247,179,43,.4)}
+  .deck-card p{margin:0 0 12px;color:#E6E9F8}
+  .deck-card p:last-child{margin-bottom:0}
+  .deck-card strong{color:#fff}
+  .deck-item{margin:0 0 16px;padding-left:16px;border-left:2px solid var(--line)}
+  .deck-item:last-child{margin-bottom:0}
+  .deck-item p{margin:0 0 8px}
+  .deck-item p:last-child{margin-bottom:0}
+  .deck-tip{margin:0;padding:10px 14px;border-radius:10px;background:rgba(167,139,250,.14);border:1px solid var(--line);font-size:.92rem;color:#E9E4FF}
+  .deck-divider{margin:6px 0;padding:26px 22px;border-radius:var(--radius);text-align:center;background:linear-gradient(135deg,#0B0F2E,#241A52,var(--purple));border:1px solid var(--line-strong);box-shadow:var(--shadow)}
+  .deck-divider b{display:block;font-size:1.15rem;color:#fff;letter-spacing:.02em}
+  .deck-divider small{display:block;margin-top:6px;font-weight:600;color:#E9E5FF}
+  .deck-refs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+  .deck-refs li{font-size:.92rem;color:var(--muted);line-height:1.5}
+  .deck-refs a{color:#C4B5FD;word-break:break-word}
+  .deck-refs a:hover{color:#fff}
+  @media (min-width:700px){
+    .deck-card{padding:22px 24px}
+  }
 </style>
 </head>
 <body>
@@ -341,6 +370,7 @@
       </div>
       <span class="pill level">Nivel 1 · Semana 1</span>
       <span class="pill">Consulta rápida</span>
+      <a class="pill" href="#presentacion">📑 Presentación Semana 1</a>
     </div>
 
     <p class="program">Programa: Inteligencia Artificial y Automatización con n8n</p>
@@ -392,6 +422,114 @@
       <b>No encontramos una pregunta relacionada.</b>
       Prueba con otra palabra o revisa las categorías.
     </div>
+  </section>
+
+  <section class="wrap deck" id="presentacion" aria-labelledby="deck-title">
+    <div class="deck-head">
+      <span class="pill level">Nivel 1 · Semana 1</span>
+      <h2 id="deck-title">Presentación <span class="accent2">Semana 1</span></h2>
+      <p class="deck-sub">Fundamentos de Inteligencia Artificial — el contenido completo de la sesión, en formato de lectura fácil.</p>
+    </div>
+
+    <ul class="deck-list">
+      <li class="deck-divider">
+        <b>Fundamentos de Inteligencia Artificial</b>
+        <small>Inteligencia Artificial · Semana 1</small>
+      </li>
+
+      <li class="deck-divider">
+        <b>Introducción a Chatbots y Navegación Experta</b>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">1</span>Introducción general</h3>
+        <p>El avance de la Inteligencia Artificial (IA) ha dejado de ser una promesa de ciencia ficción para convertirse en el motor de la transformación digital contemporánea.</p>
+        <p>Este diplomado tiene como objetivo transformar a un usuario casual en un navegador experto, capaz de comprender no solo cómo utilizar las herramientas más avanzadas del mercado (ChatGPT, Claude, Gemini, DeepSeek entre otras), sino también entender los pilares lógicos y técnicos que las sustentan.</p>
+        <p>El aprendizaje de la IA requiere un compromiso activo. El dominio de estas tecnologías no se logra memorizando comandos, sino desarrollando un criterio estratégico para saber exactamente qué herramienta activar según la naturaleza del problema.</p>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">2</span>¿Qué es la introducción a la IA y cómo se compone?</h3>
+        <p>Para utilizar la IA, es fundamental desmitificarla y entender las capas que la componen de afuera hacia adentro:</p>
+        <div class="deck-item"><p><strong>Inteligencia Artificial (IA):</strong> es el campo macro de la informática que busca simular procesos de inteligencia humana mediante sistemas de computación. Esto incluye capacidades como el aprendizaje, el razonamiento y la autocorrección.</p></div>
+        <div class="deck-item"><p><strong>Machine Learning (Aprendizaje Automático):</strong> una subcategoría de la IA que se enfoca en el desarrollo de algoritmos que permiten a las computadoras aprender a partir de datos. En lugar de ser programada explícitamente para realizar una tarea, la máquina descubre reglas y patrones por sí misma.</p></div>
+        <div class="deck-item"><p><strong>Redes Neuronales Artificiales:</strong> modelos matemáticos e informáticos inspirados en la estructura y el comportamiento de las neuronas biológicas del cerebro humano. Están diseñadas para procesar información en paralelo y reconocer relaciones complejas.</p></div>
+        <div class="deck-item"><p><strong>Deep Learning (Aprendizaje Profundo):</strong> una evolución del Machine Learning que utiliza redes neuronales artificiales de múltiples capas (profundas). Es la tecnología detrás de los sistemas de reconocimiento facial, traducción automática y los vehículos autónomos, debido a su alta eficiencia para procesar datos no estructurados (como texto raw o imágenes sin etiquetar).</p></div>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">3</span>Clasificación de la Inteligencia Artificial</h3>
+        <p>La Inteligencia Artificial se clasifica generalmente en tres niveles evolutivos o de capacidad:</p>
+        <div class="deck-item"><p><strong>IA Débil o Estrecha (Narrow AI):</strong> sistemas diseñados, entrenados y optimizados para cumplir una única función específica o un conjunto muy delimitado de tareas (por ejemplo, el algoritmo de recomendación de Netflix, los filtros de spam o los asistentes como Siri). Toda la IA que existe en el mundo hoy en día pertenece a esta categoría.</p></div>
+        <div class="deck-item"><p><strong>IA Fuerte o General (AGI - Artificial General Intelligence):</strong> un estado teórico en el que una máquina posee la capacidad de comprender, aprender y aplicar conocimiento en cualquier área intelectual, igualando la flexibilidad y adaptabilidad del cerebro humano.</p></div>
+        <div class="deck-item"><p><strong>Superinteligencia Artificial (ASI):</strong> una entidad hipotética que supera por completo la capacidad cognitiva humana en todos los aspectos imaginables, incluyendo la creatividad científica, la sabiduría general y las habilidades sociales. Su desarrollo es objeto de profundos debates éticos y existenciales.</p></div>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">4</span>Métodos de entrenamiento</h3>
+        <p>Los algoritmos necesitan "experiencia" para volverse inteligentes. Esta experiencia se adquiere a través de tres metodologías principales de entrenamiento:</p>
+        <div class="deck-item"><p><strong>Aprendizaje Supervisado:</strong> el modelo se alimenta con un conjunto de datos previamente etiquetados por humanos (ej: miles de fotos de pulmones donde se especifica cuáles tienen neumonía y cuáles no). El algoritmo aprende a asociar las entradas con las salidas correctas para poder predecir sobre datos nuevos.</p></div>
+        <div class="deck-item"><p><strong>Aprendizaje No Supervisado:</strong> el modelo recibe datos crudos sin ningún tipo de etiqueta ni guía humana. Su objetivo es explorar la información para encontrar patrones ocultos, anomalías o agrupaciones lógicas por sí mismo (muy utilizado en la segmentación de clientes de mercado).</p></div>
+        <div class="deck-item"><p><strong>Aprendizaje por Refuerzo:</strong> inspirado en la psicología conductista. El algoritmo (denominado "agente") interactúa con un entorno dinámico y aprende mediante un sistema de prueba y error, donde recibe recompensas por acciones correctas y penalizaciones por errores, optimizando su comportamiento a largo plazo (esencial en robótica y videojuegos complejos).</p></div>
+      </li>
+
+      <li class="deck-divider">
+        <b>Concluimos la primera parte de nuestra sesión</b>
+        <small>Semana 1 · Continuamos…</small>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">5</span>Pilares de la IA moderna y los modelos de lenguaje</h3>
+        <p>El auge actual de los chatbots se debe a la convergencia de varios conceptos técnicos clave:</p>
+        <div class="deck-item"><p><strong>LLM (Large Language Model - Modelos de Lenguaje Grandes):</strong> redes neuronales masivas entrenadas con corpus de texto gigantescos (libros, artículos, código web) compuestos por miles de millones de parámetros. Su función no es "pensar" en el sentido humano, sino predecir con una precisión milimétrica cuál es la palabra más probable que debe seguir a la anterior basándose en el contexto estadístico.</p></div>
+        <div class="deck-item"><p><strong>IA Generativa (GenAI):</strong> una rama específica de la IA enfocada en la creación de contenidos totalmente nuevos y originales (texto, imágenes, audio, video) a partir de descripciones textuales.</p></div>
+        <div class="deck-item"><p><strong>Tokens:</strong> es la unidad básica de procesamiento de un LLM. Los modelos no leen palabras completas, sino fragmentos de caracteres. Como regla general, un token equivale aproximadamente a 4 caracteres o a 0.75 palabras en inglés. Comprender los tokens es clave, ya que los modelos tienen un límite de memoria de procesamiento (ventana de contexto).</p></div>
+        <div class="deck-item"><p><strong>Alucinación:</strong> es un fenómeno crítico de la IA generativa donde el modelo produce respuestas que suenan coherentes, persuasivas y totalmente lógicas, pero que son factualmente falsas o inventadas. Ocurre porque el modelo prioriza la probabilidad estadística de la estructura del lenguaje sobre la veracidad histórica o científica de los datos.</p></div>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">6</span>El paisaje de los chatbots líderes del momento</h3>
+        <p>El mercado actual está dominado por cuatro grandes plataformas. Conocer sus arquitecturas y filosofías comerciales es vital para la navegación experta:</p>
+        <div class="deck-item">
+          <p><strong>ChatGPT (OpenAI):</strong> el pionero indiscutible. Destaca por su versatilidad general, ecosistema de plugins y GPTs personalizados. Cuenta con capacidades avanzadas de voz en tiempo real y análisis avanzado de datos mediante Python integrado.</p>
+          <p class="deck-tip">En ChatGPT: exprimir el Advanced Voice Mode para practicar idiomas o hacer brainstorming conversacional; utilizar la sección de Custom Instructions para que el bot recuerde tu profesión y preferencias permanentemente sin tener que repetirlas en cada chat; e implementar la función de Canvas para editar textos o códigos en paralelo junto a la ventana de chat.</p>
+        </div>
+        <div class="deck-item">
+          <p><strong>Claude (Anthropic):</strong> creado bajo los principios de la "IA Constitucional" enfocada en la seguridad y la ética. Es ampliamente reconocido por tener la mejor capacidad de redacción lírica, un tono altamente humano y empático, y una de las ventanas de contexto más estables del mercado para analizar textos legales u obras literarias extensas.</p>
+          <p class="deck-tip">En Claude: activar la función de Artifacts, la cual abre una pantalla dividida interactiva al lado del chat donde puedes visualizar páginas web completas en HTML, diagramas SVG o códigos funcionales en tiempo real sin entorpecer el hilo conversacional.</p>
+        </div>
+        <div class="deck-item">
+          <p><strong>Gemini (Google):</strong> un modelo concebido desde su origen de manera multimodal nativa (procesa texto, audio, video y código simultáneamente sin necesidad de módulos externos). Su gran ventaja radica en su integración directa con el ecosistema de Google (Drive, Gmail, Maps, Docs) y en poseer ventanas de contexto masivas que alcanzan millones de tokens.</p>
+          <p class="deck-tip">En Gemini: utilizar las Extensiones de Google Workspace. Al escribir "@Google Drive" o "@Gmail" dentro del chat, puedes ordenarle a la IA que busque un dato específico dentro de tus correos o que resuma una hoja de cálculo almacenada en tu nube privada de forma directa.</p>
+        </div>
+        <div class="deck-item">
+          <p><strong>DeepSeek:</strong> la herramienta que revolucionó el procesamiento lógico de bajo costo. Destaca de forma sobresaliente en tareas puramente analíticas, resolución de problemas matemáticos complejos, debugging y generación de código de programación, ofreciendo un desglose explícito de su árbol de razonamiento interno antes de emitir cualquier respuesta.</p>
+          <p class="deck-tip">En DeepSeek: activar manualmente la opción de DeepThink (Razonamiento Profundo). Esto obliga al sistema a mostrar de forma transparente su proceso mental de "pensamiento secuencial", lo que reduce las alucinaciones en problemas de alta complejidad técnica o de ingeniería de software.</p>
+        </div>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">7</span>Conclusión</h3>
+        <p>El estudio de los fundamentos de la Inteligencia Artificial permite comprender que los sistemas actuales operan bajo una estructura jerárquica de capas conceptuales. La Inteligencia Artificial como marco general simula los procesos cognitivos humanos; sin embargo, las aplicaciones del mundo real y los chatbots que utilizamos cotidianamente pertenecen al dominio de la IA Débil o Especializada, la cual se ejecuta a través de algoritmos de Machine Learning y arquitecturas complejas de Deep Learning o redes neuronales artificiales.</p>
+        <p>El verdadero potencial de estas tecnologías en el día a día no radica únicamente en su sofisticada programación matemática, sino en la capacidad del usuario para interactuar con ellas de manera estratégica mediante el Prompt Engineering. Las herramientas basadas en Modelos de Lenguaje Grandes (LLM) e Inteligencia Artificial Generativa son sumamente sensibles a la estructura semántica y contextual que reciben. Por lo tanto, para mitigar riesgos técnicos inherentes como las alucinaciones informáticas y optimizar la ventana de consumo de tokens, es mandatorio adoptar estructuras anatómicas formales en cada consigna.</p>
+        <p>En última instancia, el rendimiento y la precisión de la IA generativa se rigen por la regla fundamental de los sistemas de información: "Basura entra, basura sale". La calidad del resultado final depende en un 100% de la calidad, el rol, las restricciones y el contexto explícito que seamos capaces de estructurar en nuestra petición. La IA no debe concebirse como un motor estático de comandos, sino como un canal conversacional continuo que requiere una iteración humana constante para alcanzar respuestas de valor profesional.</p>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">8</span>Bibliografías</h3>
+        <ul class="deck-refs">
+          <li>Anthropic. (2026). <em>Claude</em> (Versión Claude 3.5 Sonnet / 3.7) [Software de gran modelo de lenguaje]. <a href="https://www.anthropic.com" target="_blank" rel="noopener noreferrer">anthropic.com</a></li>
+          <li>DeepSeek. (2026). <em>DeepSeek-R1 / DeepThink</em> [Software de modelo de lenguaje orientado al razonamiento]. <a href="https://www.deepseek.com" target="_blank" rel="noopener noreferrer">deepseek.com</a></li>
+          <li>Google. (2026). <em>Gemini</em> [Software de modelo de lenguaje multimodal nativo]. <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">gemini.google.com</a></li>
+          <li>OpenAI. (2026). <em>ChatGPT</em> (Versión GPT-4o) [Software de gran modelo de lenguaje]. <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">chatgpt.com</a></li>
+        </ul>
+      </li>
+
+      <li class="deck-divider">
+        <b>Semana 1 completada — ¡Felicidades!</b>
+        <small>Éxito en tu evaluación</small>
+      </li>
+    </ul>
   </section>
 </main>
 
