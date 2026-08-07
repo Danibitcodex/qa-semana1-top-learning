@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q&amp;A Semana 1 | Inteligencia Artificial | Top Learning</title>
+<meta name="description" content="Consulta rápida de las 76 preguntas y respuestas de la Semana 1 del programa Inteligencia Artificial y Automatización con n8n: fundamentos de IA, ChatGPT, prompts, privacidad, planes, Codex y plataforma Top Learning.">
+<meta name="theme-color" content="#070B2D">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Q&amp;A rápido — Semana 1 | Top Learning">
+<meta property="og:description" content="Fundamentos de Inteligencia Artificial y uso inicial de ChatGPT. 76 preguntas respondidas, buscador y filtros por categoría.">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Top Learning">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070B2D'/%3E%3Ccircle cx='20' cy='22' r='5' fill='%236D3BFF'/%3E%3Ccircle cx='44' cy='18' r='4' fill='%23E6348C'/%3E%3Ccircle cx='42' cy='44' r='5' fill='%23F7B32B'/%3E%3Ccircle cx='20' cy='44' r='4' fill='%238B5CF6'/%3E%3Cg stroke='%238B5CF6' stroke-width='2.5' opacity='.85'%3E%3Cline x1='20' y1='22' x2='44' y2='18'/%3E%3Cline x1='20' y1='22' x2='42' y2='44'/%3E%3Cline x1='20' y1='22' x2='20' y2='44'/%3E%3Cline x1='42' y1='44' x2='44' y2='18'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#070B2D;
+    --bg-2:#0D123D;
+    --card:#141A4F;
+    --card-open:#1A2160;
+    --purple:#6D3BFF;
+    --violet:#8B5CF6;
+    --magenta:#E6348C;
+    --yellow:#F7B32B;
+    --white:#FFFFFF;
+    --muted:#BBC3E4;
+    --warn:#F59E0B;
+    --safe:#22C55E;
+    --danger:#EF4444;
+    --line:rgba(139,92,246,.28);
+    --line-strong:rgba(139,92,246,.6);
+    --radius:16px;
+    --shadow:0 10px 30px rgba(3,6,25,.55);
+    --maxw:1180px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--white);
+    font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    overflow-x:hidden;
+  }
+  img,svg{max-width:100%}
+  a{color:#C4B5FD}
+  a:hover{color:var(--white)}
+  :focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:8px}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 18px}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+  /* ---------- CABECERA ---------- */
+  .site-header{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(135deg,#070B2D,#24105E,#6D3BFF);
+    border-bottom:1px solid var(--line);
+  }
+  .site-header::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(120% 90% at 85% 10%,rgba(230,52,140,.28),transparent 60%),
+               radial-gradient(90% 80% at 0% 100%,rgba(7,11,45,.85),transparent 65%);
+    pointer-events:none;
+  }
+  .net{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none}
+  .header-inner{position:relative;z-index:2;padding:22px 0 30px}
+  .brandbar{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px}
+  /* Espacio reservado para el archivo oficial del logotipo Top Learning.
+     Sustituir el bloque .brand-type por: <img src="logo-top-learning.svg" alt="Top Learning" class="brand-logo"> */
+  .brand-slot{display:flex;align-items:center;gap:12px;padding:8px 14px;border:1px solid rgba(255,255,255,.28);border-radius:12px;background:rgba(7,11,45,.42)}
+  .brand-logo{display:block;height:38px;width:auto}
+  .brand-type{margin:0;font-size:1.02rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;line-height:1.2}
+  .brand-type span{color:var(--yellow)}
+  .brand-mark{width:26px;height:26px;flex:0 0 auto}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:6px 12px;border-radius:999px;font-size:.82rem;font-weight:700;
+    background:rgba(7,11,45,.5);border:1px solid rgba(255,255,255,.25);color:#EDE9FE;
+    letter-spacing:.03em;
+  }
+  .pill.level{border-color:rgba(247,179,43,.65);color:var(--yellow)}
+  .program{margin:20px 0 0;font-size:.95rem;font-weight:700;color:#E9E5FF;letter-spacing:.02em}
+  h1{margin:6px 0 6px;font-size:clamp(2rem,7vw,3.2rem);line-height:1.08;letter-spacing:-.01em}
+  h1 .accent{background:linear-gradient(90deg,var(--yellow),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .subtitle{margin:0;font-size:clamp(1rem,3.4vw,1.22rem);color:#E4E1FF;max-width:60ch}
+
+  /* ---------- INTRO ---------- */
+  .intro{padding:26px 0 4px}
+  .intro p{margin:0 0 14px;color:var(--muted);max-width:78ch}
+  .note{
+    display:flex;gap:12px;align-items:flex-start;
+    background:rgba(245,158,11,.10);border:1px solid rgba(245,158,11,.45);
+    border-left:4px solid var(--warn);
+    padding:12px 14px;border-radius:12px;color:#FDE9C8;max-width:78ch;
+  }
+  .note strong{color:var(--warn)}
+
+  /* ---------- INDICADORES ---------- */
+  .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0 6px;padding:0;list-style:none}
+  .stat{background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:14px}
+  .stat b{display:block;font-size:1.45rem;line-height:1.2;color:var(--yellow)}
+  .stat span{font-size:.88rem;color:var(--muted)}
+
+  /* ---------- TOOLBAR ---------- */
+  .toolbar{
+    position:sticky;top:0;z-index:30;
+    margin-top:22px;padding:14px 0 10px;
+    background:rgba(7,11,45,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .searchbox{position:relative;display:flex;align-items:center}
+  .searchbox .icon{position:absolute;left:14px;width:20px;height:20px;color:var(--violet);pointer-events:none}
+  #search{
+    width:100%;padding:14px 108px 14px 44px;font-size:16px;
+    color:var(--white);background:var(--card);
+    border:1px solid var(--line-strong);border-radius:14px;
+    font-family:inherit;
+  }
+  #search::placeholder{color:#9AA3CE}
+  #search:focus{border-color:var(--yellow);box-shadow:0 0 0 3px rgba(247,179,43,.22);outline:none}
+  #clearSearch{
+    position:absolute;right:8px;padding:8px 12px;min-height:38px;
+    border-radius:10px;border:1px solid var(--line-strong);
+    background:rgba(109,59,255,.22);color:#E9E5FF;font-size:.85rem;font-weight:600;cursor:pointer;
+  }
+  #clearSearch:hover{background:rgba(109,59,255,.4)}
+  .filters{display:flex;gap:8px;overflow-x:auto;padding:12px 2px 4px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+  .chip{
+    flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;
+    padding:10px 14px;min-height:44px;border-radius:999px;cursor:pointer;
+    background:var(--bg-2);border:1px solid var(--line);color:#DDE1F5;
+    font-size:.9rem;font-weight:600;font-family:inherit;white-space:nowrap;
+    transition:transform .15s ease,border-color .15s ease,background .15s ease;
+  }
+  .chip .count{font-size:.78rem;padding:1px 8px;border-radius:999px;background:rgba(139,92,246,.22);color:#D9D2FF}
+  .chip:hover{border-color:var(--line-strong)}
+  .chip[aria-pressed="true"]{
+    background:linear-gradient(135deg,rgba(109,59,255,.85),rgba(230,52,140,.75));
+    border-color:var(--yellow);color:#fff;
+  }
+  .chip[aria-pressed="true"] .count{background:rgba(7,11,45,.45);color:#fff}
+  .chip[aria-pressed="true"]::before{content:"✓";font-weight:800;color:var(--yellow)}
+  .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:6px 0 2px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:10px 14px;min-height:44px;border-radius:10px;cursor:pointer;
+    background:var(--bg-2);border:1px solid var(--line);color:#E4E7F8;
+    font-size:.88rem;font-weight:600;font-family:inherit;
+  }
+  .btn:hover{border-color:var(--line-strong);background:#161C55}
+  .counter{margin-left:auto;font-size:.88rem;color:var(--muted)}
+  .counter b{color:var(--white)}
+
+  /* ---------- TARJETAS ---------- */
+  .list{padding:20px 0 10px;display:flex;flex-direction:column;gap:14px}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-left:4px solid transparent;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    transition:transform .18s ease,border-color .18s ease,background .18s ease;
+    scroll-margin-top:150px;
+  }
+  .card:hover{transform:translateY(-2px);border-color:var(--line-strong)}
+  .card[open]{background:var(--card-open);border-left-color:var(--violet)}
+  .card.sec{border-left-color:rgba(34,197,94,.55)}
+  .card.sec[open]{border-left-color:var(--safe)}
+  .card > summary{
+    display:flex;gap:14px;align-items:flex-start;
+    padding:16px;cursor:pointer;list-style:none;border-radius:var(--radius);
+  }
+  .card > summary::-webkit-details-marker{display:none}
+  .card > summary::marker{content:""}
+  .num{
+    flex:0 0 auto;min-width:42px;height:42px;padding:0 8px;
+    display:inline-flex;align-items:center;justify-content:center;
+    border-radius:12px;font-weight:800;font-size:1rem;
+    color:var(--yellow);background:rgba(247,179,43,.12);border:1px solid rgba(247,179,43,.4);
+  }
+  .qwrap{flex:1 1 auto;min-width:0}
+  .q{display:block;font-weight:700;font-size:1.02rem;color:var(--white);margin-bottom:8px}
+  .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .badge{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:.74rem;font-weight:700;letter-spacing:.02em;
+    padding:3px 9px;border-radius:999px;
+    background:rgba(109,59,255,.2);border:1px solid rgba(139,92,246,.5);color:#DCD5FF;
+  }
+  .badge.sec{background:rgba(34,197,94,.14);border-color:rgba(34,197,94,.55);color:#B7F0C9}
+  .badge.pending{background:rgba(245,158,11,.14);border-color:rgba(245,158,11,.6);color:#FBDCA3}
+  .tag{font-size:.74rem;padding:3px 9px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#C7CDEA}
+  .chev{flex:0 0 auto;width:26px;height:26px;margin-top:8px;color:var(--violet);transition:transform .2s ease}
+  .card[open] .chev{transform:rotate(180deg);color:var(--yellow)}
+  .answer{padding:2px 16px 4px 16px;color:#E6E9F8}
+  .answer p{margin:0 0 12px}
+  .answer ul,.answer ol{margin:0 0 12px;padding-left:22px}
+  .answer li{margin:0 0 6px}
+  .answer li::marker{color:var(--violet)}
+  .answer strong{color:#FFFFFF}
+  .answer code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.92em;
+    background:rgba(109,59,255,.2);border:1px solid var(--line);padding:1px 6px;border-radius:6px;color:#E5DEFF;
+  }
+  .answer blockquote{
+    margin:0 0 12px;padding:10px 14px;border-left:3px solid var(--yellow);
+    background:rgba(247,179,43,.08);border-radius:0 10px 10px 0;color:#FBEBCB;
+  }
+  .answer .flow{
+    display:block;padding:10px 14px;margin:0 0 12px;border-radius:10px;
+    background:rgba(109,59,255,.16);border:1px solid var(--line);font-weight:600;color:#E9E4FF;
+  }
+  .answer .alert{
+    margin:0 0 12px;padding:10px 14px;border-radius:10px;
+    background:rgba(245,158,11,.10);border:1px solid rgba(245,158,11,.45);border-left:4px solid var(--warn);color:#FDE9C8;
+  }
+  .answer .safebox{
+    margin:0 0 12px;padding:10px 14px;border-radius:10px;
+    background:rgba(34,197,94,.10);border:1px solid rgba(34,197,94,.4);border-left:4px solid var(--safe);color:#CDF3D9;
+  }
+  .src{
+    display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;
+    padding:6px 12px;border-radius:999px;text-decoration:none;
+    background:rgba(139,92,246,.14);border:1px solid var(--line-strong);color:#D7CEFF;
+  }
+  .src:hover{background:rgba(139,92,246,.3);color:#fff}
+  .src::after{content:"↗";font-size:.9em}
+  .sources{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+  .cardactions{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 16px}
+  .btn-ghost{
+    display:inline-flex;align-items:center;gap:7px;padding:9px 13px;min-height:42px;
+    border-radius:10px;cursor:pointer;font-family:inherit;font-size:.85rem;font-weight:600;
+    background:rgba(255,255,255,.05);border:1px solid var(--line);color:#DDE1F5;
+  }
+  .btn-ghost:hover{background:rgba(109,59,255,.25);border-color:var(--line-strong)}
+  mark{background:rgba(247,179,43,.35);color:#FFF3D6;padding:0 2px;border-radius:4px}
+
+  .empty{
+    display:none;text-align:center;padding:40px 20px;border:1px dashed var(--line-strong);
+    border-radius:var(--radius);background:var(--bg-2);color:var(--muted);
+  }
+  .empty.show{display:block}
+  .empty b{display:block;color:var(--white);margin-bottom:6px;font-size:1.05rem}
+
+  /* ---------- PIE ---------- */
+  .site-footer{
+    margin-top:34px;padding:28px 0 40px;
+    background:var(--bg-2);border-top:1px solid var(--line);color:var(--muted);
+  }
+  .site-footer p{margin:0 0 8px}
+  .site-footer .legal{color:#E6E9F8;font-weight:600}
+  .site-footer .disclaimer{
+    margin-top:14px;padding:12px 14px;border-radius:12px;
+    background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.35);border-left:4px solid var(--danger);color:#FBD3D3;
+    max-width:78ch;
+  }
+
+  #toTop{
+    position:fixed;right:16px;bottom:16px;z-index:40;
+    width:52px;height:52px;border-radius:50%;cursor:pointer;
+    display:none;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,var(--purple),var(--magenta));
+    border:1px solid rgba(255,255,255,.3);color:#fff;font-size:1.2rem;
+    box-shadow:var(--shadow);
+  }
+  #toTop.show{display:flex}
+  #toast{
+    position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);
+    z-index:60;padding:12px 18px;border-radius:12px;
+    background:#101646;border:1px solid var(--line-strong);color:#fff;font-weight:600;
+    box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease;
+  }
+  #toast.show{opacity:1;transform:translate(-50%,0)}
+
+  @media (min-width:700px){
+    .stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .header-inner{padding:28px 0 42px}
+    .answer{padding-left:74px;padding-right:22px}
+    .cardactions{padding-left:74px}
+    .card > summary{padding:20px}
+    .q{font-size:1.1rem}
+  }
+  @media (min-width:1000px){
+    .wrap{padding:0 28px}
+    .intro{padding-top:34px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+    .card:hover{transform:none}
+  }
+  @media print{
+    .toolbar,#toTop,.cardactions,#toast{display:none !important}
+    body{background:#fff;color:#000}
+    .card{background:#fff;border-color:#999;box-shadow:none}
+  }
+</style>
+</head>
+<body>
+
+<a class="sr-only" href="#preguntas">Saltar al listado de preguntas</a>
+
+<header class="site-header">
+  <svg class="net" viewBox="0 0 1200 320" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <g stroke="#8B5CF6" stroke-width="1" opacity=".55">
+      <line x1="60" y1="70" x2="230" y2="150"/><line x1="230" y1="150" x2="410" y2="60"/>
+      <line x1="410" y1="60" x2="600" y2="170"/><line x1="600" y1="170" x2="780" y2="80"/>
+      <line x1="780" y1="80" x2="960" y2="180"/><line x1="960" y1="180" x2="1140" y2="90"/>
+      <line x1="230" y1="150" x2="300" y2="270"/><line x1="600" y1="170" x2="520" y2="280"/>
+      <line x1="960" y1="180" x2="880" y2="285"/><line x1="60" y1="70" x2="120" y2="250"/>
+      <line x1="410" y1="60" x2="300" y2="270"/><line x1="780" y1="80" x2="880" y2="285"/>
+    </g>
+    <g fill="#F7B32B" opacity=".85">
+      <circle cx="60" cy="70" r="3.5"/><circle cx="410" cy="60" r="3"/><circle cx="780" cy="80" r="3.5"/><circle cx="1140" cy="90" r="3"/>
+    </g>
+    <g fill="#E6348C" opacity=".85">
+      <circle cx="230" cy="150" r="4"/><circle cx="600" cy="170" r="4.5"/><circle cx="960" cy="180" r="4"/>
+    </g>
+    <g fill="#FFFFFF" opacity=".6">
+      <circle cx="120" cy="250" r="2.5"/><circle cx="300" cy="270" r="2.5"/><circle cx="520" cy="280" r="2.5"/><circle cx="880" cy="285" r="2.5"/>
+    </g>
+  </svg>
+
+  <div class="wrap header-inner">
+    <div class="brandbar">
+      <!-- Espacio reservado para el logotipo oficial de Top Learning -->
+      <div class="brand-slot" data-logo-slot>
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <circle cx="20" cy="22" r="5" fill="#6D3BFF"/><circle cx="44" cy="18" r="4" fill="#E6348C"/>
+          <circle cx="42" cy="44" r="5" fill="#F7B32B"/><circle cx="20" cy="44" r="4" fill="#8B5CF6"/>
+          <g stroke="#8B5CF6" stroke-width="2.5" opacity=".85">
+            <line x1="20" y1="22" x2="44" y2="18"/><line x1="20" y1="22" x2="42" y2="44"/>
+            <line x1="20" y1="22" x2="20" y2="44"/><line x1="42" y1="44" x2="44" y2="18"/>
+          </g>
+        </svg>
+        <p class="brand-type">Top <span>Learning</span></p>
+      </div>
+      <span class="pill level">Nivel 1 · Semana 1</span>
+      <span class="pill">Consulta rápida</span>
+    </div>
+
+    <p class="program">Programa: Inteligencia Artificial y Automatización con n8n</p>
+    <h1>Q&amp;A <span class="accent">rápido</span></h1>
+    <p class="subtitle">Fundamentos de Inteligencia Artificial y uso inicial de ChatGPT</p>
+  </div>
+</header>
+
+<main>
+  <section class="wrap intro" aria-labelledby="intro-title">
+    <h2 id="intro-title" class="sr-only">Introducción</h2>
+    <p>Consulta las dudas más frecuentes de la Semana 1. Busca una palabra, selecciona una categoría o abre una pregunta para consultar la explicación completa.</p>
+    <p class="note"><span aria-hidden="true">⚠️</span><span><strong>Importante:</strong> las respuestas importantes deben verificarse, especialmente en temas médicos, legales, financieros, académicos o laborales.</span></p>
+
+    <ul class="stats">
+      <li class="stat"><b>76</b><span>preguntas respondidas</span></li>
+      <li class="stat"><b>6</b><span>categorías principales</span></li>
+      <li class="stat"><b>Semana 1</b><span>Nivel 1 del programa</span></li>
+      <li class="stat"><b>Consulta</b><span>rápida y buscable</span></li>
+    </ul>
+  </section>
+
+  <div class="toolbar">
+    <div class="wrap">
+      <div class="searchbox">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke-linecap="round"/>
+        </svg>
+        <label class="sr-only" for="search">Buscar una pregunta</label>
+        <input id="search" type="search" autocomplete="off" placeholder="Buscar: prompt, privacidad, ChatGPT, Codex, plataforma…" aria-describedby="counter">
+        <button id="clearSearch" type="button" aria-label="Limpiar la búsqueda">Limpiar</button>
+      </div>
+
+      <div class="filters" id="filters" role="group" aria-label="Filtrar preguntas por categoría"></div>
+
+      <div class="controls">
+        <button class="btn" type="button" id="expandAll">＋ Expandir todas</button>
+        <button class="btn" type="button" id="collapseAll">－ Cerrar todas</button>
+        <button class="btn" type="button" id="resetAll">↺ Limpiar filtros</button>
+        <p class="counter" id="counter" role="status" aria-live="polite">Mostrando <b>76</b> de 76 preguntas</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="wrap" id="preguntas" aria-labelledby="preguntas-title">
+    <h2 id="preguntas-title" class="sr-only">Preguntas frecuentes de la Semana 1</h2>
+    <div class="list" id="list"></div>
+    <div class="empty" id="empty">
+      <b>No encontramos una pregunta relacionada.</b>
+      Prueba con otra palabra o revisa las categorías.
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="legal">© Top Learning Online, S.C., 2026. Todos los derechos reservados.</p>
+    <p>Material educativo de consulta rápida — Semana 1.</p>
+    <p class="disclaimer">La Inteligencia Artificial puede cometer errores. Verifica la información antes de tomar decisiones importantes.</p>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="Volver arriba">↑</button>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  var CATS = [
+    {id:"todas",       label:"Todas"},
+    {id:"basicos",     label:"Conceptos básicos"},
+    {id:"fundamentos", label:"Fundamentos de IA"},
+    {id:"dudas",       label:"Dudas reales del grupo"},
+    {id:"herramientas",label:"Herramientas y automatización"},
+    {id:"privacidad",  label:"Privacidad y responsabilidad"},
+    {id:"plataforma",  label:"Plataforma Top Learning"}
+  ];
+
+  var SRC = {
+    acceso:   "https://help.openai.com/en/articles/9125172",
+    faqEs:    "https://help.openai.com/es-es/articles/12677804-qu%C3%A9-es-chatgpt-preguntas-frecuentes",
+    modelos:  "https://help.openai.com/en/articles/7842364-how-chatgpt-and-our-language-models-are-developed/",
+    gpts:     "https://openai.com/index/gpts-are-gpts/",
+    queEs:    "https://help.openai.com/en/articles/6783457-what-is-chatgpt",
+    datos:    "https://help.openai.com/en/articles/7730893-data-controls-faq",
+    memoria:  "https://help.openai.com/articles/8590148-memory-faq",
+    precios:  "https://chatgpt.com/pricing/",
+    codex:    "https://openai.com/es-419/codex/",
+    codexWork:"https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+  };
+
+  function fuente(url, texto){
+    return '<p class="sources"><a class="src" href="' + url + '" target="_blank" rel="noopener noreferrer">' + (texto || "Consultar fuente oficial") + '</a></p>';
+  }
+
+  var QA = [
+{ n:1, c:"basicos", tags:["ChatGPT","Acceso"],
+  q:"¿Cómo entro a ChatGPT?",
+  a:`<p>Se puede acceder desde el sitio oficial de ChatGPT o desde su aplicación. En la página principal se selecciona <strong>Iniciar sesión</strong> y se utiliza el correo, cuenta de Google, Apple u otro método disponible.</p>
+     <p>Es importante entrar siempre con el mismo método para conservar el historial de conversaciones.</p>` + fuente(SRC.acceso) },
+
+{ n:2, c:"basicos", tags:["ChatGPT","Cuenta"],
+  q:"¿Necesito crear una cuenta?",
+  a:`<p>Es posible utilizar algunas funciones sin una cuenta, pero crearla permite guardar conversaciones, personalizar la experiencia, consultar el historial y administrar los datos.</p>` + fuente(SRC.acceso) },
+
+{ n:3, c:"basicos", tags:["ChatGPT","Planes"],
+  q:"¿ChatGPT es gratuito?",
+  a:`<p>Existe acceso gratuito, aunque algunas funciones, modelos, límites de uso y herramientas pueden depender del plan disponible.</p>
+     <p><strong>No necesitan pagar para comenzar a practicar los fundamentos.</strong></p>` },
+
+{ n:4, c:"basicos", tags:["IA"],
+  q:"¿Qué es la Inteligencia Artificial?",
+  a:`<p>La Inteligencia Artificial es un campo de la informática que desarrolla sistemas capaces de realizar tareas asociadas con capacidades humanas, como reconocer patrones, procesar lenguaje, clasificar información, aprender de datos o producir contenido.</p>` },
+
+{ n:5, c:"basicos", tags:["IA","ChatGPT"],
+  q:"¿Qué puede hacer una Inteligencia Artificial?",
+  a:`<p>Puede analizar información, encontrar patrones, clasificar datos, generar texto o imágenes, resumir documentos, traducir, ayudar a programar, responder preguntas y apoyar ciertos procesos de decisión.</p>
+     <p>Su capacidad depende del modelo, los datos, las herramientas conectadas y la tarea solicitada.</p>` + fuente(SRC.faqEs) },
+
+{ n:6, c:"basicos", tags:["IA"],
+  q:"¿Por qué una IA no es una persona?",
+  a:`<p>Porque es un sistema computacional. No tiene cuerpo, biografía, experiencias humanas ni necesidades propias.</p>
+     <p>Aunque pueda escribir de manera natural o expresar frases emocionales, eso no demuestra que sienta emociones o posea conciencia humana.</p>` },
+
+{ n:7, c:"basicos", tags:["IA","Modelos"],
+  q:"¿La IA piensa igual que nosotros?",
+  a:`<p>No. Puede producir respuestas que parecen razonadas, pero trabaja procesando información, identificando patrones y calculando respuestas probables.</p>
+     <p>No debemos interpretar una conversación fluida como prueba de pensamiento humano. Los modelos de lenguaje aprenden patrones y generan continuaciones basadas en el contexto recibido.</p>` + fuente(SRC.modelos) },
+
+{ n:8, c:"basicos", tags:["ChatGPT"],
+  q:"¿Qué es ChatGPT?",
+  a:`<p>ChatGPT es un asistente de Inteligencia Artificial diseñado para conversar y seguir instrucciones.</p>
+     <p>Puede utilizarse para escribir, estudiar, organizar ideas, analizar archivos, resolver ejercicios, planificar y apoyar otras tareas.</p>` + fuente(SRC.faqEs) },
+
+{ n:9, c:"basicos", tags:["ChatGPT","IA"],
+  q:"¿Qué significa GPT?",
+  a:`<p>GPT significa <strong>Generative Pre-trained Transformer</strong>, que puede traducirse como Transformador Generativo Preentrenado:</p>
+     <ul>
+       <li><strong>Generativo:</strong> produce contenido.</li>
+       <li><strong>Preentrenado:</strong> fue entrenado antes de que el usuario lo utilizara.</li>
+       <li><strong>Transformer:</strong> utiliza una arquitectura especializada en relacionar elementos dentro de una secuencia de información.</li>
+     </ul>` + fuente(SRC.gpts) },
+
+{ n:10, c:"basicos", tags:["Chatbot","IA"],
+  q:"¿Qué es un chatbot?",
+  a:`<p>Es un sistema diseñado para interactuar mediante una conversación.</p>
+     <p>No todos los chatbots utilizan la misma tecnología: algunos siguen respuestas programadas y otros emplean modelos de IA capaces de generar respuestas nuevas.</p>` },
+
+{ n:11, c:"basicos", tags:["Prompt"],
+  q:"¿Qué es un prompt?",
+  a:`<p>Un prompt es la instrucción, pregunta, descripción o conjunto de datos que proporcionamos a una IA para indicarle qué necesitamos.</p>
+     <p><strong>Ejemplo demasiado general:</strong></p>
+     <blockquote>“Hazme una publicación.”</blockquote>
+     <p><strong>Ejemplo mejorado:</strong></p>
+     <blockquote>“Redacta una publicación educativa para adultos que comienzan a utilizar Inteligencia Artificial. Explica en menos de 120 palabras cómo ChatGPT puede apoyar su trabajo. Usa un tono profesional, tres ejemplos y termina con una pregunta.”</blockquote>
+     <p>La presentación oficial señala que la estructura y el contexto de la petición influyen directamente en la utilidad del resultado.</p>` },
+
+{ n:12, c:"basicos", tags:["Prompt"],
+  q:"¿Qué debe contener un buen prompt?",
+  a:`<p>Como estructura inicial puede incluir:</p>
+     <ol>
+       <li><strong>Rol:</strong> desde qué perspectiva debe responder.</li>
+       <li><strong>Contexto:</strong> situación o información necesaria.</li>
+       <li><strong>Tarea:</strong> qué debe hacer exactamente.</li>
+       <li><strong>Objetivo:</strong> para qué se utilizará.</li>
+       <li><strong>Formato:</strong> lista, tabla, correo, resumen, explicación, etcétera.</li>
+       <li><strong>Restricciones:</strong> extensión, tono, público, datos que debe evitar o requisitos que debe cumplir.</li>
+     </ol>
+     <p>No siempre se necesitan los seis elementos, pero mientras más importante sea la tarea, mayor precisión conviene aportar.</p>` },
+
+{ n:13, c:"basicos", tags:["Prompt","ChatGPT"],
+  q:"¿Tengo que escribir como programador?",
+  a:`<p>No. Se puede escribir utilizando lenguaje natural. Lo importante es expresar claramente la necesidad.</p>
+     <p>Después se puede mejorar la instrucción mediante preguntas, correcciones y ejemplos.</p>` },
+
+{ n:14, c:"basicos", tags:["Alucinaciones","IA"],
+  q:"¿La respuesta de la IA siempre es correcta?",
+  a:`<p>No. Puede equivocarse, inventar datos, confundir fechas, interpretar mal una instrucción o presentar información desactualizada.</p>
+     <p class="alert">Las respuestas importantes deben verificarse, especialmente en temas médicos, legales, financieros, académicos o laborales.</p>` },
+
+{ n:15, c:"basicos", tags:["Privacidad","Seguridad"],
+  q:"¿Debo introducir información privada en ChatGPT?",
+  a:`<p>No se deben introducir contraseñas, datos bancarios, códigos de acceso, expedientes confidenciales, información médica identificable, datos personales de terceros ni documentos internos sin autorización.</p>
+     <p class="safebox">Para practicar, conviene utilizar información ficticia o anonimizada.</p>` },
+
+{ n:16, c:"fundamentos", tags:["IA","Machine Learning"],
+  q:"¿Cuál es la diferencia entre IA y Machine Learning?",
+  a:`<p>La Inteligencia Artificial es el campo general. El <strong>Machine Learning</strong> o aprendizaje automático es una subárea que permite a los sistemas aprender patrones a partir de datos, en lugar de recibir todas las reglas escritas manualmente.</p>
+     <p>Una analogía simple:</p>
+     <ul>
+       <li><strong>IA:</strong> toda la universidad.</li>
+       <li><strong>Machine Learning:</strong> una facultad dentro de esa universidad.</li>
+     </ul>` },
+
+{ n:17, c:"fundamentos", tags:["Redes neuronales","Machine Learning"],
+  q:"¿Qué es una red neuronal artificial?",
+  a:`<p>Es un modelo matemático formado por unidades conectadas que procesan información y ajustan sus relaciones durante el entrenamiento.</p>
+     <p class="alert">Está inspirado de manera general en las neuronas biológicas, pero <strong>no es un cerebro humano digital</strong> ni una copia exacta del cerebro: son modelos matemáticos.</p>` },
+
+{ n:18, c:"fundamentos", tags:["Deep Learning","Machine Learning"],
+  q:"¿Qué es Deep Learning?",
+  a:`<p>El Deep Learning o aprendizaje profundo utiliza redes neuronales con múltiples capas. Es especialmente útil para procesar información compleja como imágenes, audio, texto y video.</p>
+     <p class="flow">Inteligencia Artificial → Machine Learning → Deep Learning.</p>` },
+
+{ n:19, c:"fundamentos", tags:["IA"],
+  q:"¿Qué es la IA estrecha o especializada?",
+  a:`<p>Es una IA creada para realizar tareas delimitadas. Puede ser muy competente en una actividad, pero eso no significa que tenga todas las capacidades intelectuales de una persona.</p>
+     <p>Los sistemas que utilizamos actualmente en el curso se estudian dentro de esta categoría de IA especializada.</p>` },
+
+{ n:20, c:"fundamentos", tags:["AGI","IA"],
+  q:"¿Qué es la Inteligencia Artificial General o AGI?",
+  a:`<p>Es una idea teórica de una máquina capaz de aprender y desenvolverse con flexibilidad en una gran variedad de áreas intelectuales, de manera comparable con un ser humano.</p>
+     <p><strong>No debe confundirse con los chatbots actuales.</strong></p>` },
+
+{ n:21, c:"fundamentos", tags:["ASI","IA"],
+  q:"¿Qué es la Superinteligencia Artificial o ASI?",
+  a:`<p>Es un escenario hipotético en el cual una IA superaría ampliamente las capacidades humanas en prácticamente todas las áreas cognitivas.</p>
+     <p>Actualmente es un concepto de análisis y debate, no una herramienta disponible para el público.</p>` },
+
+{ n:22, c:"fundamentos", tags:["Machine Learning","Entrenamiento"],
+  q:"¿Qué es el aprendizaje supervisado?",
+  a:`<p>Es un método de entrenamiento que utiliza ejemplos previamente etiquetados.</p>
+     <p>Por ejemplo, se proporciona al sistema un conjunto de correos marcados como:</p>
+     <ul><li>Spam.</li><li>No spam.</li></ul>
+     <p>El modelo aprende las diferencias y después intenta clasificar correos nuevos.</p>` },
+
+{ n:23, c:"fundamentos", tags:["Machine Learning","Entrenamiento"],
+  q:"¿Qué es el aprendizaje no supervisado?",
+  a:`<p>Es un método en el cual el sistema recibe datos sin etiquetas y busca estructuras, similitudes, agrupaciones o anomalías.</p>
+     <p>Por ejemplo, puede agrupar clientes según comportamientos de compra, aunque nadie haya definido previamente los grupos.</p>` },
+
+{ n:24, c:"fundamentos", tags:["Machine Learning","Entrenamiento"],
+  q:"¿Qué es el aprendizaje por refuerzo?",
+  a:`<p>Es un método donde un agente realiza acciones dentro de un entorno y recibe recompensas o penalizaciones. Mediante prueba y error busca mejorar su estrategia a largo plazo.</p>
+     <p>Se utiliza en áreas como robótica, juegos, optimización y control.</p>` },
+
+{ n:25, c:"fundamentos", tags:["LLM","Modelos"],
+  q:"¿Qué es un LLM?",
+  a:`<p>Un <strong>Large Language Model</strong> o modelo de lenguaje grande es un sistema entrenado con grandes cantidades de información textual para identificar patrones del lenguaje y producir respuestas coherentes.</p>
+     <p>Una explicación inicial útil es que genera la respuesta calculando qué tokens son apropiados según el contexto. Sin embargo, su funcionamiento completo es más complejo que simplemente “adivinar la siguiente palabra”.</p>` },
+
+{ n:26, c:"fundamentos", tags:["Tokens","LLM"],
+  q:"¿Qué es un token?",
+  a:`<p>Un token es una unidad pequeña en la que el modelo divide la información. Puede representar una palabra, parte de una palabra, un signo o una secuencia de caracteres.</p>
+     <p>Los límites de uso normalmente se calculan en tokens, no directamente en páginas o palabras. La equivalencia cambia según el idioma y el contenido, por lo que <strong>no debe enseñarse como una conversión exacta</strong>.</p>` },
+
+{ n:27, c:"fundamentos", tags:["Contexto","LLM"],
+  q:"¿Qué es la ventana de contexto?",
+  a:`<p>Es la cantidad de información que un modelo puede considerar dentro de una interacción determinada. Puede incluir instrucciones, mensajes anteriores, documentos y respuestas generadas.</p>
+     <p>Cuando una conversación o documento es demasiado extenso, el sistema puede perder detalles, resumirlos o dejar de considerar algunas partes.</p>` },
+
+{ n:28, c:"fundamentos", tags:["IA generativa"],
+  q:"¿Qué es la IA generativa?",
+  a:`<p>Es la rama de la IA que produce contenido nuevo a partir de instrucciones o ejemplos. Puede generar:</p>
+     <ul>
+       <li>Texto.</li><li>Imágenes.</li><li>Audio.</li><li>Video.</li>
+       <li>Código.</li><li>Presentaciones.</li><li>Estructuras de datos.</li>
+     </ul>
+     <p class="alert">Generar contenido nuevo no significa que todo el resultado sea verdadero, original o adecuado para publicarse sin revisión.</p>` },
+
+{ n:29, c:"fundamentos", tags:["Alucinaciones"],
+  q:"¿Qué es una alucinación de la IA?",
+  a:`<p>Es una respuesta incorrecta o inventada que se presenta con apariencia de seguridad y coherencia.</p>
+     <p>Ejemplos:</p>
+     <ul>
+       <li>Inventar un libro que no existe.</li>
+       <li>Crear una fecha falsa.</li>
+       <li>Atribuir una frase a una persona equivocada.</li>
+       <li>Proporcionar una referencia inexistente.</li>
+     </ul>
+     <p class="alert">Por eso, una respuesta convincente no necesariamente es una respuesta verdadera.</p>` },
+
+{ n:30, c:"fundamentos", tags:["Alucinaciones","Prompt"],
+  q:"¿Cómo puedo reducir las alucinaciones?",
+  a:`<p>Se pueden reducir mediante:</p>
+     <ul>
+       <li>Instrucciones precisas.</li>
+       <li>Datos y documentos confiables.</li>
+       <li>Solicitud de fuentes.</li>
+       <li>Separación entre hechos e inferencias.</li>
+       <li>Verificación externa.</li>
+       <li>Petición explícita de reconocer cuando no se tiene suficiente información.</li>
+     </ul>
+     <p><strong>No pueden eliminarse completamente solo con un prompt.</strong></p>` },
+
+{ n:31, c:"fundamentos", tags:["Prompt"],
+  q:"¿Un prompt perfecto garantiza una respuesta perfecta?",
+  a:`<p>No. Un buen prompt mejora la probabilidad de obtener un resultado útil, pero también influyen el modelo utilizado, la información disponible, las herramientas conectadas, los límites técnicos y la verificación humana.</p>
+     <p>La expresión “basura entra, basura sale” es una regla pedagógica útil, pero no debe interpretarse como que el resultado depende literalmente al 100 % del usuario.</p>` },
+
+{ n:32, c:"fundamentos", tags:["Prompt","Iteración"],
+  q:"¿Debo escribir todo correctamente desde el primer intento?",
+  a:`<p>No. El trabajo con IA es iterativo:</p>
+     <ol>
+       <li>Se formula una petición.</li>
+       <li>Se revisa la respuesta.</li>
+       <li>Se detectan errores o faltantes.</li>
+       <li>Se corrige la instrucción.</li>
+       <li>Se solicita una nueva versión.</li>
+       <li>Se valida el resultado.</li>
+     </ol>
+     <p>La IA debe entenderse como una interacción progresiva, no como una máquina a la que solamente se le da una orden una vez.</p>` },
+
+{ n:33, c:"fundamentos", tags:["ChatGPT","Herramientas"],
+  q:"¿Cuál es la diferencia entre ChatGPT, Claude, Gemini y DeepSeek?",
+  a:`<p>Los cuatro son asistentes basados en modelos de IA, pero pertenecen a empresas diferentes y poseen interfaces, modelos, ecosistemas, límites y herramientas distintas.</p>
+     <p>La presentación de Semana 1 los utiliza como ejemplos para enseñar que no existe una única herramienta adecuada para todas las tareas.</p>
+     <p>Una explicación inicial:</p>
+     <ul>
+       <li><strong>ChatGPT:</strong> uso general, conversación, creación, análisis y trabajo con herramientas.</li>
+       <li><strong>Claude:</strong> redacción, documentos extensos y creación mediante Artifacts.</li>
+       <li><strong>Gemini:</strong> integración con servicios del ecosistema de Google.</li>
+       <li><strong>DeepSeek:</strong> tareas analíticas, matemáticas y programación.</li>
+     </ul>
+     <p class="alert">Estas características pueden cambiar con las actualizaciones; no deben presentarse como rankings permanentes.</p>` },
+
+{ n:34, c:"fundamentos", tags:["Herramientas","Criterio"],
+  q:"¿Cuál chatbot es el mejor?",
+  a:`<p>No existe uno que sea universalmente el mejor. La elección depende de:</p>
+     <ul>
+       <li>Tipo de tarea.</li><li>Calidad esperada.</li><li>Herramientas necesarias.</li>
+       <li>Archivos que se utilizarán.</li><li>Presupuesto.</li><li>Privacidad.</li>
+       <li>Tiempo disponible.</li><li>Necesidad de verificar fuentes.</li>
+     </ul>
+     <p>El objetivo del diplomado no es memorizar marcas, sino desarrollar criterio para seleccionar la herramienta adecuada.</p>` },
+
+{ n:35, c:"fundamentos", tags:["Razonamiento","Modelos"],
+  q:"¿La opción de razonamiento muestra exactamente todo lo que la IA piensa?",
+  a:`<p>No debe asumirse que una interfaz muestra el proceso interno completo del modelo. Puede presentar una explicación, un resumen de razonamiento o pasos generados para ayudar al usuario, pero eso no equivale necesariamente a observar todos sus cálculos internos.</p>
+     <p>Esta precisión es importante al explicar funciones como modos de razonamiento profundo.</p>` },
+
+{ n:36, c:"fundamentos", tags:["ChatGPT","Buscador"],
+  q:"¿ChatGPT es lo mismo que un buscador de internet?",
+  a:`<p>No. Un buscador localiza páginas o resultados existentes. Un modelo de lenguaje genera una respuesta a partir de patrones, contexto y herramientas disponibles.</p>
+     <p>Algunas versiones de los asistentes pueden consultar internet, pero aun así se deben revisar las fuentes y distinguir entre información localizada e información generada.</p>` },
+
+{ n:37, c:"fundamentos", tags:["IA","Lenguaje"],
+  q:"¿Una IA comprende realmente lo que escribimos?",
+  a:`<p>Puede representar relaciones lingüísticas, seguir instrucciones y utilizar el contexto con mucha sofisticación. Sin embargo, no debemos asumir que comprende el mundo de la misma manera que una persona.</p>
+     <p>Para una clase inicial es suficiente explicar que procesa el lenguaje de manera matemática y produce respuestas funcionales, pero no posee una experiencia humana del significado.</p>` },
+
+{ n:38, c:"fundamentos", tags:["Contexto","Memoria"],
+  q:"¿La IA aprende automáticamente todo lo que le digo durante una conversación?",
+  a:`<p>Puede utilizar los mensajes de la conversación como contexto temporal para responder mejor. Eso no significa que cada mensaje modifique inmediatamente el modelo general o que la IA haya sido “entrenada nuevamente” por esa conversación.</p>
+     <p>También deben distinguirse tres conceptos:</p>
+     <ul>
+       <li>Contexto de la conversación.</li>
+       <li>Memoria o personalización disponible en una cuenta.</li>
+       <li>Entrenamiento general del modelo.</li>
+     </ul>` },
+
+{ n:39, c:"fundamentos", tags:["IA","Trabajo"],
+  q:"¿La IA puede sustituir completamente a una persona?",
+  a:`<p>Puede automatizar partes de una tarea, acelerar procesos y apoyar decisiones, pero sigue necesitando objetivos, supervisión, verificación y responsabilidad humana.</p>
+     <p>La pregunta correcta no es solamente “¿puede sustituirme?”, sino:</p>
+     <blockquote>“¿Qué partes repetitivas de mi trabajo puedo delegar y qué partes requieren criterio, ética, contexto y responsabilidad humana?”</blockquote>` },
+
+{ n:40, c:"fundamentos", tags:["Semana 1","IA"],
+  q:"¿Qué debemos recordar al terminar la Semana 1?",
+  a:`<p>Cinco ideas:</p>
+     <ol>
+       <li>La IA es un campo amplio; ChatGPT es solamente una aplicación.</li>
+       <li>Los modelos aprenden patrones a partir de datos.</li>
+       <li>Un chatbot no es una persona ni una fuente infalible.</li>
+       <li>La calidad de la instrucción influye en la respuesta.</li>
+       <li>Todo resultado importante debe revisarse, corregirse y verificarse.</li>
+     </ol>` },
+
+{ n:41, c:"dudas", tags:["Entrenamiento","Machine Learning"],
+  q:"Si una IA no siente dolor, ¿qué significa que reciba un castigo?",
+  a:`<p>En aprendizaje por refuerzo, un “castigo” no produce dolor ni emociones. Es simplemente una <strong>señal matemática negativa</strong> que indica que una acción produjo un resultado menos conveniente.</p>
+     <p>Por ejemplo:</p>
+     <ul>
+       <li>Acción correcta: recompensa de <code>+10</code>.</li>
+       <li>Acción incorrecta: recompensa de <code>-5</code>.</li>
+       <li>Objetivo: acumular la mayor recompensa posible.</li>
+     </ul>
+     <p>El sistema ajusta su comportamiento para elegir con mayor frecuencia las acciones que producen mejores resultados. El algoritmo optimiza una función matemática de recompensa: <strong>no tiene intención ni miedo a equivocarse</strong>.</p>
+     <p>La presentación oficial utiliza los términos recompensas y penalizaciones, pero deben entenderse matemáticamente, no emocionalmente.</p>` },
+
+{ n:42, c:"dudas", tags:["Entrenamiento","ChatGPT"],
+  q:"¿Quién decide cuáles son las recompensas y penalizaciones?",
+  a:`<p>Las definen quienes diseñan el sistema de entrenamiento. Primero establecen:</p>
+     <ul>
+       <li>El objetivo que debe alcanzar el agente.</li>
+       <li>Las acciones permitidas.</li>
+       <li>Las condiciones que representan éxito o error.</li>
+       <li>El valor de cada recompensa o penalización.</li>
+     </ul>
+     <p>En algunos procesos también participan evaluadores humanos que comparan respuestas e indican cuáles son preferibles. ChatGPT, por ejemplo, ha utilizado métodos de aprendizaje por refuerzo con retroalimentación humana.</p>` + fuente(SRC.queEs) },
+
+{ n:43, c:"dudas", tags:["Automatización","Entrenamiento"],
+  q:"¿Necesito utilizar premios y castigos para automatizar correos, ventas o WhatsApp?",
+  a:`<p>No. Un usuario principiante normalmente no entrena un modelo mediante aprendizaje por refuerzo.</p>
+     <p>Para automatizar correos o conversaciones se necesita principalmente:</p>
+     <ol>
+       <li>Definir el evento que inicia el proceso.</li>
+       <li>Proporcionar información o contexto.</li>
+       <li>Escribir instrucciones claras.</li>
+       <li>Establecer reglas y restricciones.</li>
+       <li>Conectar las herramientas.</li>
+       <li>Probar y validar los resultados.</li>
+     </ol>
+     <p>En niveles posteriores se estudiará cómo construir este tipo de flujo con automatización, APIs y supervisión humana.</p>` },
+
+{ n:44, c:"dudas", tags:["Privacidad","Entrenamiento"],
+  q:"¿Cada pregunta que hago entrena inmediatamente a ChatGPT?",
+  a:`<p>No. Una conversación no modifica instantáneamente el modelo general ni lo “reprograma” en tiempo real.</p>
+     <p>Dependiendo de la configuración de la cuenta, OpenAI puede utilizar algunas conversaciones para mejorar modelos posteriormente. Esto puede desactivarse en:</p>
+     <p class="flow">Configuración → Controles de datos → Mejorar el modelo para todos.</p>
+     <p>Al desactivarlo, las conversaciones nuevas permanecen en el historial, pero no se utilizan para entrenar los modelos.</p>` + fuente(SRC.datos) },
+
+{ n:45, c:"dudas", tags:["Contexto","Memoria"],
+  q:"¿Cuál es la diferencia entre contexto, memoria, instrucciones personalizadas y entrenamiento?",
+  a:`<p>Son cuatro cosas diferentes:</p>
+     <ul>
+       <li><strong>Contexto:</strong> información disponible dentro de la conversación actual.</li>
+       <li><strong>Memoria:</strong> datos que ChatGPT puede conservar para futuras conversaciones cuando la función está habilitada.</li>
+       <li><strong>Instrucciones personalizadas:</strong> indicaciones explícitas sobre quién es el usuario y cómo quiere recibir las respuestas. Personalizan la respuesta mediante contexto; <strong>no reentrenan el modelo base</strong>.</li>
+       <li><strong>Entrenamiento:</strong> proceso mediante el cual se desarrollan o mejoran los modelos generales.</li>
+     </ul>
+     <p>Agregar información personal o profesional a una conversación no significa que el modelo esté siendo entrenado exclusivamente para esa persona.</p>` + fuente(SRC.memoria) },
+
+{ n:46, c:"dudas", tags:["Memoria","ChatGPT"],
+  q:"¿Por qué ChatGPT parece recordar mi trabajo, mis gustos o experiencias?",
+  a:`<p>Puede ocurrir por tres razones:</p>
+     <ol>
+       <li>La información aparece anteriormente en la conversación.</li>
+       <li>Se encuentra en las instrucciones personalizadas.</li>
+       <li>La función de memoria está habilitada.</li>
+     </ol>
+     <p>El usuario puede revisar, corregir, borrar o desactivar la memoria desde <strong>Configuración → Personalización → Memoria</strong>.</p>` + fuente(SRC.memoria) },
+
+{ n:47, c:"dudas", tags:["IA","Identidad"],
+  q:"¿La IA tiene género, identidad o personalidad propia?",
+  a:`<p>No tiene sexo biológico, género humano ni identidad personal.</p>
+     <p>Puede adoptar un tono, nombre o estilo porque fue diseñado para conversar o porque el usuario se lo solicita. Esa personalidad es una forma de interacción, no evidencia de conciencia o identidad humana.</p>` },
+
+{ n:48, c:"dudas", tags:["Prompt","IA"],
+  q:"¿Está mal decirle “hola”, “por favor” o “gracias” a una IA?",
+  a:`<p>No está mal. La IA no necesita cortesía emocionalmente, pero entiende esas expresiones como parte del lenguaje.</p>
+     <p>Se puede escribir de manera natural. Lo importante es que, además de la cortesía, la instrucción indique con precisión qué se necesita.</p>` },
+
+{ n:49, c:"dudas", tags:["ChatGPT","Criterio"],
+  q:"¿ChatGPT es tan malo como dicen algunas personas?",
+  a:`<p>No es inherentemente “bueno” o “malo”. Su utilidad depende de:</p>
+     <ul>
+       <li>La tarea.</li>
+       <li>La calidad de la instrucción.</li>
+       <li>El modelo disponible.</li>
+       <li>La información proporcionada.</li>
+       <li>La verificación del usuario.</li>
+     </ul>
+     <p>Puede ser muy útil para practicar idiomas, resumir, crear materiales o analizar información, pero puede cometer errores. Debe evaluarse por resultados verificables, no solamente por opiniones en redes sociales.</p>` },
+
+{ n:50, c:"dudas", tags:["Imágenes","Prompt"],
+  q:"¿Por qué al editar una imagen la IA cambia cosas que no solicité?",
+  a:`<p>Porque los modelos generativos normalmente <strong>reconstruyen partes de la imagen</strong> en lugar de modificar cada píxel como un editor tradicional.</p>
+     <p>Una instrucción como “cambia la camisa a rojo” puede provocar modificaciones en el cabello, fondo, rostro o pantalón porque el modelo vuelve a interpretar la escena completa.</p>
+     <p>Para reducirlo, se debe especificar:</p>
+     <blockquote>“Modifica exclusivamente el color de la camisa a rojo. Conserva sin cambios el rostro, cabello, postura, pantalón, fondo, iluminación y encuadre.”</blockquote>
+     <p class="alert">Aun con una instrucción precisa, no existe garantía absoluta de conservación.</p>` },
+
+{ n:51, c:"dudas", tags:["Prompt","Imágenes"],
+  q:"¿Cómo evito que una publicación o imagen parezca genérica?",
+  a:`<p>Se deben proporcionar elementos concretos de identidad:</p>
+     <ul>
+       <li>Público.</li><li>Objetivo.</li><li>Producto.</li><li>Estilo visual.</li>
+       <li>Paleta de colores.</li><li>Tono.</li><li>Composición.</li>
+       <li>Elementos que deben conservarse.</li><li>Elementos prohibidos.</li><li>Ejemplos de referencia.</li>
+     </ul>
+     <p>No basta con pedir “hazlo profesional”. Hay que definir qué significa profesional para ese proyecto.</p>` },
+
+{ n:52, c:"dudas", tags:["Prompt","Herramientas"],
+  q:"¿Se utilizan prompts diferentes en ChatGPT, Gemini, Claude o DeepSeek?",
+  a:`<p>La estructura fundamental es prácticamente la misma:</p>
+     <p class="flow">rol + contexto + tarea + restricciones + formato.</p>
+     <p>Sin embargo, cada plataforma puede interpretar de manera distinta la misma instrucción. Por ello, puede ser necesario ajustar:</p>
+     <ul>
+       <li>La extensión.</li>
+       <li>La cantidad de contexto.</li>
+       <li>La forma de adjuntar archivos.</li>
+       <li>El formato solicitado.</li>
+       <li>Las funciones específicas de la herramienta.</li>
+     </ul>
+     <p>No se necesita aprender un idioma completamente distinto para cada chatbot.</p>` },
+
+{ n:53, c:"dudas", tags:["Herramientas","Criterio"],
+  q:"¿Cuál herramienta debo utilizar para texto, imágenes, video o matemáticas?",
+  a:`<p>No existe una herramienta universalmente superior. Debe seleccionarse según:</p>
+     <ul>
+       <li>Calidad de la salida.</li><li>Exactitud.</li><li>Facilidad de uso.</li><li>Privacidad.</li>
+       <li>Costo.</li><li>Integraciones.</li><li>Capacidad de trabajar con archivos.</li><li>Posibilidad de verificar el resultado.</li>
+     </ul>
+     <p>La presentación de Semana 1 compara ChatGPT, Claude, Gemini y DeepSeek para desarrollar precisamente ese criterio de selección.</p>` },
+
+{ n:54, c:"dudas", tags:["Prompt","Imágenes"],
+  q:"¿Por qué los resultados de distintas personas pueden parecer iguales?",
+  a:`<p>Porque muchas personas utilizan:</p>
+     <ul>
+       <li>El mismo modelo.</li>
+       <li>Instrucciones demasiado generales.</li>
+       <li>Los mismos estilos predeterminados.</li>
+       <li>Pocas referencias.</li>
+       <li>Ninguna identidad visual definida.</li>
+     </ul>
+     <p>La diferenciación surge del contexto, los ejemplos, las restricciones, el criterio humano y la edición posterior.</p>` },
+
+{ n:55, c:"dudas", tags:["Alucinaciones","Contexto"],
+  q:"¿Las alucinaciones ocurren solamente porque una conversación es demasiado larga?",
+  a:`<p>No. Una conversación extensa puede aumentar la confusión, pero <strong>no es la única causa</strong>.</p>
+     <p>También pueden ocurrir cuando:</p>
+     <ul>
+       <li>La pregunta contiene información falsa.</li>
+       <li>La instrucción es ambigua.</li>
+       <li>El modelo no tiene datos suficientes.</li>
+       <li>Se solicita una cita o fecha inexistente.</li>
+       <li>La información disponible está desactualizada.</li>
+       <li>El sistema genera una respuesta probable, pero no verificada.</li>
+     </ul>
+     <p class="alert">Abrir una conversación nueva puede limpiar el contexto, pero no garantiza una respuesta verdadera. También deben solicitarse fuentes, proporcionar documentos confiables y verificar las afirmaciones importantes.</p>` },
+
+{ n:56, c:"herramientas", tags:["Planes","ChatGPT"],
+  q:"¿Necesito pagar ChatGPT para realizar el diplomado?",
+  a:`<p>No. El curso puede comenzar con una cuenta gratuita.</p>
+     <p>Un plan pagado suele ofrecer límites más amplios, modelos avanzados, mayor memoria, más archivos, generación de imágenes y acceso ampliado a otras herramientas. La decisión debe tomarse cuando el uso real justifique el costo, no antes.</p>
+     <blockquote>“No compren un plan solamente porque están comenzando el diplomado. Utilicen primero la versión gratuita y consideren pagar cuando sus límites impidan realizar una tarea real.”</blockquote>` + fuente(SRC.precios, "Consultar planes oficiales") },
+
+{ n:57, c:"herramientas", tags:["Planes","Modelos"],
+  q:"¿La versión gratuita utiliza solamente modelos antiguos?",
+  a:`<p>No necesariamente. Actualmente, el plan gratuito ofrece acceso limitado a modelos y funciones vigentes; los planes superiores amplían el uso, el contexto y las herramientas.</p>
+     <p>Por lo tanto, no conviene explicar que la versión gratuita siempre utiliza “un modelo de hace ocho meses”. <strong>Las funciones y límites cambian con frecuencia.</strong></p>` + fuente(SRC.precios, "Consultar planes oficiales") },
+
+{ n:58, c:"herramientas", tags:["Codex","Automatización"],
+  q:"¿Qué es Codex?",
+  a:`<p>Codex es un agente de OpenAI orientado al desarrollo de software y al trabajo técnico. Puede ayudar a:</p>
+     <ul>
+       <li>Escribir código.</li><li>Revisar proyectos.</li><li>Corregir errores.</li>
+       <li>Modificar archivos.</li><li>Construir herramientas.</li><li>Ejecutar tareas técnicas de varios pasos.</li>
+     </ul>
+     <p>No es necesario dominar Codex en la Semana 1 y no debe confundirse con el chat normal de ChatGPT.</p>` + fuente(SRC.codex, "Consultar fuente oficial de Codex") },
+
+{ n:59, c:"herramientas", tags:["Codex","Planes"],
+  q:"¿Por qué Codex no aparece en mi cuenta o en el mismo lugar que al profesor?",
+  a:`<p>La ubicación puede variar según:</p>
+     <ul>
+       <li>Aplicación de escritorio, web o móvil.</li><li>Sistema operativo.</li><li>Versión instalada.</li>
+       <li>Plan.</li><li>Región.</li><li>Despliegue de la función.</li>
+     </ul>
+     <p>Actualmente Codex está incluido con diferentes límites según el plan, pero su experiencia principal puede encontrarse en clientes específicos y no siempre como un botón dentro del chat tradicional.</p>
+     <blockquote>Codex se estudiará cuando corresponda. Hoy no necesitan instalarlo ni encontrarlo para completar la actividad.</blockquote>` + fuente(SRC.codexWork) },
+
+{ n:60, c:"herramientas", tags:["Automatización"],
+  q:"¿Se puede automatizar un sistema de costos cuando cambian insumos o el tipo de cambio?",
+  a:`<p>Sí, pero no se resuelve únicamente mediante una conversación con ChatGPT.</p>
+     <p>Un sistema funcional necesitaría:</p>
+     <ol>
+       <li>Una fuente de precios.</li>
+       <li>Una tabla de productos e insumos.</li>
+       <li>Fórmulas de costo.</li>
+       <li>Una fuente del tipo de cambio.</li>
+       <li>Frecuencia de actualización.</li>
+       <li>Reglas de validación.</li>
+       <li>Alertas cuando exista una variación relevante.</li>
+       <li>Supervisión humana.</li>
+     </ol>
+     <p>La IA puede ayudar a diseñar, interpretar y explicar el sistema; la automatización conecta las fuentes y ejecuta las actualizaciones.</p>` },
+
+{ n:61, c:"herramientas", tags:["Automatización","Criterio"],
+  q:"¿El diplomado puede servir si cada alumno tiene un negocio o profesión diferente?",
+  a:`<p>Sí. Los casos pueden cambiar, pero la lógica general se conserva:</p>
+     <p class="flow">Entrada → regla o instrucción → procesamiento → resultado → validación → mejora.</p>
+     <p>La misma estructura puede aplicarse a educación, ventas, contabilidad, bienes raíces, cadena de suministro, atención al cliente o creación de contenido.</p>` },
+
+{ n:62, c:"herramientas", tags:["Automatización","Seguridad"],
+  q:"¿La IA puede contestar automáticamente correos y mensajes de clientes?",
+  a:`<p>Sí, mediante una automatización que combine:</p>
+     <ul>
+       <li>Canal de entrada.</li>
+       <li>Clasificación del mensaje.</li>
+       <li>Información del negocio.</li>
+       <li>Prompt o reglas de respuesta.</li>
+       <li>Validación.</li>
+       <li>Aprobación humana cuando sea necesaria.</li>
+       <li>Registro de la conversación.</li>
+     </ul>
+     <p class="alert">No debe conectarse directamente a clientes reales sin pruebas, límites y supervisión.</p>` },
+
+{ n:63, c:"privacidad", tags:["Privacidad","Seguridad"],
+  q:"¿Puedo introducir información de pacientes, clientes o alumnos?",
+  a:`<p><strong>No se deben introducir datos identificables o confidenciales.</strong></p>
+     <p>Evita compartir:</p>
+     <ul>
+       <li>Nombre completo.</li><li>Teléfono.</li><li>Correo.</li><li>Dirección.</li>
+       <li>Expediente.</li><li>Diagnóstico identificable.</li><li>CURP.</li><li>Identificaciones.</li>
+       <li>Información bancaria.</li><li>Contraseñas.</li><li>Datos de menores.</li><li>Documentos internos sin autorización.</li>
+     </ul>
+     <p>Para practicar, utiliza datos ficticios o anonimizados:</p>
+     <blockquote>“Paciente A, persona adulta, presenta los siguientes patrones…”</blockquote>
+     <p class="safebox">Aunque una cuenta permita desactivar el uso de conversaciones para entrenamiento, eso <strong>no sustituye las obligaciones profesionales de confidencialidad</strong>.</p>` + fuente(SRC.datos) },
+
+{ n:64, c:"privacidad", tags:["Privacidad","Responsabilidad"],
+  q:"¿La IA puede diagnosticar a un paciente o sustituir al especialista?",
+  a:`<p><strong>No debe utilizarse como sustituto de un profesional.</strong></p>
+     <p>Puede apoyar en:</p>
+     <ul>
+       <li>Organización de información.</li>
+       <li>Preparación de preguntas.</li>
+       <li>Resumen de literatura.</li>
+       <li>Generación de plantillas.</li>
+       <li>Identificación preliminar de temas que requieren revisión.</li>
+     </ul>
+     <p class="safebox">La interpretación y decisión final debe permanecer en manos de un profesional competente.</p>` },
+
+{ n:65, c:"privacidad", tags:["Privacidad","Seguridad"],
+  q:"¿Qué hago antes de subir un documento profesional?",
+  a:`<p>Aplicar esta revisión:</p>
+     <ol>
+       <li>¿Tengo autorización para utilizarlo?</li>
+       <li>¿Contiene datos personales?</li>
+       <li>¿Puedo anonimizarlo?</li>
+       <li>¿La herramienta es adecuada para información confidencial?</li>
+       <li>¿Necesito realmente subir el documento completo?</li>
+       <li>¿Voy a verificar la respuesta antes de utilizarla?</li>
+     </ol>` },
+
+{ n:66, c:"plataforma", tags:["Plataforma","Semana 1"],
+  q:"¿Dónde está la presentación de la Semana 1?",
+  a:`<p>Dentro de la plataforma:</p>
+     <p class="flow">Programa → Módulo 1 → Semana 1 → Presentación.</p>
+     <p>La presentación puede visualizarse o descargarse cuando la plataforma muestre la opción correspondiente. La Semana 1 incluye presentación, prácticas, actividades, recursos y evaluación.</p>` },
+
+{ n:67, c:"plataforma", tags:["Plataforma","Inducción"],
+  q:"¿Qué hago si no tomé la inducción?",
+  a:`<p>Primero se debe revisar el apartado de capacitación o inducción dentro de la plataforma. Ahí se explica el recorrido, acceso a Google Meet, reglamento y uso básico del programa.</p>
+     <p>Las preguntas que permanezcan después de revisar esos recursos se dirigen al canal académico oficial.</p>` },
+
+{ n:68, c:"plataforma", tags:["Plataforma","Semana 1"],
+  q:"¿Debo completar toda la Semana 1 después de la clase del martes?",
+  a:`<p>No. La Semana 1 se desarrolla entre martes y jueves.</p>
+     <p>Pueden revisar los recursos por adelantado, pero la evaluación y el cierre de la semana deben realizarse después de completar los contenidos correspondientes o cuando la plataforma los marque como disponibles.</p>` },
+
+{ n:69, c:"plataforma", tags:["Evaluación","Plataforma"],
+  q:"¿Habrá tareas?",
+  a:`<p>La plataforma incluye prácticas, actividades, recursos y una evaluación semanal.</p>
+     <p>Puede haber ejercicios voluntarios de refuerzo proporcionados por el profesor, pero deben identificarse claramente como <strong>complementarios</strong> y no confundirse con una entrega oficial.</p>` },
+
+{ n:70, c:"plataforma", tags:["Evaluación","Pendiente"], pending:"Pendiente de confirmación",
+  q:"¿Habrá examen o proyecto final?",
+  a:`<p>El programa contempla evaluación continua, actividades y construcción progresiva de proyectos.</p>
+     <p class="alert">Sin embargo, el <strong>formato exacto de una evaluación final</strong> debe comunicarse únicamente cuando esté confirmado por Top Learning.</p>` },
+
+{ n:71, c:"plataforma", tags:["Plataforma","Recursos"],
+  q:"¿Dónde se publicará el material adicional del profesor?",
+  a:`<p>En los espacios oficiales de la plataforma: muro del grupo, sección de recursos o carpeta autorizada.</p>
+     <p>No debe prometerse un archivo hasta que haya sido cargado y verificado.</p>` },
+
+{ n:72, c:"plataforma", tags:["Recursos","Plataforma"],
+  q:"¿Puedo descargar e imprimir las presentaciones?",
+  a:`<p>Sí, cuando el recurso tenga habilitada la opción de descarga. Después puede abrirse el PDF e imprimirse desde el dispositivo del alumno.</p>` },
+
+{ n:73, c:"plataforma", tags:["Grabaciones","Pendiente"], pending:"Pendiente de confirmación",
+  q:"¿Cuándo aparecen las grabaciones?",
+  a:`<p>Durante la sesión se indicó que pueden tardar hasta <strong>48 horas</strong> en publicarse.</p>
+     <p>Los materiales oficiales señalan que las grabaciones estarán disponibles para revisión, pero <strong>no establecen claramente en los documentos revisados cuánto tiempo permanecen almacenadas</strong>.</p>
+     <blockquote>La grabación puede tardar hasta 48 horas en aparecer. Si después de ese periodo no está disponible, contacten al área académica.</blockquote>` },
+
+{ n:74, c:"plataforma", tags:["Plataforma","Pendiente"], pending:"Pendiente de autorización",
+  q:"¿Qué se debe subir a las carpetas compartidas?",
+  a:`<p>Esta función no quedó confirmada durante la sesión. No debe improvisarse una respuesta.</p>
+     <p class="alert"><strong>Estado: pendiente de confirmación con Coordinación Académica.</strong></p>
+     <p>Hasta recibir instrucciones oficiales, los alumnos no necesitan subir archivos a esa carpeta.</p>` },
+
+{ n:75, c:"plataforma", tags:["Plataforma","Contacto"],
+  q:"¿Cómo contacto al profesor?",
+  a:`<p>Las dudas sobre el contenido pueden colocarse en el muro o en la función oficial de mensajes de la plataforma.</p>
+     <p>Para plataforma, pagos, asistencia o asuntos administrativos se utilizan los canales institucionales de Top Learning.</p>
+     <p class="alert">No deben crearse grupos alternos ni utilizar cuentas personales para comunicación académica.</p>` },
+
+{ n:76, c:"plataforma", tags:["Asistencia","Plataforma"],
+  q:"¿Qué grupo debo seleccionar al registrar mi asistencia?",
+  a:`<p>Para este curso se indicó:</p>
+     <p class="flow">Inteligencia Artificial — grupo E1598 — clase en vivo en línea.</p>
+     <p>El alumno debe verificar su nombre, correo y grupo antes de enviar el registro.</p>` }
+
+  ];
+
+  /* ---------- utilidades ---------- */
+  function norm(s){
+    return (s || "").toString().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+  }
+  function stripTags(html){
+    var d = document.createElement("div");
+    d.innerHTML = html;
+    return (d.textContent || "").replace(/\s+/g," ").trim();
+  }
+  function catLabel(id){
+    for (var i=0;i<CATS.length;i++){ if (CATS[i].id === id) return CATS[i].label; }
+    return "";
+  }
+  function esc(s){
+    return (s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+  }
+
+  QA.forEach(function(item){
+    item.plain = stripTags(item.a);
+    item.haystack = norm([item.n, item.q, item.plain, (item.tags||[]).join(" "), catLabel(item.c)].join(" "));
+  });
+
+  /* ---------- estado ---------- */
+  var state = { cat:"todas", query:"" };
+  try{
+    var saved = localStorage.getItem("tl_qa_cat");
+    if (saved && CATS.some(function(c){ return c.id === saved; })) state.cat = saved;
+  }catch(e){}
+
+  var listEl     = document.getElementById("list");
+  var emptyEl    = document.getElementById("empty");
+  var counterEl  = document.getElementById("counter");
+  var filtersEl  = document.getElementById("filters");
+  var searchEl   = document.getElementById("search");
+  var toastEl    = document.getElementById("toast");
+  var toTopEl    = document.getElementById("toTop");
+  var openSet    = {};
+
+  /* ---------- filtros ---------- */
+  function counts(){
+    var map = { todas: QA.length };
+    QA.forEach(function(i){ map[i.c] = (map[i.c] || 0) + 1; });
+    return map;
+  }
+  function buildFilters(){
+    var c = counts();
+    filtersEl.innerHTML = CATS.map(function(cat){
+      return '<button class="chip" type="button" role="button" data-cat="' + cat.id + '" aria-pressed="' +
+             (state.cat === cat.id) + '">' + esc(cat.label) +
+             '<span class="count">' + (c[cat.id] || 0) + '</span></button>';
+    }).join("");
+  }
+
+  /* ---------- tarjetas ---------- */
+  function cardHTML(item){
+    var isSec = item.c === "privacidad";
+    var tags = (item.tags || []).map(function(t){ return '<span class="tag">#' + esc(t) + '</span>'; }).join("");
+    var pend = item.pending ? '<span class="badge pending"><span aria-hidden="true">⏳</span>' + esc(item.pending) + '</span>' : "";
+    var secBadge = isSec ? '<span class="badge sec"><span aria-hidden="true">🛡</span>Privacidad y seguridad</span>' : "";
+    return '' +
+      '<details class="card' + (isSec ? " sec" : "") + '" id="pregunta-' + item.n + '" data-cat="' + item.c + '" data-n="' + item.n + '">' +
+        '<summary>' +
+          '<span class="num">' + item.n + '</span>' +
+          '<span class="qwrap">' +
+            '<span class="q">' + esc(item.q) + '</span>' +
+            '<span class="meta">' +
+              '<span class="badge">' + esc(catLabel(item.c)) + '</span>' + secBadge + pend + tags +
+            '</span>' +
+          '</span>' +
+          '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">' +
+            '<polyline points="6 9 12 15 18 9" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+        '</summary>' +
+        '<div class="answer">' + item.a + '</div>' +
+        '<div class="cardactions">' +
+          '<button class="btn-ghost" type="button" data-copy="answer" data-n="' + item.n + '">📋 Copiar respuesta</button>' +
+          '<button class="btn-ghost" type="button" data-copy="link" data-n="' + item.n + '">🔗 Copiar enlace</button>' +
+        '</div>' +
+      '</details>';
+  }
+
+  function highlight(root, terms){
+    if (!terms.length) return;
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+    var nodes = [], n;
+    while ((n = walker.nextNode())) {
+      if (n.parentNode && n.parentNode.nodeName !== "MARK" && n.nodeValue.trim()) nodes.push(n);
+    }
+    nodes.forEach(function(node){
+      var text = node.nodeValue, low = norm(text), frag = null, last = 0;
+      var marks = [];
+      terms.forEach(function(t){
+        var from = 0, idx;
+        while ((idx = low.indexOf(t, from)) !== -1){ marks.push([idx, idx + t.length]); from = idx + t.length; }
+      });
+      if (!marks.length) return;
+      marks.sort(function(a,b){ return a[0] - b[0]; });
+      var merged = [];
+      marks.forEach(function(m){
+        var prev = merged[merged.length - 1];
+        if (prev && m[0] <= prev[1]) prev[1] = Math.max(prev[1], m[1]);
+        else merged.push([m[0], m[1]]);
+      });
+      frag = document.createDocumentFragment();
+      merged.forEach(function(m){
+        if (m[0] > last) frag.appendChild(document.createTextNode(text.slice(last, m[0])));
+        var mk = document.createElement("mark");
+        mk.textContent = text.slice(m[0], m[1]);
+        frag.appendChild(mk);
+        last = m[1];
+      });
+      if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+      node.parentNode.replaceChild(frag, node);
+    });
+  }
+
+  function render(){
+    var q = norm(state.query.trim());
+    var terms = q ? q.split(/\s+/).filter(function(t){ return t.length > 1; }) : [];
+    var visible = QA.filter(function(i){
+      if (state.cat !== "todas" && i.c !== state.cat) return false;
+      if (!terms.length) return true;
+      return terms.every(function(t){ return i.haystack.indexOf(t) !== -1; });
+    });
+
+    listEl.innerHTML = visible.map(cardHTML).join("");
+    emptyEl.className = visible.length ? "empty" : "empty show";
+    counterEl.innerHTML = "Mostrando <b>" + visible.length + "</b> de " + QA.length + " preguntas";
+
+    Array.prototype.forEach.call(listEl.querySelectorAll("details"), function(d){
+      if (openSet[d.dataset.n]) d.open = true;
+    });
+    if (terms.length) highlight(listEl, terms);
+
+    Array.prototype.forEach.call(filtersEl.querySelectorAll(".chip"), function(b){
+      b.setAttribute("aria-pressed", String(b.dataset.cat === state.cat));
+    });
+  }
+
+  /* ---------- eventos ---------- */
+  filtersEl.addEventListener("click", function(e){
+    var btn = e.target.closest(".chip");
+    if (!btn) return;
+    state.cat = btn.dataset.cat;
+    try{ localStorage.setItem("tl_qa_cat", state.cat); }catch(err){}
+    render();
+  });
+
+  searchEl.addEventListener("input", function(){
+    state.query = searchEl.value;
+    render();
+  });
+
+  document.getElementById("clearSearch").addEventListener("click", function(){
+    searchEl.value = "";
+    state.query = "";
+    render();
+    searchEl.focus();
+  });
+
+  document.getElementById("resetAll").addEventListener("click", function(){
+    searchEl.value = "";
+    state.query = "";
+    state.cat = "todas";
+    try{ localStorage.setItem("tl_qa_cat", "todas"); }catch(err){}
+    render();
+  });
+
+  document.getElementById("expandAll").addEventListener("click", function(){
+    Array.prototype.forEach.call(listEl.querySelectorAll("details"), function(d){
+      d.open = true; openSet[d.dataset.n] = true;
+    });
+  });
+
+  document.getElementById("collapseAll").addEventListener("click", function(){
+    Array.prototype.forEach.call(listEl.querySelectorAll("details"), function(d){
+      d.open = false; openSet[d.dataset.n] = false;
+    });
+  });
+
+  listEl.addEventListener("toggle", function(e){
+    var d = e.target;
+    if (d && d.tagName === "DETAILS") openSet[d.dataset.n] = d.open;
+  }, true);
+
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.className = "show";
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function(){ toastEl.className = ""; }, 2200);
+  }
+
+  function copyText(text, okMsg){
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){ toast(okMsg); }, function(){ fallback(text, okMsg); });
+    } else {
+      fallback(text, okMsg);
+    }
+  }
+  function fallback(text, okMsg){
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly","");
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try{ document.execCommand("copy"); toast(okMsg); }
+    catch(err){ toast("No fue posible copiar en este navegador"); }
+    document.body.removeChild(ta);
+  }
+
+  listEl.addEventListener("click", function(e){
+    var btn = e.target.closest("[data-copy]");
+    if (!btn) return;
+    e.preventDefault();
+    var n = parseInt(btn.dataset.n, 10);
+    var item = QA.filter(function(i){ return i.n === n; })[0];
+    if (!item) return;
+    if (btn.dataset.copy === "answer"){
+      copyText(item.q + "\n\n" + item.plain, "Respuesta copiada");
+    } else {
+      var base = location.href.split("#")[0];
+      copyText(base + "#pregunta-" + n, "Enlace copiado");
+    }
+  });
+
+  /* ---------- hash ---------- */
+  function openFromHash(){
+    var m = /^#pregunta-(\d+)$/.exec(location.hash || "");
+    if (!m) return;
+    var n = parseInt(m[1], 10);
+    var item = QA.filter(function(i){ return i.n === n; })[0];
+    if (!item) return;
+    if (state.cat !== "todas" && item.c !== state.cat){ state.cat = "todas"; }
+    if (state.query){ state.query = ""; searchEl.value = ""; }
+    openSet[n] = true;
+    render();
+    var el = document.getElementById("pregunta-" + n);
+    if (!el) return;
+    el.open = true;
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setTimeout(function(){
+      el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+      var s = el.querySelector("summary");
+      if (s){ s.setAttribute("tabindex","-1"); s.focus({ preventScroll:true }); }
+    }, 60);
+  }
+  window.addEventListener("hashchange", openFromHash);
+
+  /* ---------- volver arriba ---------- */
+  window.addEventListener("scroll", function(){
+    toTopEl.className = window.pageYOffset > 500 ? "show" : "";
+  }, { passive:true });
+
+  toTopEl.addEventListener("click", function(){
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top:0, behavior: reduce ? "auto" : "smooth" });
+    searchEl.focus({ preventScroll:true });
+  });
+
+  /* ---------- inicio ---------- */
+  buildFilters();
+  render();
+  openFromHash();
+})();
+</script>
+</body>
+</html>
