@@ -20,19 +20,19 @@
     --bg-2:#0D123D;
     --card:#141A4F;
     --card-open:#1A2160;
-    --purple:#6D3BFF;
-    --violet:#8B5CF6;
-    --magenta:#E6348C;
+    --purple:#A78BFA;
+    --violet:#C4B5FD;
+    --magenta:#F472B6;
     --yellow:#F7B32B;
     --white:#FFFFFF;
     --muted:#BBC3E4;
     --warn:#F59E0B;
     --safe:#22C55E;
     --danger:#EF4444;
-    --line:rgba(139,92,246,.28);
-    --line-strong:rgba(139,92,246,.6);
+    --line:rgba(196,181,253,.28);
+    --line-strong:rgba(196,181,253,.6);
     --radius:16px;
-    --shadow:0 10px 30px rgba(3,6,25,.55);
+    --shadow:0 8px 22px rgba(3,6,25,.35);
     --maxw:1180px;
   }
   *,*::before,*::after{box-sizing:border-box}
@@ -57,16 +57,16 @@
   .site-header{
     position:relative;
     overflow:hidden;
-    background:linear-gradient(135deg,#070B2D,#24105E,#6D3BFF);
+    background:linear-gradient(135deg,#070B2D,#24105E,#A78BFA);
     border-bottom:1px solid var(--line);
   }
   .site-header::after{
     content:"";position:absolute;inset:0;
-    background:radial-gradient(120% 90% at 85% 10%,rgba(230,52,140,.28),transparent 60%),
+    background:radial-gradient(120% 90% at 85% 10%,rgba(244,114,182,.16),transparent 60%),
                radial-gradient(90% 80% at 0% 100%,rgba(7,11,45,.85),transparent 65%);
     pointer-events:none;
   }
-  .net{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none}
+  .net{position:absolute;inset:0;width:100%;height:100%;opacity:.32;pointer-events:none}
   .header-inner{position:relative;z-index:2;padding:22px 0 30px}
   .brandbar{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px}
   /* Espacio reservado para el archivo oficial del logotipo Top Learning.
@@ -126,9 +126,9 @@
   #clearSearch{
     position:absolute;right:8px;padding:8px 12px;min-height:38px;
     border-radius:10px;border:1px solid var(--line-strong);
-    background:rgba(109,59,255,.22);color:#E9E5FF;font-size:.85rem;font-weight:600;cursor:pointer;
+    background:rgba(167,139,250,.22);color:#E9E5FF;font-size:.85rem;font-weight:600;cursor:pointer;
   }
-  #clearSearch:hover{background:rgba(109,59,255,.4)}
+  #clearSearch:hover{background:rgba(167,139,250,.4)}
   .filters{display:flex;gap:8px;overflow-x:auto;padding:12px 2px 4px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
   .chip{
     flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;
@@ -137,10 +137,10 @@
     font-size:.9rem;font-weight:600;font-family:inherit;white-space:nowrap;
     transition:transform .15s ease,border-color .15s ease,background .15s ease;
   }
-  .chip .count{font-size:.78rem;padding:1px 8px;border-radius:999px;background:rgba(139,92,246,.22);color:#D9D2FF}
+  .chip .count{font-size:.78rem;padding:1px 8px;border-radius:999px;background:rgba(196,181,253,.22);color:#D9D2FF}
   .chip:hover{border-color:var(--line-strong)}
   .chip[aria-pressed="true"]{
-    background:linear-gradient(135deg,rgba(109,59,255,.85),rgba(230,52,140,.75));
+    background:linear-gradient(135deg,rgba(167,139,250,.7),rgba(244,114,182,.55));
     border-color:var(--yellow);color:#fff;
   }
   .chip[aria-pressed="true"] .count{background:rgba(7,11,45,.45);color:#fff}
@@ -190,7 +190,7 @@
     display:inline-flex;align-items:center;gap:6px;
     font-size:.74rem;font-weight:700;letter-spacing:.02em;
     padding:3px 9px;border-radius:999px;
-    background:rgba(109,59,255,.2);border:1px solid rgba(139,92,246,.5);color:#DCD5FF;
+    background:rgba(167,139,250,.2);border:1px solid rgba(196,181,253,.5);color:#DCD5FF;
   }
   .badge.sec{background:rgba(34,197,94,.14);border-color:rgba(34,197,94,.55);color:#B7F0C9}
   .badge.pending{background:rgba(245,158,11,.14);border-color:rgba(245,158,11,.6);color:#FBDCA3}
@@ -205,7 +205,7 @@
   .answer strong{color:#FFFFFF}
   .answer code{
     font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.92em;
-    background:rgba(109,59,255,.2);border:1px solid var(--line);padding:1px 6px;border-radius:6px;color:#E5DEFF;
+    background:rgba(167,139,250,.2);border:1px solid var(--line);padding:1px 6px;border-radius:6px;color:#E5DEFF;
   }
   .answer blockquote{
     margin:0 0 12px;padding:10px 14px;border-left:3px solid var(--yellow);
@@ -213,7 +213,7 @@
   }
   .answer .flow{
     display:block;padding:10px 14px;margin:0 0 12px;border-radius:10px;
-    background:rgba(109,59,255,.16);border:1px solid var(--line);font-weight:600;color:#E9E4FF;
+    background:rgba(167,139,250,.16);border:1px solid var(--line);font-weight:600;color:#E9E4FF;
   }
   .answer .alert{
     margin:0 0 12px;padding:10px 14px;border-radius:10px;
@@ -226,9 +226,9 @@
   .src{
     display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;
     padding:6px 12px;border-radius:999px;text-decoration:none;
-    background:rgba(139,92,246,.14);border:1px solid var(--line-strong);color:#D7CEFF;
+    background:rgba(196,181,253,.14);border:1px solid var(--line-strong);color:#D7CEFF;
   }
-  .src:hover{background:rgba(139,92,246,.3);color:#fff}
+  .src:hover{background:rgba(196,181,253,.3);color:#fff}
   .src::after{content:"↗";font-size:.9em}
   .sources{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
   .cardactions{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 16px}
@@ -237,7 +237,7 @@
     border-radius:10px;cursor:pointer;font-family:inherit;font-size:.85rem;font-weight:600;
     background:rgba(255,255,255,.05);border:1px solid var(--line);color:#DDE1F5;
   }
-  .btn-ghost:hover{background:rgba(109,59,255,.25);border-color:var(--line-strong)}
+  .btn-ghost:hover{background:rgba(167,139,250,.25);border-color:var(--line-strong)}
   mark{background:rgba(247,179,43,.35);color:#FFF3D6;padding:0 2px;border-radius:4px}
 
   .empty{
@@ -306,7 +306,7 @@
 
 <header class="site-header">
   <svg class="net" viewBox="0 0 1200 320" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-    <g stroke="#8B5CF6" stroke-width="1" opacity=".55">
+    <g stroke="#C4B5FD" stroke-width="1" opacity=".55">
       <line x1="60" y1="70" x2="230" y2="150"/><line x1="230" y1="150" x2="410" y2="60"/>
       <line x1="410" y1="60" x2="600" y2="170"/><line x1="600" y1="170" x2="780" y2="80"/>
       <line x1="780" y1="80" x2="960" y2="180"/><line x1="960" y1="180" x2="1140" y2="90"/>
@@ -317,7 +317,7 @@
     <g fill="#F7B32B" opacity=".85">
       <circle cx="60" cy="70" r="3.5"/><circle cx="410" cy="60" r="3"/><circle cx="780" cy="80" r="3.5"/><circle cx="1140" cy="90" r="3"/>
     </g>
-    <g fill="#E6348C" opacity=".85">
+    <g fill="#F472B6" opacity=".85">
       <circle cx="230" cy="150" r="4"/><circle cx="600" cy="170" r="4.5"/><circle cx="960" cy="180" r="4"/>
     </g>
     <g fill="#FFFFFF" opacity=".6">
@@ -330,9 +330,9 @@
       <!-- Espacio reservado para el logotipo oficial de Top Learning -->
       <div class="brand-slot" data-logo-slot>
         <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-          <circle cx="20" cy="22" r="5" fill="#6D3BFF"/><circle cx="44" cy="18" r="4" fill="#E6348C"/>
-          <circle cx="42" cy="44" r="5" fill="#F7B32B"/><circle cx="20" cy="44" r="4" fill="#8B5CF6"/>
-          <g stroke="#8B5CF6" stroke-width="2.5" opacity=".85">
+          <circle cx="20" cy="22" r="5" fill="#A78BFA"/><circle cx="44" cy="18" r="4" fill="#F472B6"/>
+          <circle cx="42" cy="44" r="5" fill="#F7B32B"/><circle cx="20" cy="44" r="4" fill="#C4B5FD"/>
+          <g stroke="#C4B5FD" stroke-width="2.5" opacity=".85">
             <line x1="20" y1="22" x2="44" y2="18"/><line x1="20" y1="22" x2="42" y2="44"/>
             <line x1="20" y1="22" x2="20" y2="44"/><line x1="42" y1="44" x2="44" y2="18"/>
           </g>
