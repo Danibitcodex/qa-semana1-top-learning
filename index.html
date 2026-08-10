@@ -221,6 +221,7 @@
   }
   .badge.sec{background:rgba(22,163,74,.10);border-color:rgba(22,163,74,.4);color:#166534}
   .badge.pending{background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.45);color:#92400E}
+  .badge.star{background:rgba(180,83,9,.12);border-color:rgba(180,83,9,.4);color:var(--yellow)}
   .tag{font-size:.74rem;padding:3px 9px;border-radius:999px;background:rgba(109,59,255,.06);border:1px solid rgba(109,59,255,.18);color:var(--muted)}
   .chev{flex:0 0 auto;width:26px;height:26px;margin-top:8px;color:var(--violet);transition:transform .2s ease}
   .card[open] .chev{transform:rotate(180deg);color:var(--yellow)}
@@ -355,6 +356,21 @@
     .deck-card{padding:22px 24px}
   }
 
+  /* ---------- TARJETA RESUMEN (SEMANA 2) ---------- */
+  .summary-card{
+    margin:18px 0 6px;padding:18px 20px;border-radius:var(--radius);
+    background:linear-gradient(135deg,rgba(109,59,255,.08),rgba(214,36,122,.07));
+    border:1px solid var(--line-strong);box-shadow:var(--shadow);max-width:78ch;
+  }
+  .summary-kicker{margin:0 0 4px;font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--purple-ink)}
+  .summary-lead{margin:0 0 14px;font-size:1.2rem;font-weight:800;color:var(--white)}
+  .summary-chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 14px;font-size:.86rem;font-weight:700;color:var(--purple-ink)}
+  .summary-chain span[aria-hidden]{color:var(--muted);font-weight:400}
+  .summary-chain span:not([aria-hidden]){padding:4px 10px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+  .summary-note{margin:0 0 10px;font-size:.92rem;color:var(--ink);line-height:1.65}
+  .summary-note:last-child{margin-bottom:0}
+  .summary-note strong{color:var(--white)}
+
   /* ---------- CONOCE A TU DOCENTE ---------- */
   .docente{padding:52px 0 60px;background:linear-gradient(180deg,var(--bg),var(--bg-2));border-top:1px solid var(--line)}
   .docente-head{max-width:78ch;margin:0 0 30px}
@@ -484,7 +500,7 @@
   <div class="wrap site-nav-inner">
     <div class="week-tabs" role="tablist" aria-label="Selector de semana">
       <button class="week-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="semana1" data-week="semana1">Semana 1</button>
-      <button class="week-tab is-disabled" type="button" role="tab" aria-selected="false" aria-controls="semana2" data-week="semana2" disabled title="Próximamente">Semana 2 <span class="soon">Próximamente</span></button>
+      <button class="week-tab" type="button" role="tab" aria-selected="false" aria-controls="semana2" data-week="semana2">Semana 2</button>
     </div>
     <a class="site-nav-link" href="#docente">🎓 Conoce a tu docente</a>
   </div>
@@ -646,7 +662,59 @@
   </div>
 
   <div class="week-panel" id="semana2" data-week-panel hidden>
-    <!-- Semana 2: agregar aquí las preguntas y la presentación cuando estén listas -->
+  <section class="wrap intro" aria-labelledby="intro2-title">
+    <h2 id="intro2-title" class="sr-only">Introducción Semana 2</h2>
+    <p>Ingeniería de Prompts y Redacción de Calidad: cómo comunicar con claridad lo que necesitas a una IA generativa, y cómo revisar sus resultados antes de utilizarlos profesionalmente.</p>
+    <p class="note"><span aria-hidden="true">⚠️</span><span><strong>Importante:</strong> las respuestas importantes deben verificarse, especialmente en temas médicos, legales, financieros, académicos o laborales.</span></p>
+
+    <div class="summary-card">
+      <p class="summary-kicker">La idea central de la semana</p>
+      <p class="summary-lead">Un buen prompt reduce la ambigüedad.</p>
+      <div class="summary-chain" aria-label="Rol, Contexto, Tarea, Restricciones, Formato, Revisión humana">
+        <span>Rol</span><span aria-hidden="true">→</span><span>Contexto</span><span aria-hidden="true">→</span><span>Tarea</span><span aria-hidden="true">→</span><span>Restricciones</span><span aria-hidden="true">→</span><span>Formato</span><span aria-hidden="true">→</span><span>Revisión humana</span>
+      </div>
+      <p class="summary-note">No necesitas memorizar los ocho frameworks que aparecen esta semana (RTF, FRAME, TAO, BAB, CARE, PAS, AIDA…). Lo que se evalúa es que sepas comunicar con claridad qué papel debe asumir la IA, qué necesita saber, qué debe hacer y cómo quieres recibir el resultado — y después revisarlo con criterio humano.</p>
+      <p class="summary-note"><strong>Para la evaluación, cinco respuestas son las más importantes:</strong> 1) "Basura entra, basura sale". 2) R-T-F = Rol, Tarea, Formato. 3) El asunto de un correo debe ser directo, de menos de 8 palabras. 4) Una propuesta comercial se centra en el beneficio real: diagnóstico → solución → beneficios. 5) "Marca de agua" = abuso de clichés robóticos como "es crucial" o "en conclusión".</p>
+    </div>
+
+    <ul class="stats">
+      <li class="stat"><b>400</b><span>preguntas del banco maestro</span></li>
+      <li class="stat"><b>16</b><span>categorías de contenido</span></li>
+      <li class="stat"><b>Semana 2</b><span>Nivel 1 del programa</span></li>
+      <li class="stat"><b>⭐ 20</b><span>dudas más frecuentes</span></li>
+    </ul>
+  </section>
+
+  <div class="toolbar">
+    <div class="wrap">
+      <div class="searchbox">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke-linecap="round"/>
+        </svg>
+        <label class="sr-only" for="search2">Buscar una pregunta</label>
+        <input id="search2" type="search" autocomplete="off" placeholder="Buscar: rol, RTF, correo, alucinación, marca de agua…" aria-describedby="counter2">
+        <button id="clearSearch2" type="button" aria-label="Limpiar la búsqueda">Limpiar</button>
+      </div>
+
+      <div class="filters" id="filters2" role="group" aria-label="Filtrar preguntas por categoría"></div>
+
+      <div class="controls">
+        <button class="btn" type="button" id="expandAll2">＋ Expandir todas</button>
+        <button class="btn" type="button" id="collapseAll2">－ Cerrar todas</button>
+        <button class="btn" type="button" id="resetAll2">⭐ Ver destacadas</button>
+        <p class="counter" id="counter2" role="status" aria-live="polite">Mostrando <b>20</b> de 400 preguntas</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="wrap" id="preguntas2" aria-labelledby="preguntas2-title">
+    <h2 id="preguntas2-title" class="sr-only">Preguntas frecuentes de la Semana 2</h2>
+    <div class="list" id="list2"></div>
+    <div class="empty" id="empty2">
+      <b>No encontramos una pregunta relacionada.</b>
+      Prueba con otra palabra o revisa las categorías.
+    </div>
+  </section>
   </div>
 </main>
 
@@ -790,7 +858,299 @@
 <script>
 (function(){
   "use strict";
+  /* ================= utilidades compartidas ================= */
+  function norm(s){
+    return (s || "").toString().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+  }
+  function stripTags(html){
+    var d = document.createElement("div");
+    d.innerHTML = html;
+    return (d.textContent || "").replace(/\s+/g," ").trim();
+  }
+  function esc(s){
+    return (s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+  }
 
+  var toastEl = document.getElementById("toast");
+  var toTopEl = document.getElementById("toTop");
+
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.className = "show";
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function(){ toastEl.className = ""; }, 2200);
+  }
+  function fallbackCopy(text, okMsg){
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly","");
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try{ document.execCommand("copy"); toast(okMsg); }
+    catch(err){ toast("No fue posible copiar en este navegador"); }
+    document.body.removeChild(ta);
+  }
+  function copyText(text, okMsg){
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){ toast(okMsg); }, function(){ fallbackCopy(text, okMsg); });
+    } else {
+      fallbackCopy(text, okMsg);
+    }
+  }
+
+  /* ---------- semanas ---------- */
+  function activateWeek(weekId){
+    Array.prototype.forEach.call(document.querySelectorAll(".week-tab"), function(b){
+      var active = b.dataset.week === weekId;
+      b.classList.toggle("is-active", active);
+      b.setAttribute("aria-selected", String(active));
+    });
+    Array.prototype.forEach.call(document.querySelectorAll("[data-week-panel]"), function(p){
+      p.hidden = (p.id !== weekId);
+    });
+  }
+  Array.prototype.forEach.call(document.querySelectorAll(".week-tab"), function(btn){
+    btn.addEventListener("click", function(){
+      if (btn.disabled) return;
+      activateWeek(btn.dataset.week);
+    });
+  });
+
+  /* ---------- volver arriba ---------- */
+  window.addEventListener("scroll", function(){
+    toTopEl.className = window.pageYOffset > 500 ? "show" : "";
+  }, { passive:true });
+  toTopEl.addEventListener("click", function(){
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top:0, behavior: reduce ? "auto" : "smooth" });
+  });
+
+  /* ================= app reutilizable de preguntas y respuestas ================= */
+  function initQA(cfg){
+    var QA = cfg.data, CATS = cfg.cats;
+
+    function catLabel(id){
+      for (var i=0;i<CATS.length;i++){ if (CATS[i].id === id) return CATS[i].label; }
+      return "";
+    }
+
+    QA.forEach(function(item){
+      item.plain = stripTags(item.a);
+      item.haystack = norm([item.n, item.q, item.plain, (item.tags||[]).join(" "), catLabel(item.c)].join(" "));
+    });
+
+    var state = { cat: cfg.defaultCat || "todas", query:"" };
+    try{
+      var saved = localStorage.getItem(cfg.storageKey);
+      if (saved && CATS.some(function(c){ return c.id === saved; })) state.cat = saved;
+    }catch(e){}
+
+    var listEl     = document.getElementById(cfg.ids.list);
+    var emptyEl    = document.getElementById(cfg.ids.empty);
+    var counterEl  = document.getElementById(cfg.ids.counter);
+    var filtersEl  = document.getElementById(cfg.ids.filters);
+    var searchEl   = document.getElementById(cfg.ids.search);
+    var openSet    = {};
+
+    function counts(){
+      var map = { todas: QA.length };
+      if (cfg.starCatId) map[cfg.starCatId] = QA.filter(function(i){ return !!i.star; }).length;
+      QA.forEach(function(i){ map[i.c] = (map[i.c] || 0) + 1; });
+      return map;
+    }
+    function buildFilters(){
+      var c = counts();
+      filtersEl.innerHTML = CATS.map(function(cat){
+        return '<button class="chip" type="button" role="button" data-cat="' + cat.id + '" aria-pressed="' +
+               (state.cat === cat.id) + '">' + esc(cat.label) +
+               '<span class="count">' + (c[cat.id] || 0) + '</span></button>';
+      }).join("");
+    }
+
+    function cardHTML(item){
+      var isSec = cfg.secCatId && item.c === cfg.secCatId;
+      var tags = (item.tags || []).map(function(t){ return '<span class="tag">#' + esc(t) + '</span>'; }).join("");
+      var pend = item.pending ? '<span class="badge pending"><span aria-hidden="true">\u23f3</span>' + esc(item.pending) + '</span>' : "";
+      var secBadge = isSec ? '<span class="badge sec"><span aria-hidden="true">\ud83d\udee1</span>Privacidad y seguridad</span>' : "";
+      var starBadge = (cfg.starCatId && item.star) ? '<span class="badge star"><span aria-hidden="true">\u2b50</span>Duda frecuente</span>' : "";
+      return '' +
+        '<details class="card' + (isSec ? " sec" : "") + '" id="' + cfg.hashPrefix + item.n + '" data-cat="' + item.c + '" data-n="' + item.n + '">' +
+          '<summary>' +
+            '<span class="num">' + item.n + '</span>' +
+            '<span class="qwrap">' +
+              '<span class="q">' + esc(item.q) + '</span>' +
+              '<span class="meta">' +
+                '<span class="badge">' + esc(catLabel(item.c)) + '</span>' + secBadge + starBadge + pend + tags +
+              '</span>' +
+            '</span>' +
+            '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">' +
+              '<polyline points="6 9 12 15 18 9" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+          '</summary>' +
+          '<div class="answer">' + item.a + '</div>' +
+          '<div class="cardactions">' +
+            '<button class="btn-ghost" type="button" data-copy="answer" data-n="' + item.n + '">\ud83d\udccb Copiar respuesta</button>' +
+            '<button class="btn-ghost" type="button" data-copy="link" data-n="' + item.n + '">\ud83d\udd17 Copiar enlace</button>' +
+          '</div>' +
+        '</details>';
+    }
+
+    function highlight(root, terms){
+      if (!terms.length) return;
+      var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+      var nodes = [], n;
+      while ((n = walker.nextNode())) {
+        if (n.parentNode && n.parentNode.nodeName !== "MARK" && n.nodeValue.trim()) nodes.push(n);
+      }
+      nodes.forEach(function(node){
+        var text = node.nodeValue, low = norm(text), frag = null, last = 0;
+        var marks = [];
+        terms.forEach(function(t){
+          var from = 0, idx;
+          while ((idx = low.indexOf(t, from)) !== -1){ marks.push([idx, idx + t.length]); from = idx + t.length; }
+        });
+        if (!marks.length) return;
+        marks.sort(function(a,b){ return a[0] - b[0]; });
+        var merged = [];
+        marks.forEach(function(m){
+          var prev = merged[merged.length - 1];
+          if (prev && m[0] <= prev[1]) prev[1] = Math.max(prev[1], m[1]);
+          else merged.push([m[0], m[1]]);
+        });
+        frag = document.createDocumentFragment();
+        merged.forEach(function(m){
+          if (m[0] > last) frag.appendChild(document.createTextNode(text.slice(last, m[0])));
+          var mk = document.createElement("mark");
+          mk.textContent = text.slice(m[0], m[1]);
+          frag.appendChild(mk);
+          last = m[1];
+        });
+        if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+        node.parentNode.replaceChild(frag, node);
+      });
+    }
+
+    function render(){
+      var q = norm(state.query.trim());
+      var terms = q ? q.split(/\s+/).filter(function(t){ return t.length > 1; }) : [];
+      var visible = QA.filter(function(i){
+        if (cfg.starCatId && state.cat === cfg.starCatId){
+          if (!i.star) return false;
+        } else if (state.cat !== "todas" && i.c !== state.cat){
+          return false;
+        }
+        if (!terms.length) return true;
+        return terms.every(function(t){ return i.haystack.indexOf(t) !== -1; });
+      });
+
+      listEl.innerHTML = visible.map(cardHTML).join("");
+      emptyEl.className = visible.length ? "empty" : "empty show";
+      counterEl.innerHTML = "Mostrando <b>" + visible.length + "</b> de " + QA.length + " preguntas";
+
+      Array.prototype.forEach.call(listEl.querySelectorAll("details"), function(d){
+        if (openSet[d.dataset.n]) d.open = true;
+      });
+      if (terms.length) highlight(listEl, terms);
+
+      Array.prototype.forEach.call(filtersEl.querySelectorAll(".chip"), function(b){
+        b.setAttribute("aria-pressed", String(b.dataset.cat === state.cat));
+      });
+    }
+
+    filtersEl.addEventListener("click", function(e){
+      var btn = e.target.closest(".chip");
+      if (!btn) return;
+      state.cat = btn.dataset.cat;
+      try{ localStorage.setItem(cfg.storageKey, state.cat); }catch(err){}
+      render();
+    });
+
+    searchEl.addEventListener("input", function(){
+      state.query = searchEl.value;
+      render();
+    });
+
+    document.getElementById(cfg.ids.clearSearch).addEventListener("click", function(){
+      searchEl.value = "";
+      state.query = "";
+      render();
+      searchEl.focus();
+    });
+
+    document.getElementById(cfg.ids.resetAll).addEventListener("click", function(){
+      searchEl.value = "";
+      state.query = "";
+      state.cat = cfg.defaultCat || "todas";
+      try{ localStorage.setItem(cfg.storageKey, state.cat); }catch(err){}
+      render();
+    });
+
+    document.getElementById(cfg.ids.expandAll).addEventListener("click", function(){
+      Array.prototype.forEach.call(listEl.querySelectorAll("details"), function(d){
+        d.open = true; openSet[d.dataset.n] = true;
+      });
+    });
+
+    document.getElementById(cfg.ids.collapseAll).addEventListener("click", function(){
+      Array.prototype.forEach.call(listEl.querySelectorAll("details"), function(d){
+        d.open = false; openSet[d.dataset.n] = false;
+      });
+    });
+
+    listEl.addEventListener("toggle", function(e){
+      var d = e.target;
+      if (d && d.tagName === "DETAILS") openSet[d.dataset.n] = d.open;
+    }, true);
+
+    listEl.addEventListener("click", function(e){
+      var btn = e.target.closest("[data-copy]");
+      if (!btn) return;
+      e.preventDefault();
+      var n = parseInt(btn.dataset.n, 10);
+      var item = QA.filter(function(i){ return i.n === n; })[0];
+      if (!item) return;
+      if (btn.dataset.copy === "answer"){
+        copyText(item.q + "\n\n" + item.plain, "Respuesta copiada");
+      } else {
+        var base = location.href.split("#")[0];
+        copyText(base + "#" + cfg.hashPrefix + n, "Enlace copiado");
+      }
+    });
+
+    function openFromHash(){
+      var re = new RegExp("^#" + cfg.hashPrefix + "(\\d+)$");
+      var m = re.exec(location.hash || "");
+      if (!m) return;
+      var n = parseInt(m[1], 10);
+      var item = QA.filter(function(i){ return i.n === n; })[0];
+      if (!item) return;
+      activateWeek(cfg.weekId);
+      var visibleUnderFilter = (state.cat === "todas") ||
+        (cfg.starCatId && state.cat === cfg.starCatId && item.star) ||
+        (state.cat === item.c);
+      if (!visibleUnderFilter) state.cat = "todas";
+      if (state.query){ state.query = ""; searchEl.value = ""; }
+      openSet[n] = true;
+      render();
+      var el = document.getElementById(cfg.hashPrefix + n);
+      if (!el) return;
+      el.open = true;
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      setTimeout(function(){
+        el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+        var s = el.querySelector("summary");
+        if (s){ s.setAttribute("tabindex","-1"); s.focus({ preventScroll:true }); }
+      }, 60);
+    }
+    window.addEventListener("hashchange", openFromHash);
+
+    buildFilters();
+    render();
+    openFromHash();
+  }
+
+  /* ================= datos: Semana 1 ================= */
   var CATS = [
     {id:"todas",       label:"Todas"},
     {id:"basicos",     label:"Conceptos básicos"},
@@ -1410,288 +1770,1671 @@
 
   ];
 
-  /* ---------- utilidades ---------- */
-  function norm(s){
-    return (s || "").toString().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
-  }
-  function stripTags(html){
-    var d = document.createElement("div");
-    d.innerHTML = html;
-    return (d.textContent || "").replace(/\s+/g," ").trim();
-  }
-  function catLabel(id){
-    for (var i=0;i<CATS.length;i++){ if (CATS[i].id === id) return CATS[i].label; }
-    return "";
-  }
-  function esc(s){
-    return (s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
-  }
-
-  QA.forEach(function(item){
-    item.plain = stripTags(item.a);
-    item.haystack = norm([item.n, item.q, item.plain, (item.tags||[]).join(" "), catLabel(item.c)].join(" "));
+  initQA({
+    weekId: "semana1",
+    data: QA,
+    cats: CATS,
+    ids: { list:"list", empty:"empty", counter:"counter", filters:"filters", search:"search",
+           clearSearch:"clearSearch", expandAll:"expandAll", collapseAll:"collapseAll", resetAll:"resetAll" },
+    storageKey: "tl_qa_cat",
+    hashPrefix: "pregunta-",
+    secCatId: "privacidad",
+    defaultCat: "todas"
   });
 
-  /* ---------- estado ---------- */
-  var state = { cat:"todas", query:"" };
-  try{
-    var saved = localStorage.getItem("tl_qa_cat");
-    if (saved && CATS.some(function(c){ return c.id === saved; })) state.cat = saved;
-  }catch(e){}
+  /* ================= datos: Semana 2 ================= */
+  var CATS2 = [
+    {id:"todas",        label:"Todas"},
+    {id:"destacadas",   label:"⭐ Dudas frecuentes"},
+    {id:"fundamentos",  label:"Fundamentos y GIGO"},
+    {id:"elementos",    label:"Elementos del prompt"},
+    {id:"estructuras",  label:"Estructuras y frameworks"},
+    {id:"conversacion", label:"Conversación e iteración"},
+    {id:"redaccion",    label:"Correos, propuestas e informes"},
+    {id:"documentos",   label:"Documentos y fuentes"},
+    {id:"calidad",      label:"Alucinaciones y verificación"},
+    {id:"estilo",       label:"Estilo humano y marca de agua"},
+    {id:"planes",       label:"Planes y estrategias"},
+    {id:"persuasion",   label:"Redacción persuasiva (PAS/AIDA)"},
+    {id:"simulacion",   label:"Simulación y negociación"},
+    {id:"practica",     label:"Actividad y prácticas oficiales"},
+    {id:"evaluacion",   label:"Evaluación de Semana 2"},
+    {id:"avanzado",     label:"Nivel avanzado"}
+  ];
 
-  var listEl     = document.getElementById("list");
-  var emptyEl    = document.getElementById("empty");
-  var counterEl  = document.getElementById("counter");
-  var filtersEl  = document.getElementById("filters");
-  var searchEl   = document.getElementById("search");
-  var toastEl    = document.getElementById("toast");
-  var toTopEl    = document.getElementById("toTop");
-  var openSet    = {};
+  var QA2 = [
+{ n:1, c:"fundamentos", tags:["Fundamentos"], star:true,
+  q:"¿Qué es exactamente un prompt?",
+  a:`<p>Es la instrucción, pregunta o texto que escribes a una IA para indicarle qué quieres que haga.</p>` },
 
-  /* ---------- filtros ---------- */
-  function counts(){
-    var map = { todas: QA.length };
-    QA.forEach(function(i){ map[i.c] = (map[i.c] || 0) + 1; });
-    return map;
-  }
-  function buildFilters(){
-    var c = counts();
-    filtersEl.innerHTML = CATS.map(function(cat){
-      return '<button class="chip" type="button" role="button" data-cat="' + cat.id + '" aria-pressed="' +
-             (state.cat === cat.id) + '">' + esc(cat.label) +
-             '<span class="count">' + (c[cat.id] || 0) + '</span></button>';
-    }).join("");
-  }
+{ n:2, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Un prompt es simplemente una pregunta?",
+  a:`<p>No. Puede ser una pregunta, una orden, un conjunto de instrucciones, información de contexto o una combinación de todo ello.</p>` },
 
-  /* ---------- tarjetas ---------- */
-  function cardHTML(item){
-    var isSec = item.c === "privacidad";
-    var tags = (item.tags || []).map(function(t){ return '<span class="tag">#' + esc(t) + '</span>'; }).join("");
-    var pend = item.pending ? '<span class="badge pending"><span aria-hidden="true">⏳</span>' + esc(item.pending) + '</span>' : "";
-    var secBadge = isSec ? '<span class="badge sec"><span aria-hidden="true">🛡</span>Privacidad y seguridad</span>' : "";
-    return '' +
-      '<details class="card' + (isSec ? " sec" : "") + '" id="pregunta-' + item.n + '" data-cat="' + item.c + '" data-n="' + item.n + '">' +
-        '<summary>' +
-          '<span class="num">' + item.n + '</span>' +
-          '<span class="qwrap">' +
-            '<span class="q">' + esc(item.q) + '</span>' +
-            '<span class="meta">' +
-              '<span class="badge">' + esc(catLabel(item.c)) + '</span>' + secBadge + pend + tags +
-            '</span>' +
-          '</span>' +
-          '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false">' +
-            '<polyline points="6 9 12 15 18 9" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-        '</summary>' +
-        '<div class="answer">' + item.a + '</div>' +
-        '<div class="cardactions">' +
-          '<button class="btn-ghost" type="button" data-copy="answer" data-n="' + item.n + '">📋 Copiar respuesta</button>' +
-          '<button class="btn-ghost" type="button" data-copy="link" data-n="' + item.n + '">🔗 Copiar enlace</button>' +
-        '</div>' +
-      '</details>';
-  }
+{ n:3, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Todo lo que escribo en ChatGPT es un prompt?",
+  a:`<p>Sí. Cada mensaje que envías funciona como una nueva entrada o instrucción para la conversación.</p>` },
 
-  function highlight(root, terms){
-    if (!terms.length) return;
-    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
-    var nodes = [], n;
-    while ((n = walker.nextNode())) {
-      if (n.parentNode && n.parentNode.nodeName !== "MARK" && n.nodeValue.trim()) nodes.push(n);
-    }
-    nodes.forEach(function(node){
-      var text = node.nodeValue, low = norm(text), frag = null, last = 0;
-      var marks = [];
-      terms.forEach(function(t){
-        var from = 0, idx;
-        while ((idx = low.indexOf(t, from)) !== -1){ marks.push([idx, idx + t.length]); from = idx + t.length; }
-      });
-      if (!marks.length) return;
-      marks.sort(function(a,b){ return a[0] - b[0]; });
-      var merged = [];
-      marks.forEach(function(m){
-        var prev = merged[merged.length - 1];
-        if (prev && m[0] <= prev[1]) prev[1] = Math.max(prev[1], m[1]);
-        else merged.push([m[0], m[1]]);
-      });
-      frag = document.createDocumentFragment();
-      merged.forEach(function(m){
-        if (m[0] > last) frag.appendChild(document.createTextNode(text.slice(last, m[0])));
-        var mk = document.createElement("mark");
-        mk.textContent = text.slice(m[0], m[1]);
-        frag.appendChild(mk);
-        last = m[1];
-      });
-      if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
-      node.parentNode.replaceChild(frag, node);
-    });
-  }
+{ n:4, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Una sola palabra puede ser un prompt?",
+  a:`<p>Sí, pero normalmente proporcionará muy poco contexto y la respuesta puede ser genérica.</p>` },
 
-  function render(){
-    var q = norm(state.query.trim());
-    var terms = q ? q.split(/\s+/).filter(function(t){ return t.length > 1; }) : [];
-    var visible = QA.filter(function(i){
-      if (state.cat !== "todas" && i.c !== state.cat) return false;
-      if (!terms.length) return true;
-      return terms.every(function(t){ return i.haystack.indexOf(t) !== -1; });
-    });
+{ n:5, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Un prompt puede tener varias preguntas?",
+  a:`<p>Sí. Conviene organizarlas y numerarlas para que la IA pueda responder cada punto claramente.</p>` },
 
-    listEl.innerHTML = visible.map(cardHTML).join("");
-    emptyEl.className = visible.length ? "empty" : "empty show";
-    counterEl.innerHTML = "Mostrando <b>" + visible.length + "</b> de " + QA.length + " preguntas";
+{ n:6, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Qué diferencia hay entre un prompt y una búsqueda de Google?",
+  a:`<p>Una búsqueda intenta localizar información; un prompt puede pedir a la IA que explique, transforme, compare, redacte, analice o estructure información.</p>` },
 
-    Array.prototype.forEach.call(listEl.querySelectorAll("details"), function(d){
-      if (openSet[d.dataset.n]) d.open = true;
-    });
-    if (terms.length) highlight(listEl, terms);
+{ n:7, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Qué diferencia hay entre darle una instrucción y hacerle una pregunta?",
+  a:`<p>Una pregunta solicita información; una instrucción define una acción. Por ejemplo: "¿Qué es AIDA?" frente a "Explícame AIDA con un ejemplo".</p>` },
 
-    Array.prototype.forEach.call(filtersEl.querySelectorAll(".chip"), function(b){
-      b.setAttribute("aria-pressed", String(b.dataset.cat === state.cat));
-    });
-  }
+{ n:8, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Tengo que escribir los prompts de alguna manera especial?",
+  a:`<p>No existe una sintaxis obligatoria. Lo importante es que la instrucción sea clara, específica y bien estructurada.</p>` },
 
-  /* ---------- eventos ---------- */
-  filtersEl.addEventListener("click", function(e){
-    var btn = e.target.closest(".chip");
-    if (!btn) return;
-    state.cat = btn.dataset.cat;
-    try{ localStorage.setItem("tl_qa_cat", state.cat); }catch(err){}
-    render();
+{ n:9, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Tengo que escribirlos entre comillas?",
+  a:`<p>No. Las comillas solamente ayudan cuando quieres delimitar un texto concreto.</p>` },
+
+{ n:10, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Importa utilizar mayúsculas?",
+  a:`<p>Normalmente no. Es más importante que la instrucción sea clara.</p>` },
+
+{ n:11, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Importa la ortografía?",
+  a:`<p>La IA suele comprender pequeños errores, pero una mejor redacción reduce ambigüedades.</p>` },
+
+{ n:12, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Importan los signos de puntuación?",
+  a:`<p>Ayudan. Sobre todo en prompts largos, porque separan correctamente las instrucciones.</p>` },
+
+{ n:13, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Tengo que escribir \"por favor\"?",
+  a:`<p>No es necesario para que funcione, aunque puedes hacerlo naturalmente.</p>` },
+
+{ n:14, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿ChatGPT entiende abreviaciones?",
+  a:`<p>Muchas sí, pero si una abreviación puede tener varios significados conviene explicarla.</p>` },
+
+{ n:15, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Puedo escribir como hablo normalmente?",
+  a:`<p>Sí. No necesitas utilizar lenguaje técnico para obtener resultados útiles.</p>` },
+
+{ n:16, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Puedo usar lenguaje informal?",
+  a:`<p>Sí. Después puedes pedir que la respuesta tenga un tono profesional, formal, amigable, etc.</p>` },
+
+{ n:17, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Puedo escribir un prompt muy largo?",
+  a:`<p>Sí, siempre que la información sea relevante y esté organizada.</p>` },
+
+{ n:18, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Existe una longitud ideal para un prompt?",
+  a:`<p>No. Debe contener la información necesaria sin agregar detalles que no aportan.</p>` },
+
+{ n:19, c:"fundamentos", tags:["Fundamentos"], star:true,
+  q:"¿Un prompt más largo siempre es mejor?",
+  a:`<p>No. Más específico es mejor; más largo no necesariamente.</p>` },
+
+{ n:20, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Qué pasa si mi prompt es demasiado corto?",
+  a:`<p>La IA tendrá que hacer más suposiciones y posiblemente producirá una respuesta genérica.</p>` },
+
+{ n:21, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Qué pasa si mi prompt tiene información contradictoria?",
+  a:`<p>La respuesta puede ser inconsistente. Conviene eliminar la contradicción antes de enviarlo.</p>` },
+
+{ n:22, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Qué pasa si no sé exactamente qué quiero pedir?",
+  a:`<p>Puedes decirle a la IA cuál es tu problema y pedirle que te haga preguntas antes de responder.</p>` },
+
+{ n:23, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Puedo pedirle que primero me haga preguntas?",
+  a:`<p>Sí. Ejemplo: "Antes de responder, hazme las preguntas necesarias para entender mi situación".</p>` },
+
+{ n:24, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Necesito aprenderme estructuras de prompts de memoria?",
+  a:`<p>No. Lo importante es comprender los elementos y saber aplicarlos.</p>` },
+
+{ n:25, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Tengo que utilizar siempre una plantilla?",
+  a:`<p>No. Las plantillas sirven como apoyo, especialmente mientras estás aprendiendo.</p>` },
+
+{ n:26, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Puedo crear mis propios prompts?",
+  a:`<p>Sí. De hecho, adaptar las instrucciones a tu necesidad real es una de las habilidades principales de esta semana.</p>` },
+
+{ n:27, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Puedo guardar un prompt y reutilizarlo?",
+  a:`<p>Sí. Puedes crear plantillas y cambiar solamente variables como cliente, producto, objetivo o formato.</p>` },
+
+{ n:28, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Puedo copiar prompts de internet?",
+  a:`<p>Sí, pero debes revisarlos y adaptarlos. Un prompt popular no necesariamente sirve para tu problema.</p>` },
+
+{ n:29, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Por qué dos personas pueden obtener respuestas diferentes con prompts similares?",
+  a:`<p>Porque los modelos generativos pueden producir distintas respuestas y porque pequeños cambios de contexto influyen en el resultado.</p>` },
+
+{ n:30, c:"fundamentos", tags:["Fundamentos"],
+  q:"¿Por qué ChatGPT puede responder diferente si repito exactamente el mismo prompt?",
+  a:`<p>Porque la generación de lenguaje no es completamente determinista; puede existir variabilidad entre ejecuciones.</p><p class="flow">La presentación oficial resume esta lógica mediante el principio de que la calidad de la entrada condiciona fuertemente la calidad del resultado.</p>` },
+
+{ n:31, c:"fundamentos", tags:["GIGO"], star:true,
+  q:"¿Qué significa \"Basura entra, basura sale\"?",
+  a:`<p>Que una instrucción pobre, ambigua o incompleta suele producir una respuesta igualmente pobre o genérica.</p>` },
+
+{ n:32, c:"fundamentos", tags:["GIGO"],
+  q:"¿Si escribo mal el prompt ChatGPT siempre responderá mal?",
+  a:`<p>No siempre, pero aumenta el riesgo de recibir algo diferente de lo que necesitabas.</p>` },
+
+{ n:33, c:"fundamentos", tags:["GIGO"],
+  q:"¿Puede ChatGPT entender una petición vaga?",
+  a:`<p>Sí, pero tendrá que completar los vacíos haciendo suposiciones.</p>` },
+
+{ n:34, c:"fundamentos", tags:["GIGO"],
+  q:"¿Por qué una instrucción vaga produce respuestas genéricas?",
+  a:`<p>Porque la IA no conoce suficientes detalles sobre tu propósito, público, contexto o resultado deseado.</p>` },
+
+{ n:35, c:"fundamentos", tags:["GIGO"],
+  q:"¿Qué suele faltarle a un prompt malo?",
+  a:`<p>Una tarea clara, contexto suficiente, formato, restricciones y, cuando sea útil, un rol.</p>` },
+
+{ n:36, c:"fundamentos", tags:["GIGO"],
+  q:"¿Cómo sé si mi prompt es suficientemente específico?",
+  a:`<p>Pregúntate: ¿queda claro qué quiero, para quién, con qué condiciones y cómo debe entregármelo?</p>` },
+
+{ n:37, c:"fundamentos", tags:["GIGO"],
+  q:"¿Puede existir un prompt muy detallado pero mal diseñado?",
+  a:`<p>Sí. Mucha información desordenada o contradictoria también puede empeorar el resultado.</p>` },
+
+{ n:38, c:"fundamentos", tags:["GIGO"],
+  q:"¿Qué hago si escribí un buen prompt pero recibí una respuesta mala?",
+  a:`<p>Itera: indica qué estuvo mal y pide una corrección específica.</p>` },
+
+{ n:39, c:"fundamentos", tags:["GIGO"],
+  q:"¿Debo empezar de cero o corregir la respuesta?",
+  a:`<p>Normalmente conviene corregir dentro de la misma conversación si el contexto todavía sirve.</p>` },
+
+{ n:40, c:"fundamentos", tags:["GIGO"],
+  q:"¿Cómo identifico qué parte de mi prompt falló?",
+  a:`<p>Comprueba separadamente tarea, contexto, restricciones y formato.</p><p class="flow">"Basura entra, basura sale" es además uno de los conceptos expresamente evaluados esta semana.</p>` },
+
+{ n:41, c:"elementos", tags:["Rol"], star:true,
+  q:"¿Qué significa darle un rol a la IA?",
+  a:`<p>Indicarle desde qué perspectiva quieres que responda: por ejemplo, asistente administrativo, consultor de ventas o analista.</p>` },
+
+{ n:42, c:"elementos", tags:["Rol"],
+  q:"¿Por qué \"Actúa como…\" cambia la respuesta?",
+  a:`<p>Porque orienta el vocabulario, enfoque, tono y criterios que debe utilizar el modelo.</p>` },
+
+{ n:43, c:"elementos", tags:["Rol"],
+  q:"¿La IA realmente se convierte en ese profesional?",
+  a:`<p>No. El rol orienta la respuesta; no convierte a la IA en una persona ni le otorga credenciales reales.</p>` },
+
+{ n:44, c:"elementos", tags:["Rol"],
+  q:"¿Puedo decir \"Actúa como experto\"?",
+  a:`<p>Sí, aunque suele ser mejor especificar experto en qué.</p>` },
+
+{ n:45, c:"elementos", tags:["Rol"],
+  q:"¿Es mejor \"experto\", \"especialista\", \"consultor\" o un puesto concreto?",
+  a:`<p>Depende de la tarea. Mientras más relevante sea el rol para el problema, mejor.</p>` },
+
+{ n:46, c:"elementos", tags:["Rol"],
+  q:"¿Mientras más experto sea el rol, mejor será la respuesta?",
+  a:`<p>No necesariamente. Lo importante es que el rol tenga relación con la tarea.</p>` },
+
+{ n:47, c:"elementos", tags:["Rol"],
+  q:"¿Puedo combinar dos roles?",
+  a:`<p>Sí, cuando tenga sentido.</p>` },
+
+{ n:48, c:"elementos", tags:["Rol"],
+  q:"¿Puedo decir \"actúa como contador y abogado\"?",
+  a:`<p>Puedes, pero en temas profesionales debes verificar el resultado con especialistas reales cuando corresponda.</p>` },
+
+{ n:49, c:"elementos", tags:["Rol"],
+  q:"¿Qué pasa si los roles se contradicen?",
+  a:`<p>Puedes recibir una respuesta inconsistente. Es preferible definir claramente qué perspectiva debe dominar.</p>` },
+
+{ n:50, c:"elementos", tags:["Rol"],
+  q:"¿Es obligatorio poner un rol?",
+  a:`<p>No.</p>` },
+
+{ n:51, c:"elementos", tags:["Rol"],
+  q:"¿Cuándo no necesito un rol?",
+  a:`<p>Cuando la tarea ya es suficientemente clara y el rol no aporta nada importante.</p>` },
+
+{ n:52, c:"elementos", tags:["Rol"],
+  q:"¿Puedo darle una personalidad además del rol?",
+  a:`<p>Sí. Por ejemplo: "Actúa como asesor de ventas, directo, profesional y empático".</p>` },
+
+{ n:53, c:"elementos", tags:["Rol"],
+  q:"¿Rol y tono son lo mismo?",
+  a:`<p>No. Rol indica desde qué perspectiva responde; tono indica cómo debe sonar.</p>` },
+
+{ n:54, c:"elementos", tags:["Rol"],
+  q:"¿Rol y profesión son lo mismo?",
+  a:`<p>No necesariamente, aunque muchas veces utilizamos profesiones como roles.</p>` },
+
+{ n:55, c:"elementos", tags:["Rol"],
+  q:"¿Puedo pedirle que actúe como mi cliente?",
+  a:`<p>Sí. Es útil para simulaciones.</p>` },
+
+{ n:56, c:"elementos", tags:["Rol"],
+  q:"¿Puedo pedirle que actúe como reclutador?",
+  a:`<p>Sí.</p>` },
+
+{ n:57, c:"elementos", tags:["Rol"],
+  q:"¿Puedo pedirle que actúe como CEO?",
+  a:`<p>Sí, especialmente para simular cómo podría reaccionar un directivo.</p>` },
+
+{ n:58, c:"elementos", tags:["Rol"],
+  q:"¿Puedo usar roles para practicar entrevistas?",
+  a:`<p>Sí.</p>` },
+
+{ n:59, c:"elementos", tags:["Rol"],
+  q:"¿Puedo usar un rol para hacer simulaciones?",
+  a:`<p>Sí. El material incluso propone simulaciones de clientes y directivos.</p>` },
+
+{ n:60, c:"elementos", tags:["Rol"],
+  q:"¿Por qué cambia tanto el vocabulario cuando cambia el rol?",
+  a:`<p>Porque el rol proporciona una señal contextual sobre qué tipo de lenguaje y perspectiva debe utilizar.</p><p class="flow">La práctica oficial demuestra esto comparando un estilo corporativo formal con el de una startup moderna.</p>` },
+
+{ n:61, c:"elementos", tags:["Contexto"], star:true,
+  q:"¿Qué es el contexto?",
+  a:`<p>Es la información que ayuda a la IA a comprender la situación antes de realizar la tarea.</p>` },
+
+{ n:62, c:"elementos", tags:["Contexto"],
+  q:"¿Qué información debería incluir?",
+  a:`<p>Quién eres, cuál es la situación, cuál es el problema, para quién es el resultado y qué quieres conseguir.</p>` },
+
+{ n:63, c:"elementos", tags:["Contexto"],
+  q:"¿Cuánto contexto es suficiente?",
+  a:`<p>El necesario para evitar suposiciones importantes.</p>` },
+
+{ n:64, c:"elementos", tags:["Contexto"],
+  q:"¿Demasiado contexto puede empeorar el resultado?",
+  a:`<p>Sí, especialmente si introduces información irrelevante o contradictoria.</p>` },
+
+{ n:65, c:"elementos", tags:["Contexto"],
+  q:"¿ChatGPT sabe quién soy si no se lo explico?",
+  a:`<p>No debes asumir que conoce automáticamente toda la información necesaria para esa tarea.</p>` },
+
+{ n:66, c:"elementos", tags:["Contexto"],
+  q:"¿ChatGPT sabe dónde trabajo?",
+  a:`<p>No debes depender de ello. Si es relevante, proporciona el contexto necesario.</p>` },
+
+{ n:67, c:"elementos", tags:["Contexto"],
+  q:"¿Tengo que explicar mi empresa cada vez?",
+  a:`<p>Cuando esa información sea necesaria para producir una respuesta correcta.</p>` },
+
+{ n:68, c:"elementos", tags:["Contexto"],
+  q:"¿Tengo que decir quién va a leer el documento?",
+  a:`<p>Es muy recomendable, porque el público cambia vocabulario, tono y profundidad.</p>` },
+
+{ n:69, c:"elementos", tags:["Contexto"],
+  q:"¿Por qué es importante definir el público?",
+  a:`<p>Porque no se escribe igual para un cliente, un director, un niño o un especialista.</p>` },
+
+{ n:70, c:"elementos", tags:["Contexto"],
+  q:"¿Qué diferencia hay entre contexto y tarea?",
+  a:`<p>El contexto explica la situación; la tarea indica qué debe hacer la IA.</p>` },
+
+{ n:71, c:"elementos", tags:["Contexto"],
+  q:"¿Qué diferencia hay entre contexto y objetivo?",
+  a:`<p>El contexto describe dónde estamos; el objetivo describe qué queremos conseguir.</p>` },
+
+{ n:72, c:"elementos", tags:["Contexto"],
+  q:"¿El contexto puede incluir ejemplos?",
+  a:`<p>Sí.</p>` },
+
+{ n:73, c:"elementos", tags:["Contexto"],
+  q:"¿Puedo pegar información de mi empresa?",
+  a:`<p>Sí, siempre que tengas autorización y no expongas información sensible.</p>` },
+
+{ n:74, c:"elementos", tags:["Contexto"],
+  q:"¿Qué información NO debería proporcionar?",
+  a:`<p>Contraseñas, claves API, información bancaria, datos privados de clientes u otra información sensible.</p>` },
+
+{ n:75, c:"elementos", tags:["Contexto"],
+  q:"¿Puedo proporcionar nombres de clientes?",
+  a:`<p>Para ejercicios del curso es preferible anonimizar y utilizar datos ficticios.</p>` },
+
+{ n:76, c:"elementos", tags:["Contexto"],
+  q:"¿Puedo subir información confidencial?",
+  a:`<p>No deberías hacerlo sin revisar las políticas de tu organización y de la herramienta.</p>` },
+
+{ n:77, c:"elementos", tags:["Contexto"],
+  q:"¿Puedo utilizar datos ficticios para practicar?",
+  a:`<p>Sí. Es la opción recomendada para las prácticas.</p>` },
+
+{ n:78, c:"elementos", tags:["Tarea"], star:true,
+  q:"¿Qué es la tarea?",
+  a:`<p>Es la acción concreta que quieres que la IA realice.</p>` },
+
+{ n:79, c:"elementos", tags:["Tarea"],
+  q:"¿Cómo escribo una tarea clara?",
+  a:`<p>Utiliza un verbo concreto: redacta, resume, compara, analiza, clasifica, transforma, etc.</p>` },
+
+{ n:80, c:"elementos", tags:["Tarea"],
+  q:"¿Debo empezar con un verbo?",
+  a:`<p>No es obligatorio, pero ayuda mucho.</p>` },
+
+{ n:81, c:"elementos", tags:["Tarea"],
+  q:"¿Puedo pedir varias tareas en un mismo prompt?",
+  a:`<p>Sí. Ordénalas mediante números o pasos.</p>` },
+
+{ n:82, c:"elementos", tags:["Tarea"],
+  q:"¿Es mejor dividir una tarea grande?",
+  a:`<p>Con frecuencia sí, porque permite revisar cada etapa.</p>` },
+
+{ n:83, c:"elementos", tags:["Tarea"],
+  q:"¿Qué pasa si pido demasiadas cosas a la vez?",
+  a:`<p>Puede omitir requisitos o reducir la calidad de alguna parte.</p>` },
+
+{ n:84, c:"elementos", tags:["Tarea"],
+  q:"¿Puedo pedir primero un borrador y después mejorarlo?",
+  a:`<p>Sí. Es una buena forma de trabajar con IA.</p>` },
+
+{ n:85, c:"elementos", tags:["Tarea"],
+  q:"¿Puedo pedir que haga la tarea paso a paso?",
+  a:`<p>Puedes pedir una explicación organizada por pasos.</p>` },
+
+{ n:86, c:"elementos", tags:["Tarea"],
+  q:"¿Cómo hago para que no se desvíe?",
+  a:`<p>Define claramente tarea, objetivo, restricciones y formato.</p>` },
+
+{ n:87, c:"elementos", tags:["Tarea"],
+  q:"¿Qué diferencia hay entre tarea y objetivo?",
+  a:`<p>Tarea = qué hará. Objetivo = para qué lo hará.</p>` },
+
+{ n:88, c:"elementos", tags:["Tarea"],
+  q:"¿Qué pasa si la tarea contradice al rol?",
+  a:`<p>La instrucción será menos clara. Corrige la contradicción.</p>` },
+
+{ n:89, c:"elementos", tags:["Tarea"],
+  q:"¿Puedo modificar la tarea sin abrir otro chat?",
+  a:`<p>Sí.</p>` },
+
+{ n:90, c:"elementos", tags:["Restricciones"], star:true,
+  q:"¿Qué es una restricción?",
+  a:`<p>Una condición que limita o controla cómo debe producirse la respuesta.</p>` },
+
+{ n:91, c:"elementos", tags:["Restricciones"],
+  q:"¿Para qué sirven?",
+  a:`<p>Para reducir resultados no deseados y hacer la salida más precisa.</p>` },
+
+{ n:92, c:"elementos", tags:["Restricciones"],
+  q:"¿Un límite de palabras es una restricción?",
+  a:`<p>Sí.</p>` },
+
+{ n:93, c:"elementos", tags:["Restricciones"],
+  q:"¿El tono puede considerarse una restricción?",
+  a:`<p>Sí, en una estructura detallada.</p>` },
+
+{ n:94, c:"elementos", tags:["Restricciones"],
+  q:"¿Puedo decir qué palabras NO debe utilizar?",
+  a:`<p>Sí.</p>` },
+
+{ n:95, c:"elementos", tags:["Restricciones"],
+  q:"¿Puedo pedir exactamente 100 palabras?",
+  a:`<p>Sí, aunque siempre conviene comprobar el resultado.</p>` },
+
+{ n:96, c:"elementos", tags:["Restricciones"],
+  q:"¿Siempre respetará exactamente el número?",
+  a:`<p>No existe garantía absoluta; debes verificarlo.</p>` },
+
+{ n:97, c:"elementos", tags:["Restricciones"],
+  q:"¿Puedo limitarlo a tres párrafos?",
+  a:`<p>Sí.</p>` },
+
+{ n:98, c:"elementos", tags:["Restricciones"],
+  q:"¿Puedo pedir que no utilice emojis?",
+  a:`<p>Sí.</p>` },
+
+{ n:99, c:"elementos", tags:["Restricciones"],
+  q:"¿Puedo pedir que no invente información?",
+  a:`<p>Sí. Es una buena restricción, aunque igualmente debes verificar el resultado.</p>` },
+
+{ n:100, c:"elementos", tags:["Restricciones"],
+  q:"¿Puedo decir \"si no sabes algo, dilo\"?",
+  a:`<p>Sí. Por ejemplo: "Si la información no aparece, responde 'Información no disponible'".</p>` },
+
+{ n:101, c:"elementos", tags:["Restricciones"],
+  q:"¿Qué pasa si pongo demasiadas restricciones?",
+  a:`<p>Puedes hacer la tarea innecesariamente difícil o generar contradicciones.</p>` },
+
+{ n:102, c:"elementos", tags:["Restricciones"],
+  q:"¿Qué pasa si dos restricciones se contradicen?",
+  a:`<p>La IA puede cumplir una e incumplir otra. Elimina la contradicción.</p>` },
+
+{ n:103, c:"elementos", tags:["Restricciones"],
+  q:"¿Cuál instrucción prioriza ChatGPT cuando se contradicen?",
+  a:`<p>No conviene depender de eso. Redacta instrucciones compatibles y señala explícitamente cuál es prioritaria si fuera necesario.</p><p class="flow">El material de herramienta digital utiliza explícitamente Rol + Tarea + Restricción + Formato.</p>` },
+
+{ n:104, c:"elementos", tags:["Formato"], star:true,
+  q:"¿Qué significa formato?",
+  a:`<p>Cómo quieres que esté organizada y presentada la respuesta.</p>` },
+
+{ n:105, c:"elementos", tags:["Formato"],
+  q:"¿Formato significa Word, PDF o Excel?",
+  a:`<p>Puede significarlo en otros contextos, pero aquí principalmente hablamos de estructura: tabla, lista, párrafos, secciones, etc.</p>` },
+
+{ n:106, c:"elementos", tags:["Formato"],
+  q:"¿Una tabla es un formato?",
+  a:`<p>Sí.</p>` },
+
+{ n:107, c:"elementos", tags:["Formato"],
+  q:"¿Puedo pedir viñetas?",
+  a:`<p>Sí.</p>` },
+
+{ n:108, c:"elementos", tags:["Formato"],
+  q:"¿Puedo pedir una tabla?",
+  a:`<p>Sí.</p>` },
+
+{ n:109, c:"elementos", tags:["Formato"],
+  q:"¿Puedo pedir encabezados?",
+  a:`<p>Sí.</p>` },
+
+{ n:110, c:"elementos", tags:["Formato"],
+  q:"¿Puedo pedir tres párrafos?",
+  a:`<p>Sí.</p>` },
+
+{ n:111, c:"elementos", tags:["Formato"],
+  q:"¿Puedo pedir JSON?",
+  a:`<p>Sí, si necesitas una estructura de datos y sabes para qué la utilizarás.</p>` },
+
+{ n:112, c:"elementos", tags:["Formato"],
+  q:"¿Puedo pedir Markdown?",
+  a:`<p>Sí.</p>` },
+
+{ n:113, c:"elementos", tags:["Formato"],
+  q:"¿Puedo pedir un correo listo para copiar?",
+  a:`<p>Sí.</p>` },
+
+{ n:114, c:"elementos", tags:["Formato"],
+  q:"¿Puedo pedir varias versiones?",
+  a:`<p>Sí. Por ejemplo: formal, breve y persuasiva.</p>` },
+
+{ n:115, c:"elementos", tags:["Formato"],
+  q:"¿Cómo hago una respuesta fácil de leer en celular?",
+  a:`<p>Pide párrafos cortos, información clave al inicio y estructura visual limpia.</p>` },
+
+{ n:116, c:"elementos", tags:["Formato"],
+  q:"¿Qué diferencia hay entre formato y estilo?",
+  a:`<p>Formato = estructura. Estilo = manera de redactar.</p>` },
+
+{ n:117, c:"elementos", tags:["Formato"],
+  q:"¿Qué diferencia hay entre formato y tono?",
+  a:`<p>Formato determina cómo se organiza; tono determina cómo suena.</p>` },
+
+{ n:118, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Cuál es la estructura correcta de un prompt?",
+  a:`<p>No existe una única estructura obligatoria. Diferentes tareas pueden utilizar diferentes esquemas.</p><p class="flow">Aquí hay una aclaración importante del propio material oficial. La actividad menciona "F-R-A-M-E", pero solamente desarrolla Rol, Contexto, Tarea y Formato; la evaluación sí define expresamente R-T-F como Rol, Tarea, Formato. No conviene inventar la quinta letra de FRAME.</p>` },
+
+{ n:119, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Tengo que usar Rol + Contexto + Tarea + Formato?",
+  a:`<p>Es una estructura muy útil para principiantes.</p>` },
+
+{ n:120, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Tengo que usar Rol + Tarea + Restricción + Formato?",
+  a:`<p>También es válida y aparece en el material de herramienta digital.</p>` },
+
+{ n:121, c:"estructuras", tags:["RTF/FRAME"], star:true,
+  q:"¿Qué es R-T-F?",
+  a:`<p>Rol, Tarea y Formato.</p>` },
+
+{ n:122, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿R-T-F significa Rol, Tarea y Formato?",
+  a:`<p>Sí. Esa es la respuesta oficial de la evaluación.</p>` },
+
+{ n:123, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Dónde quedó el contexto en RTF?",
+  a:`<p>RTF es un modelo simplificado. Puedes agregar contexto cuando la tarea lo necesite.</p>` },
+
+{ n:124, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Dónde quedaron las restricciones?",
+  a:`<p>También pueden añadirse aunque no formen parte de las tres letras de RTF.</p>` },
+
+{ n:125, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Qué es F-R-A-M-E?",
+  a:`<p>La actividad oficial utiliza ese nombre para una metodología de prompts.</p>` },
+
+{ n:126, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Qué significan las cinco letras de FRAME?",
+  a:`<p>El documento oficial no desarrolla las cinco letras individualmente. Solo menciona Rol, Contexto, Tarea y Formato. No debemos inventar la parte faltante.</p>` },
+
+{ n:127, c:"estructuras", tags:["RTF/FRAME"], star:true,
+  q:"¿FRAME y RTF son lo mismo?",
+  a:`<p>No exactamente. Ambos buscan estructurar instrucciones, pero el material los presenta con diferente nivel de detalle.</p>` },
+
+{ n:128, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Cuál debo utilizar para la evaluación?",
+  a:`<p>Para la pregunta oficial debes recordar: RTF = Rol, Tarea, Formato.</p>` },
+
+{ n:129, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Cuál debo utilizar en mi trabajo?",
+  a:`<p>La estructura que mejor reduzca la ambigüedad de tu tarea.</p>` },
+
+{ n:130, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Existe un framework oficial universal de prompts?",
+  a:`<p>No. Estos esquemas son herramientas para organizar instrucciones.</p>` },
+
+{ n:131, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Qué pasa si no uso ningún framework?",
+  a:`<p>Puedes obtener buenos resultados si tu instrucción sigue siendo clara.</p>` },
+
+{ n:132, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Puedo mezclar estructuras?",
+  a:`<p>Sí. Lo importante es que los elementos no se contradigan.</p>` },
+
+{ n:133, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Cuál es mejor para principiantes?",
+  a:`<p>Rol + Contexto + Tarea + Restricciones + Formato es fácil de entender y bastante completo.</p>` },
+
+{ n:134, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Cuál es mejor para tareas profesionales?",
+  a:`<p>Depende de la tarea; normalmente conviene incluir contexto, objetivo y criterios verificables.</p>` },
+
+{ n:135, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Cuál es mejor para correos?",
+  a:`<p>RTF puede ser suficiente si añades destinatario, objetivo, tono y restricciones.</p>` },
+
+{ n:136, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Cuál es mejor para analizar documentos?",
+  a:`<p>Una estructura que defina tarea, fuente permitida, restricciones y formato de salida.</p>` },
+
+{ n:137, c:"estructuras", tags:["RTF/FRAME"],
+  q:"¿Cuál es mejor para proyectos complejos?",
+  a:`<p>Una estructura más completa y una conversación por etapas.</p>` },
+
+{ n:138, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Qué es TAO?",
+  a:`<p>Tarea, Acción y Objetivo.</p><p class="flow">La presentación incluye visualmente estos esquemas.</p>` },
+
+{ n:139, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Qué significa TAO?",
+  a:`<p>Define qué necesitas, qué acción debe realizarse y qué objetivo quieres alcanzar.</p>` },
+
+{ n:140, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Cuándo utilizar TAO?",
+  a:`<p>Cuando necesitas convertir una intención general en una acción con propósito claro.</p>` },
+
+{ n:141, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Qué es RTF?",
+  a:`<p>Rol, Tarea y Formato.</p>` },
+
+{ n:142, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Qué es BAB?",
+  a:`<p>Before, After, Bridge.</p>` },
+
+{ n:143, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Qué significa Before–After–Bridge?",
+  a:`<p>Before = situación actual; After = resultado deseado; Bridge = cómo pasar de uno al otro.</p>` },
+
+{ n:144, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Para qué sirve BAB?",
+  a:`<p>Para estructurar soluciones, transformación o comunicación persuasiva.</p>` },
+
+{ n:145, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Qué es CARE?",
+  a:`<p>Contexto, Acción, Resultados y Ejemplos, según el esquema mostrado en la presentación.</p>` },
+
+{ n:146, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Para qué sirve CARE?",
+  a:`<p>Para proporcionar una situación, una acción esperada, los resultados y ejemplos que guíen la respuesta.</p>` },
+
+{ n:147, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Cuál es mejor?",
+  a:`<p>Ninguno es universalmente mejor.</p>` },
+
+{ n:148, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Tengo que aprenderme todos?",
+  a:`<p>No necesitas convertir la semana en memorización de siglas.</p>` },
+
+{ n:149, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Puedo obtener el mismo resultado utilizando estructuras diferentes?",
+  a:`<p>Sí.</p>` },
+
+{ n:150, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Existe un framework específico para ventas?",
+  a:`<p>Para la estructura persuasiva del contenido, el material introduce PAS y AIDA.</p>` },
+
+{ n:151, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Existe uno para emails?",
+  a:`<p>Puedes utilizar RTF combinado con la regla de la inmediatez.</p>` },
+
+{ n:152, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Existe uno para análisis?",
+  a:`<p>No se establece uno obligatorio. Lo importante es definir fuente, tarea, criterios y salida.</p>` },
+
+{ n:153, c:"estructuras", tags:["TAO/BAB/CARE"],
+  q:"¿Son reglas oficiales de ChatGPT?",
+  a:`<p>No. Son metodologías de organización de prompts, no comandos obligatorios de la plataforma.</p>` },
+
+{ n:154, c:"conversacion", tags:["Iteración"],
+  q:"¿Tengo que obtener todo con un solo prompt?",
+  a:`<p>No.</p><p class="flow">La actividad oficial exige precisamente continuar sobre la primera respuesta y desarrollar una de las ideas elegidas.</p>` },
+
+{ n:155, c:"conversacion", tags:["Iteración"],
+  q:"¿Qué es iterar?",
+  a:`<p>Mejorar progresivamente la entrada o la respuesta mediante nuevas instrucciones.</p>` },
+
+{ n:156, c:"conversacion", tags:["Iteración"],
+  q:"¿Por qué conviene conversar con la IA?",
+  a:`<p>Porque puedes revisar un resultado, detectar fallos y pedir mejoras específicas.</p>` },
+
+{ n:157, c:"conversacion", tags:["Iteración"],
+  q:"¿ChatGPT recuerda lo que acaba de responder?",
+  a:`<p>Dentro de la conversación puede utilizar el contexto anterior disponible.</p>` },
+
+{ n:158, c:"conversacion", tags:["Iteración"],
+  q:"¿Tengo que repetir todo en cada mensaje?",
+  a:`<p>Normalmente no dentro de la misma conversación, si el contexto sigue disponible y claro.</p>` },
+
+{ n:159, c:"conversacion", tags:["Iteración"],
+  q:"¿Puedo decir \"me gusta la opción 2, desarróllala\"?",
+  a:`<p>Sí. De hecho, es prácticamente lo que hace la actividad oficial.</p>` },
+
+{ n:160, c:"conversacion", tags:["Iteración"],
+  q:"¿Puedo corregir solo una parte?",
+  a:`<p>Sí. Especifica exactamente qué debe mantenerse y qué debe cambiar.</p>` },
+
+{ n:161, c:"conversacion", tags:["Iteración"],
+  q:"¿Puedo pedir que mantenga lo bueno?",
+  a:`<p>Sí.</p>` },
+
+{ n:162, c:"conversacion", tags:["Iteración"],
+  q:"¿Qué hago si una conversación larga empieza a desviarse?",
+  a:`<p>Resume nuevamente los requisitos o comienza una conversación limpia.</p>` },
+
+{ n:163, c:"conversacion", tags:["Iteración"],
+  q:"¿Cuándo conviene abrir un chat nuevo?",
+  a:`<p>Cuando cambias completamente de tarea o el contexto anterior empieza a interferir.</p>` },
+
+{ n:164, c:"conversacion", tags:["Iteración"],
+  q:"¿Puedo regresar a una respuesta anterior?",
+  a:`<p>Puedes referirte a ella y pedir que se retome determinado elemento.</p>` },
+
+{ n:165, c:"conversacion", tags:["Iteración"],
+  q:"¿Mega-prompt o conversación progresiva?",
+  a:`<p>Para tareas complejas suele funcionar mejor dividir el trabajo y revisar etapas.</p>` },
+
+{ n:166, c:"conversacion", tags:["Iteración"],
+  q:"¿Puedo pedirle que critique su propia respuesta?",
+  a:`<p>Sí, aunque esa crítica tampoco sustituye tu revisión.</p>` },
+
+{ n:167, c:"conversacion", tags:["Iteración"],
+  q:"¿Puedo pedir varias opciones y después elegir?",
+  a:`<p>Sí.</p>` },
+
+{ n:168, c:"conversacion", tags:["Iteración"],
+  q:"¿Cómo hago un ajuste fino sin saber prompting avanzado?",
+  a:`<p>Indica qué te gustó, qué no te gustó y qué cambio concreto necesitas.</p>` },
+
+{ n:169, c:"redaccion", tags:["Correos"],
+  q:"¿Puede ChatGPT redactar correos profesionales?",
+  a:`<p>Sí, como borrador que después debes revisar.</p><p class="flow">La presentación establece para esta semana la regla de la inmediatez: información importante al inicio, asunto directo de menos de ocho palabras y CTA claro al final.</p>` },
+
+{ n:170, c:"redaccion", tags:["Correos"],
+  q:"¿Qué información debo darle?",
+  a:`<p>Destinatario, situación, objetivo, información esencial, tono y acción esperada.</p>` },
+
+{ n:171, c:"redaccion", tags:["Correos"], star:true,
+  q:"¿Qué es la regla de la inmediatez?",
+  a:`<p>Presentar primero lo que el destinatario necesita saber.</p>` },
+
+{ n:172, c:"redaccion", tags:["Correos"],
+  q:"¿Por qué lo importante va al principio?",
+  a:`<p>Porque facilita comprender el mensaje rápidamente.</p>` },
+
+{ n:173, c:"redaccion", tags:["Correos"],
+  q:"¿Por qué el asunto debe tener menos de ocho palabras?",
+  a:`<p>Es la regla práctica utilizada en el material para mantenerlo directo y fácil de identificar.</p>` },
+
+{ n:174, c:"redaccion", tags:["Correos"],
+  q:"¿Todos los correos del mundo deben tener menos de ocho palabras?",
+  a:`<p>No. Es una pauta del curso, no una ley universal de comunicación.</p>` },
+
+{ n:175, c:"redaccion", tags:["Correos"],
+  q:"¿Qué debe contener el primer párrafo?",
+  a:`<p>La información principal que el destinatario necesita saber.</p>` },
+
+{ n:176, c:"redaccion", tags:["Correos"],
+  q:"¿Qué es una llamada a la acción?",
+  a:`<p>Una indicación clara sobre qué quieres que haga el destinatario.</p>` },
+
+{ n:177, c:"redaccion", tags:["Correos"],
+  q:"¿Qué significa CTA?",
+  a:`<p>Call To Action, o llamada a la acción.</p>` },
+
+{ n:178, c:"redaccion", tags:["Correos"],
+  q:"¿Dónde debe ir?",
+  a:`<p>Normalmente al final del mensaje.</p>` },
+
+{ n:179, c:"redaccion", tags:["Correos"],
+  q:"¿Cómo hago un correo más breve?",
+  a:`<p>Elimina repeticiones, antecedentes innecesarios y frases de relleno.</p>` },
+
+{ n:180, c:"redaccion", tags:["Correos"],
+  q:"¿Cómo hago que suene profesional pero no robótico?",
+  a:`<p>Usa lenguaje directo, natural y específico.</p>` },
+
+{ n:181, c:"redaccion", tags:["Correos"],
+  q:"¿Cómo hago que suene empático?",
+  a:`<p>Reconoce la situación del destinatario sin exagerar.</p>` },
+
+{ n:182, c:"redaccion", tags:["Correos"],
+  q:"¿Cómo comunico malas noticias?",
+  a:`<p>Informa con claridad, explica lo necesario, reconoce el impacto y señala el siguiente paso.</p>` },
+
+{ n:183, c:"redaccion", tags:["Correos"],
+  q:"¿Cómo redacto un correo por retraso?",
+  a:`<p>Indica inmediatamente el retraso, nueva fecha o situación, disculpa y acción siguiente.</p>` },
+
+{ n:184, c:"redaccion", tags:["Correos"],
+  q:"¿Puede corregir un correo que yo ya escribí?",
+  a:`<p>Sí.</p>` },
+
+{ n:185, c:"redaccion", tags:["Correos"],
+  q:"¿Puedo pegar un correo recibido y pedir una respuesta?",
+  a:`<p>Sí, pero elimina datos sensibles antes de utilizarlo.</p>` },
+
+{ n:186, c:"redaccion", tags:["Correos"],
+  q:"¿Puedo pedir diferentes tonos?",
+  a:`<p>Sí.</p>` },
+
+{ n:187, c:"redaccion", tags:["Correos"],
+  q:"¿Cómo sé si realmente suena profesional?",
+  a:`<p>Comprueba claridad, brevedad, respeto, precisión, objetivo y CTA.</p>` },
+
+{ n:188, c:"redaccion", tags:["Propuestas"],
+  q:"¿Puede ChatGPT escribir propuestas comerciales?",
+  a:`<p>Sí, como apoyo para elaborar y estructurar un borrador.</p>` },
+
+{ n:189, c:"redaccion", tags:["Propuestas"],
+  q:"¿Cuál es el problema de dejarla escribir sin instrucciones?",
+  a:`<p>Puede producir textos genéricos centrados en características en lugar de necesidades reales.</p>` },
+
+{ n:190, c:"redaccion", tags:["Propuestas"],
+  q:"¿Característica y beneficio son lo mismo?",
+  a:`<p>No. Característica = qué tiene el producto. Beneficio = qué obtiene el cliente gracias a eso.</p>` },
+
+{ n:191, c:"redaccion", tags:["Propuestas"],
+  q:"¿Por qué debemos hablar del beneficio?",
+  a:`<p>Porque el cliente necesita comprender cómo la solución mejora su situación.</p>` },
+
+{ n:192, c:"redaccion", tags:["Propuestas"],
+  q:"¿Qué significa diagnóstico–solución–beneficios?",
+  a:`<p>Diagnóstico: problema actual. Solución: qué propones. Beneficios: qué mejora obtiene el cliente.</p>` },
+
+{ n:193, c:"redaccion", tags:["Propuestas"],
+  q:"¿Cómo evito inventar beneficios?",
+  a:`<p>Proporciona información real y exige que no asuma datos no proporcionados.</p>` },
+
+{ n:194, c:"redaccion", tags:["Propuestas"],
+  q:"¿Puede adaptar una propuesta a distintos clientes?",
+  a:`<p>Sí, proporcionando el contexto de cada cliente.</p>` },
+
+{ n:195, c:"redaccion", tags:["Propuestas"],
+  q:"¿Puedo darle información de mi producto?",
+  a:`<p>Sí, siempre que pueda compartirse de manera segura.</p>` },
+
+{ n:196, c:"redaccion", tags:["Propuestas"],
+  q:"¿Puede hacer propuestas B2B?",
+  a:`<p>Sí.</p>` },
+
+{ n:197, c:"redaccion", tags:["Propuestas"],
+  q:"¿Puede hacerlo para pequeños negocios?",
+  a:`<p>Sí.</p>` },
+
+{ n:198, c:"redaccion", tags:["Propuestas"],
+  q:"¿Cómo evito que suene demasiado vendedor?",
+  a:`<p>Pide lenguaje profesional, concreto, sin exageraciones ni clichés.</p>` },
+
+{ n:199, c:"redaccion", tags:["Propuestas"],
+  q:"¿Cómo evito \"revolucionario\" e \"innovador\"?",
+  a:`<p>Inclúyelo como restricción.</p>` },
+
+{ n:200, c:"redaccion", tags:["Propuestas"],
+  q:"¿Puede ayudarme a identificar el problema del cliente?",
+  a:`<p>Puede ayudarte a plantear hipótesis, pero deben validarse con información real.</p>` },
+
+{ n:201, c:"redaccion", tags:["Propuestas"],
+  q:"¿Puede generar propuestas para diferentes segmentos?",
+  a:`<p>Sí.</p>` },
+
+{ n:202, c:"redaccion", tags:["Propuestas"],
+  q:"¿Debo revisar una propuesta antes de enviarla?",
+  a:`<p>Siempre.</p><p class="flow">El enfoque oficial es problema del cliente → solución → beneficios reales, y aparece también en la evaluación.</p>` },
+
+{ n:203, c:"redaccion", tags:["Informes"],
+  q:"¿Puede resumir documentos?",
+  a:`<p>Sí.</p>` },
+
+{ n:204, c:"redaccion", tags:["Informes"],
+  q:"¿Resumen e informe son lo mismo?",
+  a:`<p>No. Un resumen reduce información; un informe puede además organizar hallazgos, métricas y conclusiones.</p>` },
+
+{ n:205, c:"redaccion", tags:["Informes"],
+  q:"¿Qué es un resumen ejecutivo?",
+  a:`<p>Una síntesis breve de la información más importante para tomar decisiones.</p>` },
+
+{ n:206, c:"redaccion", tags:["Informes"],
+  q:"¿Por qué ponerlo al principio?",
+  a:`<p>Para que el lector comprenda rápidamente la situación principal.</p>` },
+
+{ n:207, c:"redaccion", tags:["Informes"],
+  q:"¿Puede identificar ideas principales?",
+  a:`<p>Sí, aunque debes comprobar que sean realmente las importantes.</p>` },
+
+{ n:208, c:"redaccion", tags:["Informes"],
+  q:"¿Puede extraer métricas?",
+  a:`<p>Sí, cuando estén presentes en la información proporcionada.</p>` },
+
+{ n:209, c:"redaccion", tags:["Informes"],
+  q:"¿Puede ordenar información caótica?",
+  a:`<p>Sí.</p>` },
+
+{ n:210, c:"redaccion", tags:["Informes"],
+  q:"¿Puede resumir comentarios de clientes?",
+  a:`<p>Sí.</p>` },
+
+{ n:211, c:"redaccion", tags:["Informes"],
+  q:"¿Cómo hago que identifique problemas repetidos?",
+  a:`<p>Pídele que agrupe comentarios por tema y contabilice únicamente lo que aparezca en los datos.</p>` },
+
+{ n:212, c:"redaccion", tags:["Informes"],
+  q:"¿Puede analizar muchos comentarios?",
+  a:`<p>Puede procesar grandes cantidades dependiendo de los límites de la herramienta y del contexto disponible.</p>` },
+
+{ n:213, c:"redaccion", tags:["Informes"],
+  q:"¿Puede generar recomendaciones?",
+  a:`<p>Sí, pero debes distinguir las recomendaciones de los hechos observados.</p>` },
+
+{ n:214, c:"redaccion", tags:["Informes"],
+  q:"¿Cómo sé que realmente provienen del documento?",
+  a:`<p>Pide evidencias, fragmentos o ubicación del dato y compruébalos.</p>` },
+
+{ n:215, c:"redaccion", tags:["Informes"],
+  q:"¿Puede inventar métricas?",
+  a:`<p>Sí, es posible que genere datos incorrectos si no se controla y verifica.</p>` },
+
+{ n:216, c:"redaccion", tags:["Informes"],
+  q:"¿Qué pasa si la información no existe?",
+  a:`<p>Indícale: "Responde 'Información no disponible en el documento'".</p>` },
+
+{ n:217, c:"redaccion", tags:["Informes"],
+  q:"¿Cómo hago para que no haga suposiciones?",
+  a:`<p>Añade una restricción explícita que limite la respuesta a la información proporcionada.</p><p class="flow">La herramienta oficial utiliza exactamente esta técnica para análisis documental.</p>` },
+
+{ n:218, c:"documentos", tags:["PDFs"],
+  q:"¿Puedo subir un PDF?",
+  a:`<p>La actividad de herramienta digital contempla adjuntar un archivo o proporcionar directamente el texto.</p>` },
+
+{ n:219, c:"documentos", tags:["PDFs"],
+  q:"¿Qué tipos de documentos puede analizar?",
+  a:`<p>Depende de las funciones habilitadas en la herramienta utilizada; para esta práctica se trabaja principalmente con documentos y texto.</p>` },
+
+{ n:220, c:"documentos", tags:["PDFs"],
+  q:"¿Tengo que copiar todo el texto?",
+  a:`<p>No necesariamente; cuando la herramienta permita archivos, puedes adjuntarlo.</p>` },
+
+{ n:221, c:"documentos", tags:["PDFs"],
+  q:"¿Puede leer un PDF completo?",
+  a:`<p>Puede analizar documentos compatibles, pero debes comprobar que haya procesado correctamente la información relevante.</p>` },
+
+{ n:222, c:"documentos", tags:["PDFs"],
+  q:"¿Puede analizar tablas?",
+  a:`<p>Puede intentarlo, aunque debes verificar especialmente datos y estructura.</p>` },
+
+{ n:223, c:"documentos", tags:["PDFs"],
+  q:"¿Puede identificar información que no aparece?",
+  a:`<p>Puede inferir o equivocarse, por eso debes restringirla cuando necesitas extracción estricta.</p>` },
+
+{ n:224, c:"documentos", tags:["PDFs"],
+  q:"¿Cómo hago para que utilice únicamente el archivo?",
+  a:`<p>Dilo explícitamente: "Basa tu respuesta únicamente en la información del documento".</p>` },
+
+{ n:225, c:"documentos", tags:["PDFs"],
+  q:"¿Qué significa anclar la respuesta?",
+  a:`<p>Limitarla a una fuente o conjunto concreto de información.</p>` },
+
+{ n:226, c:"documentos", tags:["PDFs"],
+  q:"¿Qué pasa si el archivo es muy grande?",
+  a:`<p>Puede existir un límite de procesamiento o contexto según la herramienta.</p>` },
+
+{ n:227, c:"documentos", tags:["PDFs"],
+  q:"¿Puede omitir partes?",
+  a:`<p>Sí, es posible. Por eso conviene especificar qué necesitas encontrar.</p>` },
+
+{ n:228, c:"documentos", tags:["PDFs"],
+  q:"¿Debo comprobar las conclusiones?",
+  a:`<p>Sí.</p>` },
+
+{ n:229, c:"documentos", tags:["PDFs"],
+  q:"¿Es seguro subir documentos laborales?",
+  a:`<p>Antes debes revisar confidencialidad, políticas internas y datos personales.</p>` },
+
+{ n:230, c:"documentos", tags:["PDFs"],
+  q:"¿Qué hago si contiene información confidencial?",
+  a:`<p>No la utilices sin autorización; anonimiza o crea una versión ficticia.</p>` },
+
+{ n:231, c:"documentos", tags:["Grounding/RAG"],
+  q:"¿Qué es grounding?",
+  a:`<p>Es proporcionar fuentes o información concreta para que la respuesta se apoye en ellas.</p><p class="flow">Contenido de nivel avanzado (complemento del profesor): el material introduce "Grounding/RAG", pero no desarrolla técnicamente su arquitectura.</p>` },
+
+{ n:232, c:"documentos", tags:["Grounding/RAG"],
+  q:"¿Qué significa \"anclar\" una respuesta?",
+  a:`<p>Hacer que la IA se base en información proporcionada en lugar de responder libremente.</p>` },
+
+{ n:233, c:"documentos", tags:["Grounding/RAG"],
+  q:"¿Qué es RAG?",
+  a:`<p>Retrieval-Augmented Generation: recuperación aumentada por generación. Consiste en recuperar información relevante y proporcionársela al modelo para generar la respuesta.</p>` },
+
+{ n:234, c:"documentos", tags:["Grounding/RAG"],
+  q:"¿Grounding y RAG son exactamente lo mismo?",
+  a:`<p>No. RAG es una técnica específica; grounding es un concepto más amplio.</p>` },
+
+{ n:235, c:"documentos", tags:["Grounding/RAG"],
+  q:"¿Adjuntar un PDF automáticamente significa que construimos un RAG?",
+  a:`<p>No necesariamente. Adjuntar una fuente sirve para grounding; un sistema RAG implica además un proceso de recuperación de información.</p>` },
+
+{ n:236, c:"documentos", tags:["Grounding/RAG"],
+  q:"¿Por qué utilizar documentos puede reducir alucinaciones?",
+  a:`<p>Porque la IA dispone de una fuente concreta en la que basar su respuesta.</p>` },
+
+{ n:237, c:"documentos", tags:["Grounding/RAG"],
+  q:"¿Puede alucinar incluso con un documento?",
+  a:`<p>Sí.</p>` },
+
+{ n:238, c:"documentos", tags:["Grounding/RAG"],
+  q:"¿Cómo hago para que indique dónde encontró algo?",
+  a:`<p>Pídele que cite página, sección o fragmento cuando sea posible y después compruébalo.</p>` },
+
+{ n:239, c:"documentos", tags:["Grounding/RAG"],
+  q:"¿Cómo compruebo que salió del documento?",
+  a:`<p>Contrasta la respuesta directamente con el contenido original.</p>` },
+
+{ n:240, c:"documentos", tags:["Grounding/RAG"],
+  q:"¿Qué pasa si el documento se contradice?",
+  a:`<p>La IA debería señalar la contradicción en lugar de inventar cuál es correcta.</p>` },
+
+{ n:241, c:"documentos", tags:["Grounding/RAG"],
+  q:"¿Qué debe hacer si la respuesta no existe?",
+  a:`<p>Decir que la información no está disponible, si así lo has indicado.</p>` },
+
+{ n:242, c:"calidad", tags:["Alucinaciones"],
+  q:"¿Qué es una alucinación?",
+  a:`<p>Una respuesta generada por IA que contiene información incorrecta o inventada presentada como si fuera válida.</p>` },
+
+{ n:243, c:"calidad", tags:["Alucinaciones"], star:true,
+  q:"¿Por qué ocurren?",
+  a:`<p>Porque un modelo generativo produce lenguaje probable; no funciona automáticamente como una base de datos infalible.</p>` },
+
+{ n:244, c:"calidad", tags:["Alucinaciones"],
+  q:"¿La IA miente intencionalmente?",
+  a:`<p>No en el sentido humano; no necesitas atribuirle intención para entender el problema.</p>` },
+
+{ n:245, c:"calidad", tags:["Alucinaciones"],
+  q:"¿Cómo detecto una alucinación?",
+  a:`<p>Verificando hechos, cifras, fechas, nombres, fuentes y citas.</p>` },
+
+{ n:246, c:"calidad", tags:["Alucinaciones"],
+  q:"¿Puede inventar fechas?",
+  a:`<p>Sí.</p>` },
+
+{ n:247, c:"calidad", tags:["Alucinaciones"],
+  q:"¿Puede inventar cifras?",
+  a:`<p>Sí.</p>` },
+
+{ n:248, c:"calidad", tags:["Alucinaciones"],
+  q:"¿Puede inventar fuentes?",
+  a:`<p>Sí.</p>` },
+
+{ n:249, c:"calidad", tags:["Alucinaciones"],
+  q:"¿Puede inventar personas?",
+  a:`<p>Sí.</p>` },
+
+{ n:250, c:"calidad", tags:["Alucinaciones"],
+  q:"¿Puede equivocarse aunque suene muy segura?",
+  a:`<p>Sí. La seguridad del tono no demuestra que la información sea correcta.</p>` },
+
+{ n:251, c:"calidad", tags:["Alucinaciones"],
+  q:"¿Un buen prompt elimina las alucinaciones?",
+  a:`<p>No. Puede reducirlas, pero no garantizar que desaparezcan.</p>` },
+
+{ n:252, c:"calidad", tags:["Alucinaciones"],
+  q:"¿Decir \"no inventes\" garantiza que no invente?",
+  a:`<p>No.</p>` },
+
+{ n:253, c:"calidad", tags:["Alucinaciones"], star:true,
+  q:"¿Cómo reduzco el riesgo?",
+  a:`<p>Proporciona fuentes, limita el alcance, pide que reconozca faltantes y verifica.</p>` },
+
+{ n:254, c:"calidad", tags:["Alucinaciones"],
+  q:"¿Qué debería verificar siempre?",
+  a:`<p>Datos importantes, especialmente números, fechas, fuentes, nombres y afirmaciones críticas.</p>` },
+
+{ n:255, c:"calidad", tags:["Alucinaciones"],
+  q:"¿Por qué sigue siendo necesario el humano?",
+  a:`<p>Porque el usuario debe evaluar si el resultado es correcto y adecuado antes de utilizarlo.</p>` },
+
+{ n:256, c:"planes", tags:["Planes"],
+  q:"¿Puede crear un plan de trabajo?",
+  a:`<p>Sí.</p>` },
+
+{ n:257, c:"planes", tags:["Planes"],
+  q:"¿Una idea y una estrategia son lo mismo?",
+  a:`<p>No. Una idea propone algo; una estrategia organiza acciones para alcanzar un objetivo.</p>` },
+
+{ n:258, c:"planes", tags:["Planes"],
+  q:"¿Por qué dividir un plan en fases?",
+  a:`<p>Porque vuelve las acciones más claras, secuenciales y medibles.</p>` },
+
+{ n:259, c:"planes", tags:["Planes"],
+  q:"¿Puedo pedirlo semana por semana?",
+  a:`<p>Sí.</p>` },
+
+{ n:260, c:"planes", tags:["Planes"],
+  q:"¿Puedo pedir objetivos medibles?",
+  a:`<p>Sí.</p>` },
+
+{ n:261, c:"planes", tags:["Planes"],
+  q:"¿Cómo evito planes genéricos?",
+  a:`<p>Proporciona contexto, recursos, plazo, restricciones, público y objetivo.</p>` },
+
+{ n:262, c:"planes", tags:["Planes"],
+  q:"¿Puedo darle presupuesto y recursos disponibles?",
+  a:`<p>Sí.</p>` },
+
+{ n:263, c:"planes", tags:["Planes"],
+  q:"¿Puede adaptar un plan cuando cambian las condiciones?",
+  a:`<p>Sí, si le proporcionas los nuevos datos.</p>` },
+
+{ n:264, c:"planes", tags:["Planes"],
+  q:"¿Puede ayudarme a priorizar?",
+  a:`<p>Sí.</p>` },
+
+{ n:265, c:"planes", tags:["Planes"],
+  q:"¿Puede convertir una meta grande en actividades pequeñas?",
+  a:`<p>Sí.</p>` },
+
+{ n:266, c:"planes", tags:["Planes"],
+  q:"¿Debo seguir literalmente el plan generado?",
+  a:`<p>No. Debes evaluarlo antes de ejecutarlo.</p>` },
+
+{ n:267, c:"planes", tags:["Planes"],
+  q:"¿Cómo sé si es ejecutable?",
+  a:`<p>Comprueba recursos, responsables, tiempo, costos, dependencias y resultados esperados.</p>` },
+
+{ n:268, c:"estilo", tags:["Marca de agua"], star:true,
+  q:"¿Qué significa \"marca de agua de la IA\"?",
+  a:`<p>Patrones de escritura repetitivos que hacen que un texto suene genérico o robótico.</p><p class="flow">Para Semana 2, "marca de agua" se utiliza como una metáfora para ciertos clichés y patrones robóticos, no como una marca digital invisible.</p>` },
+
+{ n:269, c:"estilo", tags:["Marca de agua"],
+  q:"¿Es una marca de agua real?",
+  a:`<p>No en el sentido utilizado por esta actividad.</p>` },
+
+{ n:270, c:"estilo", tags:["Marca de agua"],
+  q:"¿ChatGPT coloca aquí un código invisible en el texto?",
+  a:`<p>No es a eso a lo que se refiere el material.</p>` },
+
+{ n:271, c:"estilo", tags:["Marca de agua"],
+  q:"¿Qué significa concretamente esta semana?",
+  a:`<p>Abuso de frases como "es crucial", "es fundamental" o "en conclusión".</p>` },
+
+{ n:272, c:"estilo", tags:["Marca de agua"],
+  q:"¿Cuáles son clichés típicos?",
+  a:`<p>El material menciona "en el competitivo mercado actual", "es crucial", "es fundamental" y "en conclusión".</p>` },
+
+{ n:273, c:"estilo", tags:["Marca de agua"],
+  q:"¿Por qué utiliza \"es crucial\"?",
+  a:`<p>Porque es un patrón frecuente de redacción formal genérica.</p>` },
+
+{ n:274, c:"estilo", tags:["Marca de agua"],
+  q:"¿Por qué utiliza \"es fundamental\"?",
+  a:`<p>Por la misma razón: es una fórmula común y segura estilísticamente.</p>` },
+
+{ n:275, c:"estilo", tags:["Marca de agua"],
+  q:"¿Por qué aparece tanto \"en conclusión\"?",
+  a:`<p>Porque es una transición común para cerrar textos.</p>` },
+
+{ n:276, c:"estilo", tags:["Marca de agua"],
+  q:"¿Cómo los elimino?",
+  a:`<p>Reescribe las frases directamente y conserva solamente la información útil.</p>` },
+
+{ n:277, c:"estilo", tags:["Marca de agua"],
+  q:"¿Un texto con clichés necesariamente fue escrito por IA?",
+  a:`<p>No.</p>` },
+
+{ n:278, c:"estilo", tags:["Marca de agua"],
+  q:"¿Se puede demostrar que alguien utilizó IA solamente por esos clichés?",
+  a:`<p>No.</p>` },
+
+{ n:279, c:"estilo", tags:["Marca de agua"], star:true,
+  q:"¿Cómo hago que suene más natural?",
+  a:`<p>Usa frases específicas, vocabulario propio, ejemplos reales y elimina relleno.</p>` },
+
+{ n:280, c:"estilo", tags:["Marca de agua"],
+  q:"¿Puedo pedir que evite clichés desde el prompt?",
+  a:`<p>Sí.</p>` },
+
+{ n:281, c:"estilo", tags:["Marca de agua"],
+  q:"¿Puedo darle ejemplos de mi escritura?",
+  a:`<p>Sí, siempre que puedas compartirlos.</p>` },
+
+{ n:282, c:"estilo", tags:["Marca de agua"],
+  q:"¿Qué significa \"toque humano\"?",
+  a:`<p>Revisar, personalizar, corregir y agregar contexto real antes de utilizar el resultado.</p>` },
+
+{ n:283, c:"estilo", tags:["Edición"],
+  q:"¿Por qué editar si la IA ya escribió?",
+  a:`<p>Porque el primer borrador puede contener errores, clichés o información que no representa exactamente tu intención.</p>` },
+
+{ n:284, c:"estilo", tags:["Edición"],
+  q:"¿Qué reviso primero?",
+  a:`<p>Exactitud, cumplimiento del objetivo, claridad y datos críticos.</p>` },
+
+{ n:285, c:"estilo", tags:["Edición"],
+  q:"¿Debo revisar ortografía?",
+  a:`<p>Sí.</p>` },
+
+{ n:286, c:"estilo", tags:["Edición"],
+  q:"¿Debo revisar nombres?",
+  a:`<p>Sí.</p>` },
+
+{ n:287, c:"estilo", tags:["Edición"],
+  q:"¿Debo revisar fechas?",
+  a:`<p>Sí.</p>` },
+
+{ n:288, c:"estilo", tags:["Edición"],
+  q:"¿Debo revisar cifras?",
+  a:`<p>Sí.</p>` },
+
+{ n:289, c:"estilo", tags:["Edición"],
+  q:"¿Debo revisar enlaces?",
+  a:`<p>Sí.</p>` },
+
+{ n:290, c:"estilo", tags:["Edición"],
+  q:"¿Cómo añado mi estilo?",
+  a:`<p>Sustituye expresiones genéricas por la forma en que realmente te comunicarías.</p>` },
+
+{ n:291, c:"estilo", tags:["Edición"],
+  q:"¿Puedo darle ejemplos escritos por mí?",
+  a:`<p>Sí.</p>` },
+
+{ n:292, c:"estilo", tags:["Edición"],
+  q:"¿Cómo dejo de sonar genérico?",
+  a:`<p>Añade detalles específicos y elimina frases que podrían aplicarse a cualquier persona o empresa.</p>` },
+
+{ n:293, c:"estilo", tags:["Edición"],
+  q:"¿Cuánto debo modificar?",
+  a:`<p>Lo necesario hasta que puedas responsabilizarte del resultado final.</p>` },
+
+{ n:294, c:"estilo", tags:["Edición"],
+  q:"¿Quién es responsable si el contenido está equivocado?",
+  a:`<p>En el uso práctico, no debes delegar tu responsabilidad de revisión a la herramienta.</p>` },
+
+{ n:295, c:"estilo", tags:["Edición"],
+  q:"¿Debo decir que utilicé IA?",
+  a:`<p>Depende de las reglas de tu escuela, empresa o actividad. El material de Semana 2 no establece una regla universal sobre divulgación.</p><p class="flow">La presentación identifica la personalización y la verificación como el "toque final humano".</p>` },
+
+{ n:296, c:"persuasion", tags:["PAS/AIDA"],
+  q:"¿Qué es PAS?",
+  a:`<p>Problema, Agitación, Solución.</p><p class="flow">PAS y AIDA aparecen en el material como herramientas de redacción persuasiva, con una breve explicación pedagógica adicional.</p>` },
+
+{ n:297, c:"persuasion", tags:["PAS/AIDA"],
+  q:"¿Qué significa?",
+  a:`<p>Primero presentas el problema, después haces visible su impacto y finalmente introduces la solución.</p>` },
+
+{ n:298, c:"persuasion", tags:["PAS/AIDA"],
+  q:"¿Qué significa \"agitar\" el problema?",
+  a:`<p>Explicar sus consecuencias para que el lector comprenda por qué merece atención; no significa mentir ni exagerar.</p>` },
+
+{ n:299, c:"persuasion", tags:["PAS/AIDA"],
+  q:"¿Para qué sirve PAS?",
+  a:`<p>Principalmente para redacción persuasiva.</p>` },
+
+{ n:300, c:"persuasion", tags:["PAS/AIDA"],
+  q:"¿Qué es AIDA?",
+  a:`<p>Atención, Interés, Deseo y Acción.</p>` },
+
+{ n:301, c:"persuasion", tags:["PAS/AIDA"],
+  q:"¿Cómo funciona AIDA?",
+  a:`<p>Captas atención, generas interés, desarrollas deseo y terminas con una acción concreta.</p>` },
+
+{ n:302, c:"persuasion", tags:["PAS/AIDA"],
+  q:"¿PAS y AIDA son frameworks de prompts?",
+  a:`<p>Principalmente son estructuras de comunicación o redacción persuasiva.</p>` },
+
+{ n:303, c:"persuasion", tags:["PAS/AIDA"],
+  q:"¿Entonces no son lo mismo que RTF?",
+  a:`<p>Correcto. RTF organiza cómo instruyes a la IA; PAS/AIDA pueden organizar el contenido que quieres que escriba.</p>` },
+
+{ n:304, c:"persuasion", tags:["PAS/AIDA"],
+  q:"¿Puedo utilizar RTF para pedir un texto PAS?",
+  a:`<p>Sí. Ejemplo: defines rol, tarea y formato, y dentro de la tarea exiges PAS.</p>` },
+
+{ n:305, c:"persuasion", tags:["PAS/AIDA"],
+  q:"¿Qué es mejor, PAS o AIDA?",
+  a:`<p>Depende del propósito.</p>` },
+
+{ n:306, c:"persuasion", tags:["PAS/AIDA"],
+  q:"¿Se pueden combinar?",
+  a:`<p>Es posible, aunque para principiantes suele ser mejor aplicar una estructura claramente.</p>` },
+
+{ n:307, c:"persuasion", tags:["PAS/AIDA"],
+  q:"¿Tengo que saber marketing para usarlos?",
+  a:`<p>No, pero entender qué pretende cada etapa mejora el resultado.</p><p class="flow">El prompt oficial de PAS incorpora además restricciones de longitud y prohibición de clichés.</p>` },
+
+{ n:308, c:"simulacion", tags:["Roleplay"],
+  q:"¿Puedo practicar una negociación con ChatGPT?",
+  a:`<p>Sí.</p>` },
+
+{ n:309, c:"simulacion", tags:["Roleplay"],
+  q:"¿Puede actuar como un cliente difícil?",
+  a:`<p>Sí.</p>` },
+
+{ n:310, c:"simulacion", tags:["Roleplay"],
+  q:"¿Puede ponerme objeciones?",
+  a:`<p>Sí.</p>` },
+
+{ n:311, c:"simulacion", tags:["Roleplay"],
+  q:"¿Qué es roleplay?",
+  a:`<p>Una simulación en la que la IA adopta un papel para practicar una interacción.</p>` },
+
+{ n:312, c:"simulacion", tags:["Roleplay"],
+  q:"¿Para qué sirve?",
+  a:`<p>Para ensayar antes de enfrentarte a una situación real.</p>` },
+
+{ n:313, c:"simulacion", tags:["Roleplay"],
+  q:"¿Puedo practicar entrevistas?",
+  a:`<p>Sí.</p>` },
+
+{ n:314, c:"simulacion", tags:["Roleplay"],
+  q:"¿Puedo practicar ventas?",
+  a:`<p>Sí.</p>` },
+
+{ n:315, c:"simulacion", tags:["Roleplay"],
+  q:"¿Puedo practicar una presentación?",
+  a:`<p>Sí.</p>` },
+
+{ n:316, c:"simulacion", tags:["Roleplay"],
+  q:"¿Puedo pedir que sea más exigente?",
+  a:`<p>Sí.</p>` },
+
+{ n:317, c:"simulacion", tags:["Roleplay"],
+  q:"¿Puedo pedir que no acepte fácilmente mis argumentos?",
+  a:`<p>Sí. El ejemplo oficial hace exactamente eso con un CEO escéptico.</p>` },
+
+{ n:318, c:"simulacion", tags:["Roleplay"],
+  q:"¿Qué es empatía táctica?",
+  a:`<p>Una metodología de negociación orientada a reconocer y comprender la perspectiva de la otra persona para comunicarse mejor.</p>` },
+
+{ n:319, c:"simulacion", tags:["Roleplay"],
+  q:"¿Qué es etiquetado emocional?",
+  a:`<p>Expresar verbalmente la emoción o preocupación que parece estar experimentando la otra persona.</p>` },
+
+{ n:320, c:"simulacion", tags:["Roleplay"],
+  q:"¿Quién es Chris Voss?",
+  a:`<p>Es un exnegociador de rehenes del FBI conocido por divulgar técnicas de negociación; el material utiliza su enfoque como ejemplo.</p>` },
+
+{ n:321, c:"simulacion", tags:["Roleplay"],
+  q:"¿Tengo que dominar su metodología esta semana?",
+  a:`<p>No aparece como núcleo de la evaluación semanal.</p>` },
+
+{ n:322, c:"simulacion", tags:["Roleplay"],
+  q:"¿Cuál era la pregunta 322?",
+  a:`<p>La lista anterior saltó directamente de la 321 a la 323; no existía una pregunta 322 original.</p><p class="flow">La herramienta oficial presenta negociación y simulación como casos prácticos de uso de ChatGPT.</p>` },
+
+{ n:323, c:"practica", tags:["Actividad"],
+  q:"¿Tengo que usar exactamente el prompt del documento?",
+  a:`<p>La instrucción oficial es copiarlo, pegarlo y adaptar los campos entre corchetes.</p>` },
+
+{ n:324, c:"practica", tags:["Actividad"],
+  q:"¿Puedo cambiar mi profesión?",
+  a:`<p>Sí; debes colocar tu profesión o área de estudio.</p>` },
+
+{ n:325, c:"practica", tags:["Actividad"],
+  q:"¿Qué pongo si no trabajo?",
+  a:`<p>Tu área de estudio o un ámbito que conozcas.</p>` },
+
+{ n:326, c:"practica", tags:["Actividad"],
+  q:"¿Puede ser algo relacionado con mis estudios?",
+  a:`<p>Sí.</p>` },
+
+{ n:327, c:"practica", tags:["Actividad"],
+  q:"¿Qué tipo de problema debo escribir?",
+  a:`<p>Una tarea, proyecto o problema realista relacionado con tu trabajo o estudios.</p>` },
+
+{ n:328, c:"practica", tags:["Actividad"],
+  q:"¿Puede ser un problema personal?",
+  a:`<p>Técnicamente puedes practicar con otro contexto, pero la actividad está orientada principalmente al área de estudio o trabajo.</p>` },
+
+{ n:329, c:"practica", tags:["Actividad"],
+  q:"¿Qué pongo entre corchetes?",
+  a:`<p>Tu propia información.</p>` },
+
+{ n:330, c:"practica", tags:["Actividad"],
+  q:"¿Debo borrar los corchetes?",
+  a:`<p>Sí, sustituyéndolos por la información correspondiente.</p>` },
+
+{ n:331, c:"practica", tags:["Actividad"],
+  q:"¿Tengo que pedir tres ideas?",
+  a:`<p>Para reproducir la actividad oficial, sí.</p>` },
+
+{ n:332, c:"practica", tags:["Actividad"],
+  q:"¿Tengo que pedir dos posibles errores?",
+  a:`<p>Sí, según la plantilla oficial.</p>` },
+
+{ n:333, c:"practica", tags:["Actividad"],
+  q:"¿La respuesta tiene que estar en tabla?",
+  a:`<p>La actividad oficial lo solicita.</p>` },
+
+{ n:334, c:"practica", tags:["Actividad"],
+  q:"¿Por qué utilizar una tabla?",
+  a:`<p>Para comprobar cómo una instrucción de formato cambia la respuesta.</p>` },
+
+{ n:335, c:"practica", tags:["Actividad"],
+  q:"¿Qué hago después de obtener las tres ideas?",
+  a:`<p>Seleccionas la que más te guste.</p>` },
+
+{ n:336, c:"practica", tags:["Actividad"],
+  q:"¿Tengo que escoger una?",
+  a:`<p>Sí, para realizar el Paso 3 de la actividad.</p>` },
+
+{ n:337, c:"practica", tags:["Actividad"],
+  q:"¿Qué significa desarrollarla \"a detalle\"?",
+  a:`<p>Convertir la idea general en una propuesta más concreta y accionable.</p>` },
+
+{ n:338, c:"practica", tags:["Actividad"],
+  q:"¿Qué es un plan de acción de tres pasos?",
+  a:`<p>Tres acciones ordenadas que indiquen cómo comenzar a implementar la idea.</p>` },
+
+{ n:339, c:"practica", tags:["Actividad"],
+  q:"¿La segunda petición va en el mismo chat?",
+  a:`<p>Sí. El documento lo indica expresamente.</p>` },
+
+{ n:340, c:"practica", tags:["Actividad"],
+  q:"¿Qué hago si la respuesta no sale exactamente como el ejemplo?",
+  a:`<p>Evalúa si cumple tus instrucciones y, si no, corrígela mediante otra petición.</p><p class="flow">La práctica concluye recordando que la IA funciona como asistente y que el criterio, ética y revisión humana siguen siendo indispensables.</p>` },
+
+{ n:341, c:"practica", tags:["Prácticas"],
+  q:"¿Qué hacemos en el Detector de Clichés?",
+  a:`<p>Identificar expresiones robóticas y reescribir el texto de forma más directa y natural.</p>` },
+
+{ n:342, c:"practica", tags:["Prácticas"],
+  q:"¿Hay que eliminar todas las palabras formales?",
+  a:`<p>No. Solo las fórmulas innecesarias o repetitivas.</p>` },
+
+{ n:343, c:"practica", tags:["Prácticas"],
+  q:"¿Cómo sé si algo es cliché?",
+  a:`<p>Si es una frase genérica, repetida y que aporta poco significado concreto.</p>` },
+
+{ n:344, c:"practica", tags:["Prácticas"],
+  q:"¿Qué hacemos en Diseñador de Identidades?",
+  a:`<p>Comparamos cómo cambia una misma tarea al utilizar diferentes roles.</p>` },
+
+{ n:345, c:"practica", tags:["Prácticas"],
+  q:"¿Utilizamos dos roles diferentes?",
+  a:`<p>La resolución oficial compara un asistente corporativo formal y un líder de startup.</p>` },
+
+{ n:346, c:"practica", tags:["Prácticas"],
+  q:"¿Qué debemos observar?",
+  a:`<p>Vocabulario, tono, estructura y estilo.</p>` },
+
+{ n:347, c:"practica", tags:["Prácticas"],
+  q:"¿Qué es la regla de la inmediatez?",
+  a:`<p>Colocar la información crítica primero y hacer el mensaje breve y accionable.</p>` },
+
+{ n:348, c:"practica", tags:["Prácticas"],
+  q:"¿Por qué la práctica pide exactamente seis palabras en el asunto?",
+  a:`<p>Porque introduce una restricción todavía más específica para practicar control del resultado; sigue cumpliendo la regla de menos de ocho palabras.</p>` },
+
+{ n:349, c:"practica", tags:["Prácticas"],
+  q:"¿Qué significa ingeniería inversa de prompts aquí?",
+  a:`<p>Tomar un resultado existente y diseñar instrucciones para transformarlo en el resultado deseado.</p>` },
+
+{ n:350, c:"practica", tags:["Prácticas"],
+  q:"¿Qué hacemos en Mapeo de Esquema?",
+  a:`<p>Identificamos qué parte del prompt corresponde al rol, tarea y formato.</p>` },
+
+{ n:351, c:"practica", tags:["Prácticas"],
+  q:"¿Cómo identifico el rol?",
+  a:`<p>Pregunta: "¿Desde qué perspectiva debe responder la IA?"</p>` },
+
+{ n:352, c:"practica", tags:["Prácticas"],
+  q:"¿Cómo identifico la tarea?",
+  a:`<p>Pregunta: "¿Qué acción concreta debe realizar?"</p>` },
+
+{ n:353, c:"practica", tags:["Prácticas"],
+  q:"¿Cómo identifico el formato?",
+  a:`<p>Pregunta: "¿Cómo debe verse o estructurarse la respuesta?"</p>` },
+
+{ n:354, c:"practica", tags:["Prácticas"],
+  q:"¿El tono forma parte del formato?",
+  a:`<p>En la resolución RTF se agrupa junto con las características de salida.</p>` },
+
+{ n:355, c:"practica", tags:["Prácticas"],
+  q:"¿El límite de palabras es formato o restricción?",
+  a:`<p>Depende del esquema. En una anatomía detallada es una restricción; en el RTF de la práctica se integra dentro de las condiciones del formato.</p>` },
+
+{ n:356, c:"practica", tags:["Prácticas"],
+  q:"¿Hay una única forma correcta de mapear cada detalle?",
+  a:`<p>Los tres elementos principales sí deben distinguirse; algunos detalles secundarios pueden agruparse de forma diferente según el framework.</p><p class="flow">La resolución oficial desarrolla las cuatro prácticas y sus resultados esperados.</p>` },
+
+{ n:357, c:"evaluacion", tags:["Evaluación"], star:true,
+  q:"¿Qué entra en el examen?",
+  a:`<p>Los cinco reactivos oficiales cubren GIGO, RTF, regla de inmediatez, propuestas comerciales y "marca de agua" de IA.</p>` },
+
+{ n:358, c:"evaluacion", tags:["Evaluación"],
+  q:"¿Tengo que memorizar todos los frameworks?",
+  a:`<p>No para responder los cinco reactivos proporcionados.</p>` },
+
+{ n:359, c:"evaluacion", tags:["Evaluación"],
+  q:"¿Tengo que aprender FRAME?",
+  a:`<p>Forma parte de la actividad, pero no aparece directamente en las cinco preguntas oficiales.</p>` },
+
+{ n:360, c:"evaluacion", tags:["Evaluación"],
+  q:"¿Tengo que aprender RTF?",
+  a:`<p>Sí: Rol, Tarea, Formato.</p>` },
+
+{ n:361, c:"evaluacion", tags:["Evaluación"],
+  q:"¿Tengo que aprender PAS y AIDA?",
+  a:`<p>Conviene comprenderlos como parte del contenido, aunque no aparecen explícitamente entre las cinco preguntas proporcionadas.</p>` },
+
+{ n:362, c:"evaluacion", tags:["Evaluación"],
+  q:"¿Tengo que recordar \"menos de ocho palabras\"?",
+  a:`<p>Sí para la evaluación oficial: el asunto debe ser directo y de menos de ocho palabras.</p>` },
+
+{ n:363, c:"evaluacion", tags:["Evaluación"],
+  q:"¿Qué significa \"Basura entra, basura sale\"?",
+  a:`<p>Una entrada deficiente tiende a producir un resultado deficiente.</p>` },
+
+{ n:364, c:"evaluacion", tags:["Evaluación"],
+  q:"¿Cuál es el foco correcto de una propuesta comercial?",
+  a:`<p>El beneficio real para el cliente, organizado alrededor de diagnóstico, solución y beneficios.</p>` },
+
+{ n:365, c:"evaluacion", tags:["Evaluación"],
+  q:"¿Qué significa \"marca de agua\" para el examen?",
+  a:`<p>Abuso de clichés como "es crucial", "es fundamental" o "en conclusión".</p>` },
+
+{ n:366, c:"evaluacion", tags:["Evaluación"],
+  q:"¿Cuántas preguntas tiene la evaluación proporcionada?",
+  a:`<p>Cinco.</p>` },
+
+{ n:367, c:"evaluacion", tags:["Evaluación"],
+  q:"¿Cuál es la calificación mínima?",
+  a:`<p>El guion institucional señala 60% como mínimo aprobatorio.</p>` },
+
+{ n:368, c:"evaluacion", tags:["Evaluación"],
+  q:"¿Cuántos intentos tengo?",
+  a:`<p>El guion institucional establece máximo tres intentos y señala que se registra la calificación más alta.</p>` },
+
+{ n:369, c:"evaluacion", tags:["Evaluación"],
+  q:"¿Qué pasa si no apruebo a la primera?",
+  a:`<p>Según ese lineamiento, puedes utilizar los intentos restantes hasta el máximo establecido.</p>` },
+
+{ n:370, c:"avanzado", tags:["Avanzado"],
+  q:"¿Asignar un rol realmente \"fuerza\" al modelo?",
+  a:`<p>No literalmente. El rol funciona como una señal contextual que orienta probabilísticamente el tipo de respuesta.</p><p class="flow">Nivel avanzado — complemento del profesor, no es contenido central de la evaluación oficial.</p>` },
+
+{ n:371, c:"avanzado", tags:["Avanzado"],
+  q:"¿Por qué funciona el role prompting?",
+  a:`<p>Porque palabras como "analista financiero" activan patrones lingüísticos y conceptuales relacionados con ese contexto.</p>` },
+
+{ n:372, c:"avanzado", tags:["Avanzado"],
+  q:"¿Contexto e instrucciones son diferentes?",
+  a:`<p>Sí. Contexto = información sobre la situación. Instrucciones = comportamiento o tarea solicitada.</p>` },
+
+{ n:373, c:"avanzado", tags:["Avanzado"],
+  q:"¿Qué pasa si una instrucción contradice otra?",
+  a:`<p>La probabilidad de incumplimiento aumenta. El prompt debe eliminar contradicciones.</p>` },
+
+{ n:374, c:"avanzado", tags:["Avanzado"],
+  q:"¿Existe un orden de prioridad?",
+  a:`<p>A nivel de usuario, la mejor estrategia no es depender de prioridades ocultas, sino redactar instrucciones inequívocas y compatibles.</p>` },
+
+{ n:375, c:"avanzado", tags:["Avanzado"],
+  q:"¿Qué es una ventana de contexto?",
+  a:`<p>Es la cantidad limitada de información que un modelo puede considerar activamente durante una interacción.</p>` },
+
+{ n:376, c:"avanzado", tags:["Avanzado"],
+  q:"¿Puede \"olvidar\" información en conversaciones muy largas?",
+  a:`<p>Puede dejar de considerar correctamente detalles antiguos cuando el contexto se vuelve demasiado extenso o complejo.</p>` },
+
+{ n:377, c:"avanzado", tags:["Avanzado"],
+  q:"¿Por qué a veces ignora restricciones?",
+  a:`<p>Porque la generación no es una ejecución rígida de código y pueden existir instrucciones ambiguas, difíciles o contradictorias.</p>` },
+
+{ n:378, c:"avanzado", tags:["Avanzado"],
+  q:"¿Todos los modelos responden igual al mismo prompt?",
+  a:`<p>No.</p>` },
+
+{ n:379, c:"avanzado", tags:["Avanzado"],
+  q:"¿Un prompt de ChatGPT funciona igual en Gemini o Claude?",
+  a:`<p>Los principios suelen transferirse, pero cada modelo puede interpretar y ejecutar las instrucciones de forma diferente.</p>` },
+
+{ n:380, c:"avanzado", tags:["Avanzado"],
+  q:"¿Existen prompts universales?",
+  a:`<p>No existe un "prompt perfecto" universal para todas las tareas.</p>` },
+
+{ n:381, c:"avanzado", tags:["Avanzado"],
+  q:"¿El prompt engineering seguirá siendo importante con mejores modelos?",
+  a:`<p>Sí, aunque probablemente evolucione de "trucos" hacia especificar claramente objetivos, contexto, restricciones y criterios de calidad.</p>` },
+
+{ n:382, c:"avanzado", tags:["Avanzado"],
+  q:"¿Prompt engineering y context engineering son lo mismo?",
+  a:`<p>No exactamente. Prompt engineering se centra en las instrucciones; context engineering gestiona además fuentes, datos, herramientas, memoria y demás información disponible para el modelo.</p>` },
+
+{ n:383, c:"avanzado", tags:["Avanzado"],
+  q:"¿Qué es zero-shot prompting?",
+  a:`<p>Pedir una tarea sin proporcionar ejemplos previos.</p>` },
+
+{ n:384, c:"avanzado", tags:["Avanzado"],
+  q:"¿Qué es few-shot prompting?",
+  a:`<p>Proporcionar uno o varios ejemplos para mostrar al modelo el patrón que quieres.</p>` },
+
+{ n:385, c:"avanzado", tags:["Avanzado"],
+  q:"¿Para qué sirven los ejemplos?",
+  a:`<p>Reducen ambigüedad mostrando concretamente cómo debería verse un buen resultado.</p>` },
+
+{ n:386, c:"avanzado", tags:["Avanzado"],
+  q:"¿Qué pasa si el ejemplo está mal?",
+  a:`<p>Puede orientar al modelo hacia un patrón incorrecto.</p>` },
+
+{ n:387, c:"avanzado", tags:["Avanzado"],
+  q:"¿Se puede medir objetivamente qué prompt es mejor?",
+  a:`<p>Sí, si defines criterios y pruebas ambos sobre las mismas tareas.</p>` },
+
+{ n:388, c:"avanzado", tags:["Avanzado"],
+  q:"¿Cómo hacemos una prueba A/B de prompts?",
+  a:`<p>Ejecutamos dos versiones sobre el mismo conjunto de casos y comparamos sus resultados con la misma rúbrica.</p>` },
+
+{ n:389, c:"avanzado", tags:["Avanzado"],
+  q:"¿Qué métricas podríamos utilizar?",
+  a:`<p>Precisión, cumplimiento de instrucciones, relevancia, completitud, consistencia y cantidad de edición humana necesaria.</p>` },
+
+{ n:390, c:"avanzado", tags:["Avanzado"],
+  q:"¿Cómo hago un prompt reproducible?",
+  a:`<p>Mantén constantes los datos de entrada, requisitos, criterios de evaluación y, cuando sea posible, el modelo utilizado.</p>` },
+
+{ n:391, c:"avanzado", tags:["Avanzado"],
+  q:"¿Qué es temperatura?",
+  a:`<p>Es un parámetro relacionado con la variabilidad del muestreo en algunos sistemas de modelos; valores diferentes pueden modificar cuán predecible o variable es la generación.</p>` },
+
+{ n:392, c:"avanzado", tags:["Avanzado"],
+  q:"¿Por qué existe variabilidad entre respuestas?",
+  a:`<p>Por el proceso probabilístico de generación, diferencias de contexto, configuración o incluso versiones del modelo.</p>` },
+
+{ n:393, c:"avanzado", tags:["Avanzado"],
+  q:"¿Cómo se conecta esto con los tokens de Semana 1?",
+  a:`<p>El prompt y la conversación se representan internamente mediante tokens que forman parte del contexto que procesa el modelo.</p>` },
+
+{ n:394, c:"avanzado", tags:["Avanzado"],
+  q:"¿Un prompt más largo utiliza más tokens?",
+  a:`<p>En general, sí: más texto de entrada implica más tokens de entrada.</p>` },
+
+{ n:395, c:"avanzado", tags:["Avanzado"],
+  q:"¿Eso importa cuando utilizamos una API?",
+  a:`<p>Sí. El volumen de tokens puede afectar uso, límites y costo según el proveedor y modelo; los precios concretos deben consultarse cuando llegue el momento porque pueden cambiar.</p>` },
+
+{ n:396, c:"avanzado", tags:["Avanzado"],
+  q:"¿Qué diferencia hay entre ChatGPT y el modelo de lenguaje?",
+  a:`<p>ChatGPT es un producto o interfaz; un modelo de lenguaje es uno de los componentes de IA que puede estar detrás de esa experiencia.</p>` },
+
+{ n:397, c:"avanzado", tags:["Avanzado"],
+  q:"¿Por qué RAG reduce errores pero no los elimina?",
+  a:`<p>Porque la recuperación puede traer información incorrecta o irrelevante y el modelo todavía puede interpretarla mal.</p>` },
+
+{ n:398, c:"avanzado", tags:["Avanzado"],
+  q:"¿Una fuente incorrecta puede generar una respuesta bien fundamentada pero falsa?",
+  a:`<p>Sí. Si la fuente contiene información falsa, fundamentarse correctamente en ella no vuelve verdadero el contenido.</p>` },
+
+{ n:399, c:"avanzado", tags:["Avanzado"],
+  q:"¿Cómo verificamos sistemáticamente una respuesta?",
+  a:`<p>Definimos afirmaciones verificables, comprobamos las fuentes originales, revisamos números y fechas y contrastamos el resultado con criterios previamente establecidos.</p>` },
+
+{ n:400, c:"avanzado", tags:["Avanzado"],
+  q:"¿Cuál es el límite entre utilizar IA como asistente y delegarle una decisión?",
+  a:`<p>La IA puede ayudar a analizar, organizar y generar alternativas; la decisión y la responsabilidad deben permanecer en la persona, especialmente cuando existen consecuencias relevantes.</p>` },
+
+{ n:401, c:"elementos", tags:["Resumen"], star:true,
+  q:"¿Qué información necesita un buen prompt?",
+  a:`<p>Depende de la tarea, pero como guía general un buen prompt suele incluir hasta cinco elementos: <strong>rol</strong> (desde qué perspectiva responde), <strong>contexto</strong> (la situación y quién eres), <strong>tarea</strong> (qué debe hacer exactamente), <strong>restricciones</strong> (límites, tono, extensión) y <strong>formato</strong> (cómo debe presentarse la respuesta).</p><p>No siempre se necesitan los cinco: la regla es incluir la información suficiente para que la IA no tenga que adivinar lo importante.</p>` },
+
+{ n:402, c:"estructuras", tags:["Resumen"], star:true,
+  q:"¿Tengo que usar siempre una estructura?",
+  a:`<p>No. No existe una estructura única obligatoria: puedes usar Rol + Contexto + Tarea + Formato, Rol + Tarea + Restricción + Formato (RTF) u otra combinación, siempre que los elementos no se contradigan.</p><p>Puedes incluso obtener buenos resultados sin seguir ningún framework, si tu instrucción sigue siendo clara y específica.</p>` },
+
+{ n:403, c:"conversacion", tags:["Resumen"], star:true,
+  q:"¿Puedo mejorar una respuesta sin empezar otro chat?",
+  a:`<p>Sí. Puedes iterar dentro de la misma conversación: indica qué parte quieres mantener y cuál debe cambiar, por ejemplo "me gusta la opción 2, desarróllala" o "corrige solo el segundo párrafo".</p><p>Solo conviene abrir un chat nuevo cuando cambias completamente de tarea o cuando el contexto anterior empieza a interferir con la respuesta.</p>` },
+
+{ n:404, c:"calidad", tags:["Resumen"], star:true,
+  q:"¿Qué debo revisar antes de utilizar profesionalmente una respuesta?",
+  a:`<p>Antes de usar cualquier resultado de forma profesional, verifica al menos: ortografía, nombres, fechas, cifras y enlaces.</p><p>Estos son los datos con mayor riesgo de contener una alucinación, y son también los que más rápido dañan tu credibilidad si están mal.</p>` },
+
+  ];
+
+  initQA({
+    weekId: "semana2",
+    data: QA2,
+    cats: CATS2,
+    ids: { list:"list2", empty:"empty2", counter:"counter2", filters:"filters2", search:"search2",
+           clearSearch:"clearSearch2", expandAll:"expandAll2", collapseAll:"collapseAll2", resetAll:"resetAll2" },
+    storageKey: "tl_qa2_cat",
+    hashPrefix: "pregunta2-",
+    starCatId: "destacadas",
+    defaultCat: "destacadas"
   });
 
-  searchEl.addEventListener("input", function(){
-    state.query = searchEl.value;
-    render();
-  });
-
-  document.getElementById("clearSearch").addEventListener("click", function(){
-    searchEl.value = "";
-    state.query = "";
-    render();
-    searchEl.focus();
-  });
-
-  document.getElementById("resetAll").addEventListener("click", function(){
-    searchEl.value = "";
-    state.query = "";
-    state.cat = "todas";
-    try{ localStorage.setItem("tl_qa_cat", "todas"); }catch(err){}
-    render();
-  });
-
-  document.getElementById("expandAll").addEventListener("click", function(){
-    Array.prototype.forEach.call(listEl.querySelectorAll("details"), function(d){
-      d.open = true; openSet[d.dataset.n] = true;
-    });
-  });
-
-  document.getElementById("collapseAll").addEventListener("click", function(){
-    Array.prototype.forEach.call(listEl.querySelectorAll("details"), function(d){
-      d.open = false; openSet[d.dataset.n] = false;
-    });
-  });
-
-  listEl.addEventListener("toggle", function(e){
-    var d = e.target;
-    if (d && d.tagName === "DETAILS") openSet[d.dataset.n] = d.open;
-  }, true);
-
-  function toast(msg){
-    toastEl.textContent = msg;
-    toastEl.className = "show";
-    clearTimeout(toast._t);
-    toast._t = setTimeout(function(){ toastEl.className = ""; }, 2200);
-  }
-
-  function copyText(text, okMsg){
-    if (navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(text).then(function(){ toast(okMsg); }, function(){ fallback(text, okMsg); });
-    } else {
-      fallback(text, okMsg);
-    }
-  }
-  function fallback(text, okMsg){
-    var ta = document.createElement("textarea");
-    ta.value = text;
-    ta.setAttribute("readonly","");
-    ta.style.position = "fixed";
-    ta.style.opacity = "0";
-    document.body.appendChild(ta);
-    ta.select();
-    try{ document.execCommand("copy"); toast(okMsg); }
-    catch(err){ toast("No fue posible copiar en este navegador"); }
-    document.body.removeChild(ta);
-  }
-
-  listEl.addEventListener("click", function(e){
-    var btn = e.target.closest("[data-copy]");
-    if (!btn) return;
-    e.preventDefault();
-    var n = parseInt(btn.dataset.n, 10);
-    var item = QA.filter(function(i){ return i.n === n; })[0];
-    if (!item) return;
-    if (btn.dataset.copy === "answer"){
-      copyText(item.q + "\n\n" + item.plain, "Respuesta copiada");
-    } else {
-      var base = location.href.split("#")[0];
-      copyText(base + "#pregunta-" + n, "Enlace copiado");
-    }
-  });
-
-  /* ---------- hash ---------- */
-  function openFromHash(){
-    var m = /^#pregunta-(\d+)$/.exec(location.hash || "");
-    if (!m) return;
-    var n = parseInt(m[1], 10);
-    var item = QA.filter(function(i){ return i.n === n; })[0];
-    if (!item) return;
-    if (state.cat !== "todas" && item.c !== state.cat){ state.cat = "todas"; }
-    if (state.query){ state.query = ""; searchEl.value = ""; }
-    openSet[n] = true;
-    render();
-    var el = document.getElementById("pregunta-" + n);
-    if (!el) return;
-    el.open = true;
-    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    setTimeout(function(){
-      el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
-      var s = el.querySelector("summary");
-      if (s){ s.setAttribute("tabindex","-1"); s.focus({ preventScroll:true }); }
-    }, 60);
-  }
-  window.addEventListener("hashchange", openFromHash);
-
-  /* ---------- volver arriba ---------- */
-  window.addEventListener("scroll", function(){
-    toTopEl.className = window.pageYOffset > 500 ? "show" : "";
-  }, { passive:true });
-
-  toTopEl.addEventListener("click", function(){
-    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    window.scrollTo({ top:0, behavior: reduce ? "auto" : "smooth" });
-    searchEl.focus({ preventScroll:true });
-  });
-
-  /* ---------- semanas ---------- */
-  Array.prototype.forEach.call(document.querySelectorAll(".week-tab"), function(btn){
-    btn.addEventListener("click", function(){
-      if (btn.disabled) return;
-      Array.prototype.forEach.call(document.querySelectorAll(".week-tab"), function(b){
-        b.classList.remove("is-active");
-        b.setAttribute("aria-selected", "false");
-      });
-      btn.classList.add("is-active");
-      btn.setAttribute("aria-selected", "true");
-      var week = btn.dataset.week;
-      Array.prototype.forEach.call(document.querySelectorAll("[data-week-panel]"), function(p){
-        p.hidden = (p.id !== week);
-      });
-    });
-  });
-
-  /* ---------- inicio ---------- */
-  buildFilters();
-  render();
-  openFromHash();
 })();
 </script>
+
 </body>
 </html>
