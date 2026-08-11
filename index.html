@@ -340,6 +340,8 @@
   .deck-card p{margin:0 0 12px;color:var(--ink);line-height:1.75}
   .deck-card p:last-child{margin-bottom:0}
   .deck-card strong{color:var(--white)}
+  .deck-card blockquote{margin:0 0 12px;padding:10px 14px;border-left:3px solid var(--yellow);background:rgba(180,83,9,.06);border-radius:0 10px 10px 0;color:#6B4408;font-style:italic}
+  .deck-card blockquote:last-child{margin-bottom:0}
   .deck-item{margin:0 0 16px;padding-left:16px;border-left:2px solid var(--line)}
   .deck-item:last-child{margin-bottom:0}
   .deck-item p{margin:0 0 8px}
@@ -487,7 +489,8 @@
       </div>
       <span class="pill level">Nivel 1 · Semana 1</span>
       <span class="pill">Consulta rápida</span>
-      <a class="pill" href="#presentacion">📑 Presentación Semana 1</a>
+      <a class="pill" href="#presentacion" data-goto-week="semana1">📑 Presentación Semana 1</a>
+      <a class="pill" href="#presentacion2" data-goto-week="semana2">📑 Semana 2 Presentación</a>
     </div>
 
     <p class="program">Programa: Inteligencia Artificial y Automatización con n8n</p>
@@ -715,6 +718,113 @@
       Prueba con otra palabra o revisa las categorías.
     </div>
   </section>
+
+  <section class="wrap deck" id="presentacion2" aria-labelledby="deck2-title">
+    <div class="deck-head">
+      <span class="pill level">Nivel 1 · Semana 2</span>
+      <h2 id="deck2-title">Semana 2 <span class="accent2">Presentación</span></h2>
+      <p class="deck-sub">Ingeniería de Prompts y Redacción de Calidad — el contenido completo de la sesión, en formato de lectura fácil.</p>
+    </div>
+
+    <ul class="deck-list">
+      <li class="deck-divider">
+        <b>Ingeniería de Prompts y Redacción de Calidad</b>
+        <small>Inteligencia Artificial · Semana 2</small>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">1</span>Objetivos de la sesión</h3>
+        <p>Generar contenido escrito y documentos de calidad.</p>
+        <p>Crear prompts efectivos que te den exactamente lo que necesitas.</p>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">2</span>¿Qué es un "Prompt"? La base de la comunicación</h3>
+        <p>Un prompt es la instrucción, pregunta o texto que le escribes a una Inteligencia Artificial para que realice una tarea. No es una simple búsqueda de Google, sino un puente de comunicación lógica donde tu capacidad para dar órdenes determina directamente la calidad de la respuesta del modelo.</p>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">3</span>El principio fundamental: "Basura entra, basura sale"</h3>
+        <p>Si le das a la IA una instrucción vaga o genérica (como "escribe un correo"), la máquina te devolverá un texto aburrido, plano y poco útil. Para obtener redacción de alta calidad, necesitas alimentar al modelo con instrucciones precisas, contexto claro y directrices de formato bien delimitadas.</p>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">4</span>El Rol — darle una identidad profesional a la IA</h3>
+        <p>Para que el vocabulario de la IA sea el adecuado, el primer paso es asignarle un rol o personalidad experta (ej. "Actúa como un director de marketing" o "como un asistente administrativo"). Esto fuerza al sistema a calibrar su tono y utilizar terminología técnica propia de esa profesión.</p>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">5</span>El Contexto — situar a la IA en el escenario real</h3>
+        <p>La IA no sabe quién eres, qué vendes ni a quién te diriges a menos que se lo expliques. En tu prompt, describe brevemente los antecedentes de la situación, el problema que deseas resolver y quién va a leer el texto final para que la redacción se adapte perfectamente a tu público objetivo.</p>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">6</span>La Instrucción y el Formato — definir el resultado esperado</h3>
+        <p>Explica de manera directa la tarea que debe realizar y delimita cómo debe estructurarse físicamente el resultado. Especifica detalles clave como el número de párrafos, el tono (amable, formal, persuasivo), el límite de palabras y si prefieres que use listas con viñetas.</p>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">7</span>Redacción de correos: la regla de la inmediatez</h3>
+        <p>Un correo electrónico profesional redactado con IA debe ser breve, directo y fácil de leer desde un teléfono móvil. La información más importante siempre debe colocarse en el primer párrafo, acompañada de un asunto directo de menos de 8 palabras y una llamada a la acción muy clara al final.</p>
+      </li>
+
+      <li class="deck-divider">
+        <b>Concluimos la primera parte de nuestra sesión</b>
+        <small>Semana 2 · Continuamos…</small>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">8</span>Prompt modelo para correos profesionales</h3>
+        <p>Para generar un email de calidad, utiliza esta estructura en la IA:</p>
+        <blockquote>"Actúa como un asistente de atención al cliente. Redacta un correo breve para un cliente cuyo pedido se retrasará dos días por problemas de logística. El tono debe ser transparente y empático. Estructura el correo en tres párrafos cortos y añade una disculpa clara."</blockquote>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">9</span>Propuestas comerciales: enfoque en el beneficio, no en el producto</h3>
+        <p>La IA tiende a escribir propuestas comerciales que solo hablan de las características técnicas de un producto.</p>
+        <p>Para redactar propuestas efectivas, debes instruirla para que estructure el texto en tres bloques: el diagnóstico del problema del cliente, la solución que ofreces y los beneficios reales que obtendrá.</p>
+        <p><strong>Prompt modelo:</strong></p>
+        <blockquote>"Actúa como un consultor de ventas senior. Redacta una propuesta de servicios de diseño web para un restaurante local. Enfócate en su problema (baja visibilidad en línea) y explica en tres secciones cortas cómo nuestra solución de sitio web rápido aumentará sus reservas mensuales."</blockquote>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">10</span>Informes y resúmenes: simplificación de datos complejos</h3>
+        <p>El propósito de un informe generado por IA es tomar un texto caótico o un conjunto de datos y transformarlo en información limpia para tomar decisiones rápidas. Exige siempre a la IA que inicie con un "Resumen Ejecutivo" de un párrafo y que destaque las métricas principales en una lista ordenada.</p>
+        <p><strong>Prompt modelo:</strong></p>
+        <blockquote>"Actúa como un analista de operaciones. A partir de los siguientes comentarios de quejas de clientes [insertar comentarios], redacta un informe que incluya un resumen de la situación en un párrafo, una lista con viñetas de las tres quejas más repetidas y dos recomendaciones de solución inmediata."</blockquote>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">11</span>Planes y estrategias: conexión entre metas y tareas</h3>
+        <p>La creación de planes estratégicos con IA requiere orden lógico para evitar ideas vagas. Debes pedirle a la máquina que divida la estrategia de manera cronológica (por fases, semanas o meses) y que asigne a cada etapa actividades específicas que el equipo de trabajo pueda medir y ejecutar.</p>
+        <p><strong>Prompt modelo:</strong></p>
+        <blockquote>"Actúa como un director de marketing. Diseña una estrategia sencilla de 4 semanas para dar a conocer una cafetería de especialidad en el barrio. Organiza el plan semana a semana, detallando únicamente dos acciones concretas para realizar en redes sociales por cada semana."</blockquote>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">12</span>Edición de calidad: detectar y eliminar la "marca de agua" de la IA</h3>
+        <p>El primer borrador de la IA suele sonar robótico porque abusa de clichés como "es crucial", "es fundamental", "en conclusión" o "en el competitivo mercado actual". Para ganar calidad, lee el texto generado y elimina estas palabras repetitivas para que la lectura sea directa y natural.</p>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">13</span>El toque final humano — personalización y verificación</h3>
+        <p>La IA es una excelente redactora de borradores, pero no conoce tu negocio ni tu tono personal. El paso final indispensable es acortar los párrafos densos, verificar que las fechas o datos no sean inventados (alucinaciones) y añadir tus propias palabras o anécdotas reales para darle autenticidad al texto.</p>
+      </li>
+
+      <li class="deck-card">
+        <h3><span class="deck-num">14</span>Bibliografías</h3>
+        <ul class="deck-refs">
+          <li>OpenAI. (2026). <em>ChatGPT</em> (Versión GPT-4o) [Modelo de lenguaje grande]. <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">chatgpt.com</a></li>
+          <li>Google. (2026). <em>Gemini</em> (Versión Gemini 1.5 Pro) [Modelo de lenguaje grande]. <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">gemini.google.com</a></li>
+        </ul>
+      </li>
+
+      <li class="deck-divider">
+        <b>Semana 2 completada — ¡Felicidades!</b>
+        <small>Éxito en tu evaluación</small>
+      </li>
+    </ul>
+  </section>
   </div>
 </main>
 
@@ -916,6 +1026,9 @@
       if (btn.disabled) return;
       activateWeek(btn.dataset.week);
     });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-goto-week]"), function(a){
+    a.addEventListener("click", function(){ activateWeek(a.dataset.gotoWeek); });
   });
 
   /* ---------- volver arriba ---------- */
