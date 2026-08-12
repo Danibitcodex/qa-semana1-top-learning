@@ -91,6 +91,7 @@
     letter-spacing:.03em;
   }
   .pill.level{border-color:rgba(180,83,9,.45);color:var(--yellow)}
+  .pill.warn{border-color:rgba(220,38,38,.35);color:#B91C1C;background:rgba(220,38,38,.06)}
   .program{margin:20px 0 0;font-size:.95rem;font-weight:700;color:var(--purple-ink);letter-spacing:.02em}
   h1{margin:6px 0 6px;font-size:clamp(2rem,7vw,3.2rem);line-height:1.12;letter-spacing:-.01em;font-weight:800}
   h1 .accent{background:linear-gradient(90deg,var(--yellow),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -372,6 +373,16 @@
   .summary-note{margin:0 0 10px;font-size:.92rem;color:var(--ink);line-height:1.65}
   .summary-note:last-child{margin-bottom:0}
   .summary-note strong{color:var(--white)}
+
+  /* ---------- VIDEO COMPLEMENTARIO (NO OFICIAL) ---------- */
+  .video-block{padding:8px 0 40px}
+  .video-head{max-width:78ch;margin:0 0 18px}
+  .video-head h2{margin:12px 0 8px;font-size:clamp(1.5rem,5vw,2.1rem);line-height:1.15;letter-spacing:-.01em}
+  .video-sub{margin:0;color:var(--muted)}
+  .video-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#000;max-width:900px}
+  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .video-credit{margin:12px 0 0;font-size:.88rem;color:var(--muted);max-width:900px}
+  .video-credit a{color:var(--violet)}
 
   /* ---------- CONOCE A TU DOCENTE ---------- */
   .docente{padding:52px 0 60px;background:linear-gradient(180deg,var(--bg),var(--bg-2));border-top:1px solid var(--line)}
@@ -824,6 +835,18 @@
         <small>Éxito en tu evaluación</small>
       </li>
     </ul>
+  </section>
+
+  <section class="wrap video-block" id="video2" aria-labelledby="video2-title">
+    <div class="video-head">
+      <span class="pill warn">⚠️ No oficial</span>
+      <h2 id="video2-title">Video complementario <span class="accent2">Semana 2</span></h2>
+      <p class="video-sub">Recurso externo, no forma parte del material oficial del programa ni de Top Learning. Se comparte como apoyo visual adicional para repasar el concepto de prompt.</p>
+    </div>
+    <div class="video-frame">
+      <iframe src="https://www.youtube.com/embed/PPKrKFAZlBk" title="¿Qué es un Prompt? Descubre la Anatomía de tus Instrucciones de IA — VisionQuant" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <p class="video-credit">"¿Qué es un Prompt? Descubre la Anatomía de tus Instrucciones de IA" — <a href="https://www.youtube.com/@VisionQuantMxx" target="_blank" rel="noopener noreferrer">VisionQuant</a> · <a href="https://youtu.be/PPKrKFAZlBk" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a></p>
   </section>
   </div>
 </main>
