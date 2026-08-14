@@ -383,6 +383,9 @@
   .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
   .video-credit{margin:12px 0 0;font-size:.88rem;color:var(--muted);max-width:900px}
   .video-credit a{color:var(--violet)}
+  .video-item{margin:0 0 32px}
+  .video-item:last-child{margin-bottom:0}
+  .video-part{margin:0 0 10px;font-size:.85rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--purple-ink)}
 
   /* ---------- CONOCE A TU DOCENTE ---------- */
   .docente{padding:52px 0 60px;background:linear-gradient(180deg,var(--bg),var(--bg-2));border-top:1px solid var(--line)}
@@ -840,13 +843,25 @@
   <section class="wrap video-block" id="video2" aria-labelledby="video2-title">
     <div class="video-head">
       <span class="pill warn">⚠️ No oficial</span>
-      <h2 id="video2-title">Video complementario <span class="accent2">Semana 2</span></h2>
-      <p class="video-sub">Recurso externo, no forma parte del material oficial del programa ni de Top Learning. Se comparte como apoyo visual adicional para repasar el concepto de prompt.</p>
+      <h2 id="video2-title">Repaso en video <span class="accent2">Semana 2</span></h2>
+      <p class="video-sub">Recursos externos, no forman parte del material oficial del programa ni de Top Learning. Se comparten en dos partes como apoyo visual adicional para repasar los temas de la semana.</p>
     </div>
-    <div class="video-frame">
-      <iframe src="https://www.youtube.com/embed/PPKrKFAZlBk" title="¿Qué es un Prompt? Descubre la Anatomía de tus Instrucciones de IA — VisionQuant" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <div class="video-item">
+      <p class="video-part">Parte 1</p>
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/PPKrKFAZlBk" title="¿Qué es un Prompt? Descubre la Anatomía de tus Instrucciones de IA — VisionQuant" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-credit">"¿Qué es un Prompt? Descubre la Anatomía de tus Instrucciones de IA" — <a href="https://www.youtube.com/@VisionQuantMxx" target="_blank" rel="noopener noreferrer">VisionQuant</a> · <a href="https://youtu.be/PPKrKFAZlBk" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a></p>
     </div>
-    <p class="video-credit">"¿Qué es un Prompt? Descubre la Anatomía de tus Instrucciones de IA" — <a href="https://www.youtube.com/@VisionQuantMxx" target="_blank" rel="noopener noreferrer">VisionQuant</a> · <a href="https://youtu.be/PPKrKFAZlBk" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a></p>
+
+    <div class="video-item">
+      <p class="video-part">Parte 2</p>
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/2XKX7X2iFIs" title="Ingeniería de Prompts — VisionQuant" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-credit">"Ingeniería de Prompts" — <a href="https://www.youtube.com/@VisionQuantMxx" target="_blank" rel="noopener noreferrer">VisionQuant</a> · <a href="https://youtu.be/2XKX7X2iFIs" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a></p>
+    </div>
   </section>
   </div>
 </main>
